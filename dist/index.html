@@ -482,6 +482,129 @@
     }
 
     .empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); }
+
+    /* ===== Info cards & utilities (Task 2.4) ===== */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 16px;
+      font-weight: 800;
+      margin: 4px 0 12px;
+    }
+    .section-title + .section-hint { margin-top: -8px; }
+    .section-hint { font-size: 12px; color: var(--text-muted); margin-bottom: 12px; }
+    .sub-title { font-size: 14px; font-weight: 700; color: var(--text-sub); margin: 18px 0 10px; }
+
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-sm);
+      padding: 12px 14px;
+      margin-bottom: 10px;
+      min-width: 0;
+    }
+
+    .flight-card { padding: 0; overflow: hidden; margin-bottom: 14px; }
+    .flight-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      color: #fff;
+      background: linear-gradient(135deg, #3a86ff, #5e9bff);
+    }
+    .flight-card.inbound .flight-head { background: linear-gradient(135deg, #8338ec, #a066f5); }
+    .flight-head .f-type { font-weight: 800; font-size: 14px; }
+    .flight-head .f-date { font-size: 12px; opacity: 0.92; }
+    .flight-body { padding: 12px 14px; }
+    .flight-route {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+      align-items: center;
+      gap: 8px;
+    }
+    .f-end .f-time { font-size: 24px; font-weight: 800; letter-spacing: -0.5px; font-variant-numeric: tabular-nums; }
+    .f-end .f-airport { font-size: 12px; font-weight: 600; color: var(--text-main); overflow-wrap: anywhere; }
+    .f-end .f-terminal { font-size: 11px; color: var(--text-muted); }
+    .f-end.arr { text-align: right; }
+    .f-mid { text-align: center; font-size: 11px; color: var(--text-muted); white-space: nowrap; }
+    .f-mid .plane { display: block; font-size: 18px; }
+    .flight-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .flight-steps { margin-top: 10px; display: grid; gap: 6px; }
+    .flight-steps div {
+      font-size: 12px;
+      color: var(--text-sub);
+      background: var(--bg-muted);
+      border-radius: var(--radius-sm);
+      padding: 6px 10px;
+      overflow-wrap: anywhere;
+    }
+    .flight-note { margin-top: 8px; font-size: 12px; color: var(--text-sub); overflow-wrap: anywhere; }
+
+    .coupon-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .coupon-card {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      margin: 0;
+      padding: 12px;
+      border-top: 3px solid var(--primary);
+    }
+    .coupon-card .badge {
+      align-self: flex-start;
+      max-width: 100%;
+      font-size: 10px;
+      font-weight: 700;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      border-radius: var(--radius-pill);
+      padding: 2px 8px;
+      overflow-wrap: anywhere;
+    }
+    .coupon-card .c-title { font-size: 14px; font-weight: 700; line-height: 1.35; overflow-wrap: anywhere; }
+    .coupon-card .c-desc { font-size: 12px; color: var(--text-sub); flex: 1; overflow-wrap: anywhere; }
+    .coupon-card .c-cat { font-size: 11px; color: var(--text-muted); }
+    .card-actions { display: flex; gap: 6px; flex-wrap: wrap; }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      min-height: 32px;
+      padding: 5px 10px;
+      font-family: inherit;
+      font-size: 12px;
+      font-weight: 700;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-muted);
+      color: var(--text-sub);
+      text-decoration: none;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    .btn:active { transform: scale(0.97); }
+    .btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
+    .btn-blue { background: #eaf2ff; border-color: #cfe0ff; color: var(--accent-blue); }
+
+    .info-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .info-row + .info-row { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border-subtle); }
+    .info-name { font-size: 14px; font-weight: 700; margin-bottom: 6px; overflow-wrap: anywhere; }
+    .info-label { font-size: 11px; color: var(--text-muted); }
+    .info-value { font-size: 13px; color: var(--text-main); overflow-wrap: anywhere; }
+    .info-value a { color: inherit; }
+    .info-text { min-width: 0; flex: 1; }
+    .info-note { font-size: 12px; color: var(--text-sub); margin-top: 6px; overflow-wrap: anywhere; }
+
+    .todo-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
   </style>
 </head>
 <body>
@@ -525,32 +648,21 @@
 
       <!-- Tab 2: 航班資訊 -->
       <div id="view-flights" class="tab-view">
-        <div id="flights-container">
-          <!-- Flights rendered here -->
-          <div class="section-title" style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap: 6px;">
-            <span>✈️</span><span>航班與出入境資訊</span>
-          </div>
-        </div>
+        <div class="section-title"><span>✈️</span><span>航班與出入境資訊</span></div>
+        <div id="flights-container"></div>
       </div>
 
       <!-- Tab 3: 優惠券 -->
       <div id="view-coupons" class="tab-view">
-        <div id="coupons-container">
-          <!-- Coupons rendered here -->
-          <div class="section-title" style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap: 6px;">
-            <span>🏷️</span><span>旅日優惠券與實用連結</span>
-          </div>
-        </div>
+        <div class="section-title"><span>🏷️</span><span>旅日優惠券與實用連結</span></div>
+        <div class="section-hint">建議出發前先開啟一次並存到手機，離線也能出示。</div>
+        <div id="coupons-container"></div>
       </div>
 
       <!-- Tab 4: 實用資訊 -->
       <div id="view-practical" class="tab-view">
-        <div id="practical-container">
-          <!-- Practical info rendered here -->
-          <div class="section-title" style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap: 6px;">
-            <span>ℹ️</span><span>緊急求助與旅日必備</span>
-          </div>
-        </div>
+        <div class="section-title"><span>ℹ️</span><span>緊急求助與旅日必備</span></div>
+        <div id="practical-container"></div>
       </div>
     </main>
 
@@ -727,6 +839,184 @@
       selectDay(initialDayIndex());
     }
 
+    // ===== Copy utility + Toast (Task 2.4) =====
+    let toastTimer = null;
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => t.classList.remove('show'), 1800);
+    }
+
+    function legacyCopy(text) {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      ta.setAttribute('readonly', '');
+      ta.style.cssText = 'position:fixed;top:0;left:0;opacity:0;pointer-events:none;';
+      document.body.appendChild(ta);
+      ta.select();
+      ta.setSelectionRange(0, text.length);
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch (_) { ok = false; }
+      ta.remove();
+      return ok;
+    }
+
+    async function copyText(text) {
+      try {
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(text);
+          return true;
+        }
+      } catch (_) { /* fall through to legacy */ }
+      return legacyCopy(text);
+    }
+
+    // Event delegation: any [data-copy] element anywhere copies its value
+    document.addEventListener('click', async (e) => {
+      const btn = e.target.closest('[data-copy]');
+      if (!btn) return;
+      e.preventDefault();
+      const ok = await copyText(btn.dataset.copy);
+      showToast(ok ? `✅ 已複製：${btn.dataset.copyLabel || btn.dataset.copy}` : '⚠️ 複製失敗，請長按文字手動複製');
+    });
+
+    const copyBtn = (value, label) => value
+      ? `<button type="button" class="btn copy-btn" data-copy="${esc(value)}" data-copy-label="${esc(label || value)}" aria-label="複製${esc(label || '')}">📋 複製</button>` : '';
+    const telHref = (tel) => 'tel:' + String(tel).replace(/[^\d+]/g, '');
+
+    // ===== Flights =====
+    function renderFlights() {
+      const el = document.getElementById('flights-container');
+      const flights = APP.data.flights || [];
+      if (!flights.length) { el.innerHTML = '<div class="empty-state">尚無航班資料</div>'; return; }
+      el.innerHTML = flights.map(f => {
+        const dep = f.departure || {}, arr = f.arrival || {};
+        const inbound = /回程|inbound/i.test(f.type + f.id);
+        const meta = [
+          f.airline && `<span class="tag">🛫 ${esc(f.airline)}</span>`,
+          f.baggage && `<span class="tag">🧳 ${esc(f.baggage)}</span>`,
+          f.status && `<span class="tag booked-yes">● ${esc(f.status)}</span>`,
+        ].filter(Boolean).join('');
+        const steps = [dep.action && `🛫 ${esc(dep.action)}`, arr.action && `🛬 ${esc(arr.action)}`]
+          .filter(Boolean).map(s => `<div>${s}</div>`).join('');
+        return `<article class="card flight-card ${inbound ? 'inbound' : 'outbound'}" id="${esc(f.id)}">
+            <div class="flight-head">
+              <span class="f-type">${inbound ? '🛬' : '🛫'} ${esc(f.type)}・${esc(f.flight_no || '')}</span>
+              <span class="f-date">${esc(f.date || '')} ${esc(f.day || '')}</span>
+            </div>
+            <div class="flight-body">
+              <div class="flight-route">
+                <div class="f-end dep">
+                  <div class="f-time">${esc(dep.time || '--:--')}</div>
+                  <div class="f-airport">${esc(dep.airport || '')}</div>
+                  <div class="f-terminal">${esc(dep.terminal || '')}</div>
+                </div>
+                <div class="f-mid"><span class="plane">✈️</span>${esc(f.duration || '')}</div>
+                <div class="f-end arr">
+                  <div class="f-time">${esc(arr.time || '--:--')}</div>
+                  <div class="f-airport">${esc(arr.airport || '')}</div>
+                  <div class="f-terminal">${esc(arr.terminal || '')}</div>
+                </div>
+              </div>
+              ${meta ? `<div class="flight-meta">${meta}</div>` : ''}
+              ${steps ? `<div class="flight-steps">${steps}</div>` : ''}
+              ${f.notes ? `<div class="flight-note">💡 ${esc(f.notes)}</div>` : ''}
+            </div>
+          </article>`;
+      }).join('');
+    }
+
+    // ===== Coupons =====
+    function renderCoupons() {
+      const el = document.getElementById('coupons-container');
+      const coupons = APP.data.coupons || [];
+      if (!coupons.length) { el.innerHTML = '<div class="empty-state">尚無優惠資料</div>'; return; }
+      el.innerHTML = `<div class="coupon-grid">${coupons.map(c => `
+          <article class="card coupon-card" id="${esc(c.id)}">
+            ${c.badge ? `<span class="badge">${esc(c.badge)}</span>` : ''}
+            <div class="c-title">${esc(c.title)}</div>
+            ${c.description ? `<div class="c-desc">${esc(c.description)}</div>` : ''}
+            ${c.category ? `<div class="c-cat">#${esc(c.category)}</div>` : ''}
+            <div class="card-actions">
+              ${c.url ? `<a class="btn btn-primary" href="${esc(c.url)}" target="_blank" rel="noopener">開啟 ↗</a>` : ''}
+              ${c.url ? `<button type="button" class="btn copy-btn" data-copy="${esc(c.url)}" data-copy-label="連結">🔗 複製</button>` : ''}
+            </div>
+          </article>`).join('')}</div>`;
+    }
+
+    // ===== Practical info =====
+    function infoRow(label, value, { tel = false, map = false } = {}) {
+      if (!value) return '';
+      const shown = tel ? `<a href="${telHref(value)}">${esc(value)}</a>` : esc(value);
+      return `<div class="info-row">
+          <div class="info-text"><div class="info-label">${esc(label)}</div><div class="info-value">${shown}</div></div>
+          <div class="card-actions">
+            ${tel ? `<a class="btn btn-blue" href="${telHref(value)}">📞 撥打</a>` : ''}
+            ${map ? `<a class="btn btn-blue" href="${mapUrl(value)}" target="_blank" rel="noopener">🗺️</a>` : ''}
+            ${copyBtn(value, label)}
+          </div>
+        </div>`;
+    }
+
+    function renderPractical() {
+      const el = document.getElementById('practical-container');
+      const p = APP.data.practical || {};
+      const html = [];
+
+      if (p.accommodations?.length) {
+        html.push('<div class="sub-title">🏨 住宿</div>');
+        html.push(p.accommodations.map(a => `<div class="card">
+            <div class="info-name">${esc(a.name)}</div>
+            ${infoRow('地址', a.address, { map: true })}
+            ${a.check_in || a.check_out ? `<div class="tl-meta">${a.check_in ? `<span class="tag">Check-in ${esc(a.check_in)}</span>` : ''}${a.check_out ? `<span class="tag">Check-out ${esc(a.check_out)}</span>` : ''}</div>` : ''}
+            ${a.notes ? `<div class="info-note">${esc(a.notes)}</div>` : ''}
+          </div>`).join(''));
+      }
+
+      if (p.emergency_contacts?.length) {
+        html.push('<div class="sub-title">🚨 緊急聯絡</div>');
+        html.push(p.emergency_contacts.map(c => `<div class="card">
+            <div class="info-name">${esc(c.name)}</div>
+            ${infoRow('電話', c.tel, { tel: true })}
+            ${infoRow('急難救助', c.emergency_tel, { tel: true })}
+            ${/\d/.test(c.address || '') && !/直撥/.test(c.address) ? infoRow('地址', c.address, { map: true }) : (c.address ? `<div class="info-note">${esc(c.address)}</div>` : '')}
+          </div>`).join(''));
+      }
+
+      if (p.luggage_storage?.length) {
+        html.push('<div class="sub-title">🧳 行李寄放</div>');
+        html.push(p.luggage_storage.map(s => `<div class="card">
+            <div class="info-name">${esc(s.name)}</div>
+            ${infoRow('位置', s.location, { map: true })}
+            ${s.hours ? `<div class="tl-meta"><span class="tag">🕘 ${esc(s.hours)}</span></div>` : ''}
+            ${s.notes ? `<div class="info-note">${esc(s.notes)}</div>` : ''}
+          </div>`).join(''));
+      }
+
+      if (p.useful_links?.length) {
+        html.push('<div class="sub-title">🔗 實用連結</div>');
+        html.push(p.useful_links.map(l => `<div class="card">
+            <div class="info-row">
+              <div class="info-text"><div class="info-name">${esc(l.title)}</div><div class="info-note">${esc(l.desc || '')}</div></div>
+              <div class="card-actions"><a class="btn btn-primary" href="${esc(l.url)}" target="_blank" rel="noopener">開啟 ↗</a></div>
+            </div>
+          </div>`).join(''));
+      }
+
+      const todos = APP.data.todos || [];
+      if (todos.length) {
+        html.push('<div class="sub-title">📝 待辦與口袋清單</div>');
+        html.push(todos.map(t => `<div class="card">
+            <div class="info-name">${esc(t.category)}</div>
+            <ul class="todo-list">${(t.items || []).map(i => `<li class="tag">${esc(i)}</li>`).join('')}</ul>
+          </div>`).join(''));
+      }
+
+      el.innerHTML = html.join('') || '<div class="empty-state">尚無實用資訊</div>';
+    }
+
     // ===== Boot =====
     async function loadData() {
       const res = await fetch('itinerary_data.json', { cache: 'no-cache' });
@@ -737,7 +1027,10 @@
     loadData()
       .then(data => {
         APP.data = data;
-        renderSchedule();
+        // Render each view independently so one malformed section can't blank the others
+        [renderSchedule, renderFlights, renderCoupons, renderPractical].forEach(fn => {
+          try { fn(); } catch (err) { console.warn(fn.name + ' failed', err); }
+        });
       })
       .catch(err => {
         console.warn('Failed to load itinerary data', err);

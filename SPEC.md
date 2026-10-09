@@ -68,7 +68,7 @@ Git 訊息： feat: add persistent bottom navigation tabs
 
 Git 訊息： feat: render interactive itinerary timeline
 
-[ ] Task 2.4: 實作資訊卡片與工具功能
+[x] Task 2.4: 實作資訊卡片與工具功能
 
 目標： 渲染機票卡片（去/回程）、優惠券網格、地址與電話的一鍵複製到剪貼簿功能。
 
