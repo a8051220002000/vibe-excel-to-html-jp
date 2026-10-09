@@ -92,3 +92,11 @@ Git 訊息： feat: add service worker for offline accessibility
 驗收命令： test -f dist/.nojekyll && test -f README.md
 
 Git 訊息： docs: add build guide and github pages config
+
+[x] Task 3.3: 建立 GitHub Actions 自動部署工作流 (CI/CD Pipeline)
+
+目標： 建立 .github/workflows/pages.yml，設定於 main 分支推送到 dist/** 時自動執行資料驗證、打包 dist/ 產物並發布至 GitHub Pages，包含手動觸發 (workflow_dispatch) 與自動啟用 (enablement: true)。
+
+驗收命令： test -f .github/workflows/pages.yml && grep -q "actions/deploy-pages" .github/workflows/pages.yml
+
+Git 訊息： ci: add github actions pages deployment workflow
