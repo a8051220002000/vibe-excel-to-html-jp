@@ -9,6 +9,7 @@
   <meta name="apple-mobile-web-app-title" content="福岡2026">
   <meta name="description" content="2026 福岡・九州自由行五日隨身數位手冊">
   <title>2026 福岡・九州自由行 | 行程隨身手冊</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛩️</text></svg>">
   <style>
     :root {
       --primary: #e85a71;
@@ -150,6 +151,27 @@
       max-width: 100%;
       overflow-x: hidden;
       padding: 14px 16px;
+    }
+
+    /* Tab Views */
+    .tab-view {
+      display: none;
+      animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .tab-view.active {
+      display: block;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(4px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Skeleton Placeholder for Initial Layout */
@@ -312,26 +334,63 @@
         </div>
       </section>
 
-      <div id="view-container" class="view-section">
-        <!-- Content will be populated dynamically -->
+      <!-- Tab 1: 每日行程 -->
+      <div id="view-schedule" class="tab-view active">
+        <div id="schedule-container">
+          <!-- Timeline will be rendered here -->
+          <div class="loading-state" style="text-align:center; padding: 40px 20px; color: var(--text-muted);">
+            <div style="font-size: 28px; margin-bottom: 8px;">⏳</div>
+            <div>載入行程中...</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: 航班資訊 -->
+      <div id="view-flights" class="tab-view">
+        <div id="flights-container">
+          <!-- Flights rendered here -->
+          <div class="section-title" style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap: 6px;">
+            <span>✈️</span><span>航班與出入境資訊</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 3: 優惠券 -->
+      <div id="view-coupons" class="tab-view">
+        <div id="coupons-container">
+          <!-- Coupons rendered here -->
+          <div class="section-title" style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap: 6px;">
+            <span>🏷️</span><span>旅日優惠券與實用連結</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 4: 實用資訊 -->
+      <div id="view-practical" class="tab-view">
+        <div id="practical-container">
+          <!-- Practical info rendered here -->
+          <div class="section-title" style="font-size: 16px; font-weight: 700; margin-bottom: 12px; display:flex; align-items:center; gap: 6px;">
+            <span>ℹ️</span><span>緊急求助與旅日必備</span>
+          </div>
+        </div>
       </div>
     </main>
 
     <!-- Bottom Nav -->
     <nav class="bottom-nav" id="bottomNav">
-      <button class="nav-item active" data-tab="schedule">
+      <button class="nav-item active" data-tab="schedule" aria-label="每日行程">
         <span class="nav-icon">📅</span>
         <span class="nav-label">每日行程</span>
       </button>
-      <button class="nav-item" data-tab="flights">
+      <button class="nav-item" data-tab="flights" aria-label="航班資訊">
         <span class="nav-icon">✈️</span>
         <span class="nav-label">航班資訊</span>
       </button>
-      <button class="nav-item" data-tab="coupons">
+      <button class="nav-item" data-tab="coupons" aria-label="優惠券">
         <span class="nav-icon">🏷️</span>
         <span class="nav-label">優惠券</span>
       </button>
-      <button class="nav-item" data-tab="practical">
+      <button class="nav-item" data-tab="practical" aria-label="實用資訊">
         <span class="nav-icon">ℹ️</span>
         <span class="nav-label">實用資訊</span>
       </button>
@@ -342,8 +401,44 @@
   </div>
 
   <script>
-    // Safe Area & Viewport check
-    console.log("Mobile layout initialized. Viewport width:", window.innerWidth);
+    // Tab Switching Controller
+    function switchTab(tabId) {
+      // 1. Update Navigation Buttons
+      const navButtons = document.querySelectorAll('#bottomNav .nav-item');
+      navButtons.forEach(btn => {
+        if (btn.getAttribute('data-tab') === tabId) {
+          btn.classList.add('active');
+        } else {
+          btn.classList.remove('active');
+        }
+      });
+
+      // 2. Toggle Tab Views (Instantaneous, no white flash)
+      const tabViews = document.querySelectorAll('.tab-view');
+      tabViews.forEach(view => {
+        if (view.id === 'view-' + tabId) {
+          view.classList.add('active');
+        } else {
+          view.classList.remove('active');
+        }
+      });
+
+      // 3. Reset scroll position smoothly
+      window.scrollTo({ top: 0, behavior: 'instant' });
+    }
+
+    // Attach click listeners to all tab buttons
+    document.querySelectorAll('#bottomNav .nav-item').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetTab = button.getAttribute('data-tab');
+        if (targetTab) {
+          switchTab(targetTab);
+        }
+      });
+    });
+
+    console.log("Tab navigation controller initialized.");
   </script>
 </body>
 </html>

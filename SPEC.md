@@ -52,7 +52,7 @@ Phase 2: 手機優先網頁介面 (Mobile-First UI)
 
 Git 訊息： feat: init responsive mobile layout skeleton
 
-[ ] Task 2.2: 實作底部導覽列 (Bottom Nav Bar) 與分頁切換
+[x] Task 2.2: 實作底部導覽列 (Bottom Nav Bar) 與分頁切換
 
 目標： 實作 4 個 Tab 切換：📅 每日行程、✈️ 航班資訊、🏷️ 優惠券、ℹ️ 實用資訊。
 
