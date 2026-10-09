@@ -77,7 +77,7 @@ Git 訊息： feat: render interactive itinerary timeline
 Git 訊息： feat: add flight cards and copy utilities
 
 Phase 3: 離線支援與靜態發布 (Offline & Deployment)
-[ ] Task 3.1: 註冊 Service Worker 達成 PWA 離線快取
+[x] Task 3.1: 註冊 Service Worker 達成 PWA 離線快取
 
 目標： 建立 dist/sw.js 快取 index.html 與 itinerary_data.json，達成完全離線可用。
 

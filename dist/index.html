@@ -1037,6 +1037,15 @@
         document.getElementById('timeline').innerHTML =
           '<div class="empty-state">⚠️ 無法載入行程資料，請確認網路或重新整理。</div>';
       });
+
+    // ===== Offline support (Task 3.1) =====
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./sw.js', { scope: './' })
+          .then(reg => console.log('Service worker registered:', reg.scope))
+          .catch(err => console.warn('Service worker registration failed', err));
+      });
+    }
   </script>
 </body>
 </html>
