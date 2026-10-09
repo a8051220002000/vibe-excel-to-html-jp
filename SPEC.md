@@ -27,7 +27,7 @@ Phase 1: 資料層 CLI 建置 (Data Ingestion & Pipeline)
 
 Git 訊息： chore: add sheet inspection tool
 
-[ ] Task 1.2: 實作可重複執行的轉換 CLI (scripts/build_data.py)
+[x] Task 1.2: 實作可重複執行的轉換 CLI (scripts/build_data.py)
 
 目標： 實作完整轉換邏輯，具備 Forward Fill 與型別安全轉換，支援參數化輸入與輸出路徑。
 
