@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="theme-color" content="#e85a71">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="福岡2026">
+  <meta name="description" content="2026 福岡・九州自由行五日隨身數位手冊">
+  <title>2026 福岡・九州自由行 | 行程隨身手冊</title>
+  <style>
+    :root {
+      --primary: #e85a71;
+      --primary-dark: #c93b52;
+      --primary-light: #fff0f3;
+      --primary-subtle: #fbe4e8;
+      --accent-blue: #3a86ff;
+      --accent-teal: #06d6a0;
+      --accent-amber: #f59e0b;
+      --accent-purple: #8338ec;
+      --bg-canvas: #f1f5f9;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-muted: #f8fafc;
+      --border-subtle: #e2e8f0;
+      --border-focus: #cbd5e1;
+      --text-main: #0f172a;
+      --text-sub: #475569;
+      --text-muted: #94a3b8;
+      --radius-sm: 8px;
+      --radius-md: 14px;
+      --radius-lg: 20px;
+      --radius-pill: 9999px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 16px -2px rgba(15, 23, 42, 0.07);
+      --shadow-lg: 0 10px 25px -3px rgba(15, 23, 42, 0.1);
+      --safe-top: env(safe-area-inset-top, 0px);
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+      --safe-left: env(safe-area-inset-left, 0px);
+      --safe-right: env(safe-area-inset-right, 0px);
+      --nav-height: 64px;
+    }
+
+    /* Reset & Base System */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    html, body {
+      width: 100%;
+      min-height: 100%;
+      background-color: var(--bg-canvas);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "PingFang TC", "Noto Sans TC", sans-serif;
+      font-size: 15px;
+      line-height: 1.5;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Mobile Container App Shell */
+    .app-shell {
+      width: 100%;
+      max-width: 480px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background-color: var(--bg-surface);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+      overflow-x: hidden;
+      padding-top: var(--safe-top);
+      padding-bottom: calc(var(--safe-bottom) + var(--nav-height) + 12px);
+      padding-left: var(--safe-left);
+      padding-right: var(--safe-right);
+    }
+
+    /* App Header */
+    .app-header {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(255, 255, 255, 0.88);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      padding: 12px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: all 0.25s ease;
+    }
+
+    .header-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-sm);
+      background: linear-gradient(135deg, #e85a71, #ff758c);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 18px;
+      box-shadow: 0 3px 10px rgba(232, 90, 113, 0.35);
+    }
+
+    .brand-title {
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--text-main);
+      letter-spacing: -0.3px;
+    }
+
+    .brand-subtitle {
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-muted);
+      letter-spacing: 0.2px;
+    }
+
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      background-color: var(--primary-light);
+      color: var(--primary-dark);
+      font-size: 11px;
+      font-weight: 600;
+      border-radius: var(--radius-pill);
+      border: 1px solid var(--primary-subtle);
+    }
+
+    /* Main Content Area */
+    .main-content {
+      flex: 1;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: hidden;
+      padding: 14px 16px;
+    }
+
+    /* Skeleton Placeholder for Initial Layout */
+    .view-section {
+      width: 100%;
+      max-width: 100%;
+      box-sizing: border-box;
+      overflow-x: hidden;
+    }
+
+    .hero-banner {
+      background: linear-gradient(135deg, #e85a71 0%, #fa709a 100%);
+      color: #ffffff;
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-banner::after {
+      content: "✈️";
+      position: absolute;
+      right: 14px;
+      bottom: 8px;
+      font-size: 52px;
+      opacity: 0.18;
+      pointer-events: none;
+    }
+
+    .hero-title {
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 6px;
+    }
+
+    .hero-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      font-size: 12px;
+      opacity: 0.95;
+    }
+
+    .hero-tag {
+      background: rgba(255, 255, 255, 0.22);
+      padding: 3px 9px;
+      border-radius: var(--radius-pill);
+      font-weight: 500;
+      backdrop-filter: blur(4px);
+    }
+
+    /* Bottom Navigation Skeleton */
+    .bottom-nav {
+      position: fixed;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      height: calc(var(--nav-height) + var(--safe-bottom));
+      padding-bottom: var(--safe-bottom);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1000;
+      box-sizing: border-box;
+    }
+
+    .nav-item {
+      flex: 1;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      border: none;
+      background: transparent;
+      transition: color 0.2s ease, transform 0.15s ease;
+      padding: 4px 0;
+    }
+
+    .nav-item.active {
+      color: var(--primary);
+      font-weight: 700;
+    }
+
+    .nav-icon {
+      font-size: 20px;
+      line-height: 1;
+      margin-bottom: 3px;
+    }
+
+    .nav-label {
+      font-size: 11px;
+      letter-spacing: -0.2px;
+    }
+
+    /* Toast Notification */
+    .toast-container {
+      position: fixed;
+      top: calc(var(--safe-top) + 60px);
+      left: 50%;
+      transform: translateX(-50%) translateY(-20px);
+      background: rgba(15, 23, 42, 0.92);
+      color: #ffffff;
+      padding: 10px 18px;
+      border-radius: var(--radius-pill);
+      font-size: 13px;
+      font-weight: 600;
+      box-shadow: var(--shadow-lg);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toast-container.show {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <div class="app-shell" id="app">
+    <!-- Header -->
+    <header class="app-header">
+      <div class="header-brand">
+        <div class="brand-icon">⛩️</div>
+        <div>
+          <div class="brand-title">福岡・九州自由行</div>
+          <div class="brand-subtitle">2026.11.12 - 11.16・5 Days</div>
+        </div>
+      </div>
+      <div class="header-badge">5天4夜</div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="main-content">
+      <section class="hero-banner">
+        <div class="hero-title">福岡之旅 2026</div>
+        <div class="hero-meta">
+          <span class="hero-tag">📅 11/12 (四) ~ 11/16 (一)</span>
+          <span class="hero-tag">📍 博多・天神・門司港・熊本</span>
+          <span class="hero-tag">✈️ 華航/星宇 TPE ⇄ FUK</span>
+        </div>
+      </section>
+
+      <div id="view-container" class="view-section">
+        <!-- Content will be populated dynamically -->
+      </div>
+    </main>
+
+    <!-- Bottom Nav -->
+    <nav class="bottom-nav" id="bottomNav">
+      <button class="nav-item active" data-tab="schedule">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">每日行程</span>
+      </button>
+      <button class="nav-item" data-tab="flights">
+        <span class="nav-icon">✈️</span>
+        <span class="nav-label">航班資訊</span>
+      </button>
+      <button class="nav-item" data-tab="coupons">
+        <span class="nav-icon">🏷️</span>
+        <span class="nav-label">優惠券</span>
+      </button>
+      <button class="nav-item" data-tab="practical">
+        <span class="nav-icon">ℹ️</span>
+        <span class="nav-label">實用資訊</span>
+      </button>
+    </nav>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast-container">已複製</div>
+  </div>
+
+  <script>
+    // Safe Area & Viewport check
+    console.log("Mobile layout initialized. Viewport width:", window.innerWidth);
+  </script>
+</body>
+</html>

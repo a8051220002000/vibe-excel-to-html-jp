@@ -44,7 +44,7 @@ Git 訊息： feat: implement idempotent excel-to-json build script
 Git 訊息： test: verify generated json integrity
 
 Phase 2: 手機優先網頁介面 (Mobile-First UI)
-[ ] Task 2.1: 建立 Mobile-First HTML 基礎骨架
+[x] Task 2.1: 建立 Mobile-First HTML 基礎骨架
 
 目標： 建立 dist/index.html，配置手機安全邊距（Safe Area Inset）、響應式 Meta 與 CSS 樣式系統。
 
