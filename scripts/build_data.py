@@ -306,7 +306,7 @@ def build_flights_info(schedule):
                 "airport": "桃園國際機場 (TPE)",
                 "terminal": "第一航廈 (預定)",
                 "time": "06:45",
-                "action": "03:40 土城出發，04:30 抵達桃機辦理報到與行李託運"
+                "action": "03:40 出發前往機場，04:30 抵達桃機辦理報到與行李託運"
             },
             "arrival": {
                 "airport": "福岡機場 (FUK)",
@@ -336,7 +336,7 @@ def build_flights_info(schedule):
                 "airport": "桃園國際機場 (TPE)",
                 "terminal": "第一航廈 (預定)",
                 "time": "19:40",
-                "action": "19:40 抵達桃園機場，完成入境查驗，預計 21:00-22:00 返抵土城"
+                "action": "19:40 抵達桃園機場，完成入境查驗，預計 21:00-22:00 返家休息"
             },
             "duration": "2 小時 45 分",
             "baggage": "託運行李 23kg / 件、手提 7kg",

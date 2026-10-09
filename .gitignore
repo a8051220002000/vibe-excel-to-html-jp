@@ -1,0 +1,14 @@
+# Excel raw data
+itinerary.xlsx
+*.xlsx
+*.xls
+
+# OS & Temp
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
+
+# Scratch
+scratch/
+dist/test_run.json

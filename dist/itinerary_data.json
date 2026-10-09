@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-10T00:15:55.126310",
+  "generated_at": "2026-10-10T01:57:45.225213",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -20,8 +20,8 @@
           "date": "2026-11-12",
           "time_start": "03:40",
           "time_end": "04:30",
-          "spot": "土城→桃園機場",
-          "location_tag": "土城",
+          "spot": "出發前往桃園機場",
+          "location_tag": "市區出發",
           "transport": "",
           "remarks": "（06:45飛機)",
           "price": "",
@@ -216,13 +216,13 @@
           "date": "2026-11-12",
           "time_start": "",
           "time_end": "",
-          "spot": "特別提醒",
+          "spot": "旅遊提醒",
           "location_tag": "",
           "transport": "",
-          "remarks": "拉拉拉，你是小果，小果帶我飛日本，我要血拚，我要看到血流成河",
+          "remarks": "開開心心出門，平平安安回家，準備盡情購物享受美食！",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "transport"
         }
       ]
     },
@@ -1102,7 +1102,7 @@
           "date": "2026-11-16",
           "time_start": "21:00",
           "time_end": "22:00",
-          "spot": "回土城",
+          "spot": "返家休息",
           "location_tag": "",
           "transport": "喔不",
           "remarks": "",
@@ -1125,7 +1125,7 @@
         "airport": "桃園國際機場 (TPE)",
         "terminal": "第一航廈 (預定)",
         "time": "06:45",
-        "action": "03:40 土城出發，04:30 抵達桃機辦理報到與行李託運"
+        "action": "03:40 出發前往機場，04:30 抵達桃機辦理報到與行李託運"
       },
       "arrival": {
         "airport": "福岡機場 (FUK)",
@@ -1155,7 +1155,7 @@
         "airport": "桃園國際機場 (TPE)",
         "terminal": "第一航廈 (預定)",
         "time": "19:40",
-        "action": "19:40 抵達桃園機場，完成入境查驗，預計 21:00-22:00 返抵土城"
+        "action": "19:40 抵達桃園機場，完成入境查驗，預計 21:00-22:00 返家休息"
       },
       "duration": "2 小時 45 分",
       "baggage": "託運行李 23kg / 件、手提 7kg",
@@ -1224,9 +1224,13 @@
   "attractions": [
     {
       "day": "Day 1",
-      "title": "大丸心齋橋店 地下食品街",
-      "details": "大丸心齋橋店 地下食品街\n距離：​約800公尺，步行約10分鐘\n特色：​地下食品街內有多家高級肉品專賣店，提供各式和牛肉品，包括神戶牛。",
-      "extra": ""
+      "type": "景點",
+      "content": "大丸心齋橋店 地下食品街"
+    },
+    {
+      "day": "Day 1",
+      "type": "注意事項",
+      "content": "大丸心齋橋店 地下食品街\n距離：​約800公尺，步行約10分鐘\n特色：​地下食品街內有多家高級肉品專賣店，提供各式和牛肉品，包括神戶牛。"
     },
     {
       "day": "Day 1",
@@ -1239,36 +1243,44 @@
       "content": "10:00–20:00"
     },
     {
-      "day": "Day 2",
+      "day": "Day 1",
       "type": "前往方法",
       "content": "公車"
     },
     {
-      "day": "Day 2",
+      "day": "Day 1",
       "type": "營業時間",
       "content": "6:00~18:00"
     },
     {
-      "day": "Day 2",
+      "day": "Day 1",
       "type": "注意事項",
       "content": "七条河原町 上車\n清水道 下車"
     },
     {
-      "day": "Day 2",
-      "title": "景點 錦市場",
-      "details": "景點 錦市場",
-      "extra": ""
+      "day": "Day 1",
+      "type": "景點",
+      "content": "景點 錦市場"
     },
     {
-      "day": "Day 3",
+      "day": "Day 1",
+      "type": "注意事項",
+      "content": "景點 錦市場"
+    },
+    {
+      "day": "Day 1",
       "type": "營業時間",
       "content": "官網開放時間：8：30-21：00"
     },
     {
-      "day": "Day 3",
-      "title": "大阪木津卸売市場",
-      "details": "大阪木津卸売市場",
-      "extra": ""
+      "day": "Day 1",
+      "type": "景點",
+      "content": "大阪木津卸売市場"
+    },
+    {
+      "day": "Day 1",
+      "type": "注意事項",
+      "content": "大阪木津卸売市場"
     }
   ],
   "todos": [
@@ -1306,7 +1318,7 @@
   ],
   "tickets": [
     "D4 大阪周遊一日卷",
-    "25KK230442438.pdf"
+    "交通套票憑證.pdf"
   ],
   "practical": {
     "emergency_contacts": [
