@@ -58,7 +58,7 @@ itinerary.xlsx ──▶ scripts/build_data.py ──▶ dist/itinerary_data.jso
 6. 提交並推送，GitHub Actions 會自動重新發布：
 
    ```bash
-   git add itinerary.xlsx dist/itinerary_data.json
+   git add dist/itinerary_data.json
    git commit -m "data: update itinerary"
    git push origin main
    ```
