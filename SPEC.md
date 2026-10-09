@@ -85,7 +85,7 @@ Phase 3: 離線支援與靜態發布 (Offline & Deployment)
 
 Git 訊息： feat: add service worker for offline accessibility
 
-[ ] Task 3.2: 建立 GitHub Pages 發布設定與說明
+[x] Task 3.2: 建立 GitHub Pages 發布設定與說明
 
 目標： 在 dist/ 放入 .nojekyll，並在根目錄建立 README.md 說明後續更新 Excel 時如何重新執行腳本轉換。
 
