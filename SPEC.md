@@ -35,7 +35,7 @@ Git 訊息： chore: add sheet inspection tool
 
 Git 訊息： feat: implement idempotent excel-to-json build script
 
-[ ] Task 1.3: 產出資料結構自我校驗 (Schema Validation)
+[x] Task 1.3: 產出資料結構自我校驗 (Schema Validation)
 
 目標： 撰寫或透過命令驗證產出的 dist/itinerary_data.json 符合 JSON 語法，且包含 schedule（大於 0 天）、flights、coupons 鍵值。
 
