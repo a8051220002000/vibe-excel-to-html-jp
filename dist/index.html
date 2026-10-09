@@ -64,6 +64,11 @@
       -moz-osx-font-smoothing: grayscale;
     }
 
+    /* html's overflow propagates to the viewport; body must not become a scroll container or sticky breaks */
+    body {
+      overflow-x: clip;
+    }
+
     /* Mobile Container App Shell */
     .app-shell {
       width: 100%;
@@ -76,6 +81,7 @@
       position: relative;
       box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
       overflow-x: hidden;
+      overflow-x: clip; /* clip doesn't create a scroll container, keeps position: sticky working */
       padding-top: var(--safe-top);
       padding-bottom: calc(var(--safe-bottom) + var(--nav-height) + 12px);
       padding-left: var(--safe-left);
@@ -150,6 +156,7 @@
       width: 100%;
       max-width: 100%;
       overflow-x: hidden;
+      overflow-x: clip;
       padding: 14px 16px;
     }
 
@@ -307,6 +314,174 @@
       transform: translateX(-50%) translateY(0);
       opacity: 1;
     }
+
+    /* ===== Timeline (Task 2.3) ===== */
+    :root { --header-h: 67px; } /* synced to real header height via JS */
+
+    .day-bar {
+      position: sticky;
+      top: calc(var(--safe-top) + var(--header-h));
+      z-index: 80;
+      margin: 0 -16px 12px;
+      padding: 10px 16px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .day-bar::-webkit-scrollbar { display: none; }
+
+    .day-chip {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-muted);
+      color: var(--text-sub);
+      border-radius: var(--radius-md);
+      padding: 6px 12px;
+      min-width: 64px;
+      text-align: center;
+      font-family: inherit;
+      cursor: pointer;
+      transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    }
+    .day-chip .chip-day { display: block; font-size: 13px; font-weight: 700; }
+    .day-chip .chip-date { display: block; font-size: 11px; opacity: 0.8; }
+    .day-chip.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 3px 10px rgba(232, 90, 113, 0.3);
+    }
+
+    .day-summary {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .day-summary h2 { font-size: 16px; font-weight: 800; line-height: 1.35; }
+    .day-summary .count { flex: 0 0 auto; font-size: 12px; color: var(--text-muted); }
+
+    .timeline { position: relative; }
+    .tl-item {
+      display: grid;
+      grid-template-columns: 46px 28px minmax(0, 1fr);
+      column-gap: 6px;
+      position: relative;
+      padding-bottom: 12px;
+    }
+    .tl-item::before { /* vertical rail */
+      content: "";
+      position: absolute;
+      left: 65px;
+      top: 26px;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-subtle);
+    }
+    .tl-item:last-child::before { display: none; }
+
+    .tl-time { text-align: right; padding-top: 4px; font-variant-numeric: tabular-nums; }
+    .tl-time .t-start { display: block; font-size: 13px; font-weight: 700; color: var(--text-main); }
+    .tl-time .t-end { display: block; font-size: 11px; color: var(--text-muted); }
+    .tl-time .t-none { font-size: 11px; color: var(--text-muted); }
+
+    .tl-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      background: var(--bg-muted);
+      border: 2px solid var(--border-subtle);
+      position: relative;
+      z-index: 1;
+    }
+    .cat-flight .tl-dot { background: #eaf2ff; border-color: var(--accent-blue); }
+    .cat-transport .tl-dot { background: #f3ecff; border-color: var(--accent-purple); }
+    .cat-food .tl-dot { background: #fff5e6; border-color: var(--accent-amber); }
+    .cat-shopping .tl-dot { background: var(--primary-light); border-color: var(--primary); }
+    .cat-sightseeing .tl-dot { background: #e7fbf5; border-color: var(--accent-teal); }
+    .cat-hotel .tl-dot { background: #eef2f7; border-color: #64748b; }
+
+    .tl-card {
+      min-width: 0;
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      box-shadow: var(--shadow-sm);
+    }
+    .tl-title {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      overflow-wrap: anywhere;
+    }
+    .map-link {
+      flex: 0 0 auto;
+      font-size: 12px;
+      font-weight: 600;
+      text-decoration: none;
+      color: var(--accent-blue);
+      background: #eaf2ff;
+      border-radius: var(--radius-pill);
+      padding: 2px 8px;
+    }
+    .tl-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      max-width: 100%;
+      font-size: 11px;
+      font-weight: 500;
+      color: var(--text-sub);
+      background: var(--bg-muted);
+      border: 1px solid var(--border-subtle);
+      border-radius: var(--radius-pill);
+      padding: 2px 8px;
+      overflow-wrap: anywhere;
+    }
+    .tag.booked-yes { color: #047857; background: #ecfdf5; border-color: #a7f3d0; }
+
+    .tl-remarks { margin-top: 8px; }
+    .tl-remarks summary {
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--primary-dark);
+      cursor: pointer;
+      list-style: none;
+    }
+    .tl-remarks summary::-webkit-details-marker { display: none; }
+    .tl-remarks summary::before { content: "▸ "; }
+    .tl-remarks[open] summary::before { content: "▾ "; }
+    .tl-remarks p {
+      margin-top: 6px;
+      font-size: 13px;
+      color: var(--text-sub);
+      background: var(--bg-muted);
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+      white-space: pre-line;
+      overflow-wrap: anywhere;
+    }
+
+    .empty-state { text-align: center; padding: 40px 20px; color: var(--text-muted); }
   </style>
 </head>
 <body>
@@ -336,11 +511,14 @@
 
       <!-- Tab 1: 每日行程 -->
       <div id="view-schedule" class="tab-view active">
+        <nav class="day-bar" id="dayBar" aria-label="選擇日期"></nav>
         <div id="schedule-container">
-          <!-- Timeline will be rendered here -->
-          <div class="loading-state" style="text-align:center; padding: 40px 20px; color: var(--text-muted);">
-            <div style="font-size: 28px; margin-bottom: 8px;">⏳</div>
-            <div>載入行程中...</div>
+          <div class="day-summary" id="daySummary"></div>
+          <div class="timeline" id="timeline">
+            <div class="loading-state empty-state">
+              <div style="font-size: 28px; margin-bottom: 8px;">⏳</div>
+              <div>載入行程中...</div>
+            </div>
           </div>
         </div>
       </div>
@@ -439,6 +617,133 @@
     });
 
     console.log("Tab navigation controller initialized.");
+
+    // ===== Shared helpers =====
+    const APP = { data: null, dayIndex: 0 };
+    const esc = (v) => String(v ?? '').replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const mapUrl = (q) => 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(q);
+
+    // Keep sticky offsets in sync with the real header height (fonts / safe-area may change it)
+    (function syncHeaderHeight() {
+      const header = document.querySelector('.app-header');
+      const apply = () => document.documentElement.style.setProperty('--header-h', header.offsetHeight + 'px');
+      apply();
+      if ('ResizeObserver' in window) new ResizeObserver(apply).observe(header);
+    })();
+
+    // ===== Timeline (Task 2.3) =====
+    const CAT_ICON = { flight: '✈️', transport: '🚃', food: '🍜', shopping: '🛍️', sightseeing: '⛩️', hotel: '🏨' };
+    const DAY_KEY = 'japan2026.dayIndex';
+
+    function renderDayBar() {
+      const bar = document.getElementById('dayBar');
+      bar.innerHTML = APP.data.schedule.map((d, i) => {
+        const md = (d.date || '').slice(5).replace('-', '/');
+        return `<button class="day-chip" type="button" data-day-index="${i}" aria-pressed="false">
+            <span class="chip-day">${esc(d.day)}</span>
+            <span class="chip-date">${esc(md)} ${esc((d.weekday || '').replace('週', ''))}</span>
+          </button>`;
+      }).join('');
+      bar.addEventListener('click', (e) => {
+        const chip = e.target.closest('.day-chip');
+        if (chip) selectDay(Number(chip.dataset.dayIndex));
+      });
+    }
+
+    function renderTimelineItem(it) {
+      const time = it.time_start
+        ? `<span class="t-start">${esc(it.time_start)}</span>${it.time_end ? `<span class="t-end">${esc(it.time_end)}</span>` : ''}`
+        : '<span class="t-none">彈性</span>';
+      const tags = [];
+      if (it.location_tag) tags.push(`<span class="tag">📍 ${esc(it.location_tag)}</span>`);
+      if (it.transport) tags.push(`<span class="tag">🚃 ${esc(it.transport)}</span>`);
+      if (it.price) tags.push(`<span class="tag">💴 ${esc(it.price)}</span>`);
+      if (it.booked && it.booked !== '不適用') {
+        const yes = /^(已|是|yes|v|o|ok)|✔|✓|已訂|已預約|已購/i.test(it.booked.trim());
+        tags.push(`<span class="tag ${yes ? 'booked-yes' : ''}">🎫 ${esc(it.booked)}</span>`);
+      }
+      const isRoute = /→|➔|->/.test(it.spot);
+      const map = it.spot && !isRoute
+        ? `<a class="map-link" href="${mapUrl(it.spot)}" target="_blank" rel="noopener">🗺️ 地圖</a>` : '';
+      const remarks = it.remarks
+        ? `<details class="tl-remarks"><summary>備註</summary><p>${esc(it.remarks)}</p></details>` : '';
+      return `<article class="tl-item cat-${esc(it.category || 'other')}" data-day="${esc(it.day)}" id="${esc(it.id)}">
+          <div class="tl-time">${time}</div>
+          <div class="tl-dot" aria-hidden="true">${CAT_ICON[it.category] || '📌'}</div>
+          <div class="tl-card">
+            <div class="tl-title"><span>${esc(it.spot || '（未命名）')}</span>${map}</div>
+            ${tags.length ? `<div class="tl-meta">${tags.join('')}</div>` : ''}
+            ${remarks}
+          </div>
+        </article>`;
+    }
+
+    function selectDay(idx) {
+      const days = APP.data.schedule;
+      if (!days[idx]) idx = 0;
+      APP.dayIndex = idx;
+      try { localStorage.setItem(DAY_KEY, String(idx)); } catch (_) {}
+      const day = days[idx];
+
+      document.querySelectorAll('#dayBar .day-chip').forEach(c => {
+        const on = Number(c.dataset.dayIndex) === idx;
+        c.classList.toggle('active', on);
+        c.setAttribute('aria-pressed', on);
+        if (on) {
+          const bar = c.parentElement;
+          bar.scrollTo({ left: Math.max(0, c.offsetLeft - (bar.clientWidth - c.offsetWidth) / 2), behavior: 'smooth' });
+        }
+      });
+
+      document.getElementById('daySummary').innerHTML =
+        `<h2>${esc(day.day)}・${esc(day.title || '')}</h2><span class="count">${esc(day.date)} ${esc(day.weekday || '')}・${day.items.length} 站</span>`;
+
+      const items = day.items.filter(it => it.day === day.day);
+      document.getElementById('timeline').innerHTML = items.length
+        ? items.map(renderTimelineItem).join('')
+        : '<div class="empty-state">這天尚未安排行程</div>';
+
+      // Keep the day bar in view without jumping above the timeline
+      const bar = document.getElementById('dayBar');
+      const barTop = bar.getBoundingClientRect().top;
+      const stickyTop = parseFloat(getComputedStyle(bar).top) || 0;
+      if (barTop <= stickyTop + 1) {
+        const anchor = document.getElementById('schedule-container');
+        window.scrollTo({ top: anchor.offsetTop - stickyTop - bar.offsetHeight - 4, behavior: 'instant' });
+      }
+    }
+
+    function initialDayIndex() {
+      const today = new Date();
+      const iso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
+      const t = APP.data.schedule.findIndex(d => d.date === iso);
+      if (t >= 0) return t;
+      const saved = Number(localStorage.getItem(DAY_KEY));
+      return Number.isInteger(saved) && APP.data.schedule[saved] ? saved : 0;
+    }
+
+    function renderSchedule() {
+      renderDayBar();
+      selectDay(initialDayIndex());
+    }
+
+    // ===== Boot =====
+    async function loadData() {
+      const res = await fetch('itinerary_data.json', { cache: 'no-cache' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    }
+
+    loadData()
+      .then(data => {
+        APP.data = data;
+        renderSchedule();
+      })
+      .catch(err => {
+        console.warn('Failed to load itinerary data', err);
+        document.getElementById('timeline').innerHTML =
+          '<div class="empty-state">⚠️ 無法載入行程資料，請確認網路或重新整理。</div>';
+      });
   </script>
 </body>
 </html>

@@ -60,7 +60,7 @@ Git 訊息： feat: init responsive mobile layout skeleton
 
 Git 訊息： feat: add persistent bottom navigation tabs
 
-[ ] Task 2.3: 實作每日行程時間軸 (Timeline View)
+[x] Task 2.3: 實作每日行程時間軸 (Timeline View)
 
 目標： 讀取 schedule 資料，支援頂部 Sticky Day 橫向滑動過濾，卡片清晰展示時間、地點、交通方式與備註展開。
 
