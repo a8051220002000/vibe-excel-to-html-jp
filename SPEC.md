@@ -89,7 +89,7 @@ Git 訊息： feat: add service worker for offline accessibility
 
 目標： 在 dist/ 放入 .nojekyll，並在根目錄建立 README.md 說明後續更新 Excel 時如何重新執行腳本轉換。
 
-驗收命令： test -f dist/.nojekyll && test -f README.md
+驗收命令： test -f dist/.nojekyll && test -f README.md && test -f dist/CNAME
 
 Git 訊息： docs: add build guide and github pages config
 
