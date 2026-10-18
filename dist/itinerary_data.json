@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-10T01:57:45.225213",
+  "generated_at": "2026-10-18T14:43:15.173262",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -25,7 +25,7 @@
           "transport": "",
           "remarks": "（06:45飛機)",
           "price": "",
-          "booked": "不適用",
+          "booked": "",
           "category": "flight"
         },
         {
@@ -61,24 +61,24 @@
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "12:00",
-          "time_end": "12:05",
-          "spot": "福岡機場→博多車站",
+          "time_end": "12:15",
+          "spot": "福岡機場→中洲川端站",
           "location_tag": "",
-          "transport": "博多車站",
+          "transport": "車站",
           "remarks": "",
           "price": "",
-          "booked": "不適用",
+          "booked": "",
           "category": "flight"
         },
         {
           "id": "day1-5",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "12:05",
-          "time_end": "12:30",
-          "spot": "佐川急便人工寄物",
+          "time_start": "",
+          "time_end": "",
+          "spot": "一蘭(可選：如果肚子餓）",
           "location_tag": "",
-          "transport": "寄行李",
+          "transport": "離車站近",
           "remarks": "",
           "price": "",
           "booked": "",
@@ -88,13 +88,13 @@
           "id": "day1-6",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "12:30",
-          "time_end": "14:00",
-          "spot": "大東園博多",
+          "time_start": "",
+          "time_end": "",
+          "spot": "寄放行李＆麵包超人博物館",
           "location_tag": "",
-          "transport": "神社附近",
-          "remarks": "大東園定食：2,860 日圓\n匠定食：4,290 日圓",
-          "price": "",
+          "transport": "麵包超人",
+          "remarks": "10月買票\n搭乘福岡市地下鐵空港線至「中洲川端站」，\n由川端口 6 號出口出站，直接進入博多 Riverain Mall 並搭乘電梯至 5 樓入口。",
+          "price": "2200",
           "booked": "",
           "category": "food"
         },
@@ -102,53 +102,53 @@
           "id": "day1-7",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "14:00",
-          "time_end": "14:50",
-          "spot": "櫛田神社",
-          "location_tag": "",
-          "transport": "櫛田神社",
-          "remarks": "社務所／授與所（御守、御朱印）： 09:00 – 17:00",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day1-8",
-          "day": "Day 1",
-          "date": "2026-11-12",
           "time_start": "",
           "time_end": "",
-          "spot": "麵包超人博物館",
+          "spot": "Chocolate Shop",
           "location_tag": "",
-          "transport": "麵包超人",
-          "remarks": "10月買票",
-          "price": "",
-          "booked": "",
-          "category": "food"
-        },
-        {
-          "id": "day1-9",
-          "day": "Day 1",
-          "date": "2026-11-12",
-          "time_start": "",
-          "time_end": "",
-          "spot": "CHECK-IN",
-          "location_tag": "",
-          "transport": "",
+          "transport": "民宿走路會到",
           "remarks": "",
           "price": "",
           "booked": "",
           "category": "hotel"
         },
         {
+          "id": "day1-8",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "16:00",
+          "time_end": "16:30",
+          "spot": "CHECK-IN",
+          "location_tag": "",
+          "transport": "民宿",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "hotel"
+        },
+        {
+          "id": "day1-9",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "16:40",
+          "time_end": "17:00",
+          "spot": "搭車到博多",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
           "id": "day1-10",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "",
-          "time_end": "",
-          "spot": "晚餐",
+          "time_start": "17:20",
+          "time_end": "19:00",
+          "spot": "晚餐 牛腸鍋 六花舍",
           "location_tag": "",
-          "transport": "",
+          "transport": "牛腸鍋",
           "remarks": "",
           "price": "",
           "booked": "",
@@ -158,9 +158,37 @@
           "id": "day1-11",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "17:00",
-          "time_end": "18:00",
-          "spot": "中洲屋台(可經過)",
+          "time_start": "19:00",
+          "time_end": "19:20",
+          "spot": "博多運河城",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "shopping"
+        },
+        {
+          "id": "day1-12",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "20:00",
+          "time_end": "21:00",
+          "spot": "博多運河城水舞",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "shopping"
+        },
+        {
+          "id": "day1-13",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "",
+          "time_end": "",
+          "spot": "中洲屋台(經過)",
           "location_tag": "",
           "transport": "中州屋台",
           "remarks": "",
@@ -169,35 +197,35 @@
           "category": "food"
         },
         {
-          "id": "day1-12",
-          "day": "Day 1",
-          "date": "2026-11-12",
-          "time_start": "20:00",
-          "time_end": "20:30",
-          "spot": "取行李→民宿",
-          "location_tag": "",
-          "transport": "民宿",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "transport"
-        },
-        {
-          "id": "day1-13",
-          "day": "Day 1",
-          "date": "2026-11-12",
-          "time_start": "20:30",
-          "time_end": "21:00",
-          "spot": "逛超市，回家",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "hotel"
-        },
-        {
           "id": "day1-14",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "",
+          "time_end": "",
+          "spot": "逛超市",
+          "location_tag": "",
+          "transport": "sunny-24H",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day1-15",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "",
+          "time_end": "",
+          "spot": "Shin-Shin 古門戸町店",
+          "location_tag": "",
+          "transport": "地圖",
+          "remarks": "營業時間： 11:00–01:00",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day1-16",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "21:00",
@@ -209,20 +237,6 @@
           "price": "",
           "booked": "",
           "category": "hotel"
-        },
-        {
-          "id": "day1-15",
-          "day": "Day 1",
-          "date": "2026-11-12",
-          "time_start": "",
-          "time_end": "",
-          "spot": "旅遊提醒",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "開開心心出門，平平安安回家，準備盡情購物享受美食！",
-          "price": "",
-          "booked": "",
-          "category": "transport"
         }
       ]
     },
@@ -236,12 +250,12 @@
           "id": "day2-1",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "",
+          "time_start": "06:30",
           "time_end": "",
           "spot": "Dacomecca麵包",
           "location_tag": "",
           "transport": "麵包",
-          "remarks": "",
+          "remarks": "營業時間： 07:00–19:00",
           "price": "",
           "booked": "",
           "category": "food"
@@ -250,15 +264,15 @@
           "id": "day2-2",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "",
-          "time_end": "",
-          "spot": "吃早餐",
-          "location_tag": "天神",
-          "transport": "",
+          "time_start": "12:00",
+          "time_end": "13:00",
+          "spot": "福岡三越",
+          "location_tag": "血拼不完",
+          "transport": "福岡三越",
           "remarks": "",
           "price": "",
           "booked": "",
-          "category": "food"
+          "category": "shopping"
         },
         {
           "id": "day2-3",
@@ -278,20 +292,6 @@
           "id": "day2-4",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "12:00",
-          "time_end": "13:00",
-          "spot": "福岡三越",
-          "location_tag": "血拼不完",
-          "transport": "福岡三越",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "shopping"
-        },
-        {
-          "id": "day2-5",
-          "day": "Day 2",
-          "date": "2026-11-13",
           "time_start": "13:00",
           "time_end": "15:00",
           "spot": "福岡PARCO",
@@ -301,6 +301,20 @@
           "price": "",
           "booked": "",
           "category": "shopping"
+        },
+        {
+          "id": "day2-5",
+          "day": "Day 2",
+          "date": "2026-11-13",
+          "time_start": "14:00",
+          "time_end": "",
+          "spot": "葫蘆壽司",
+          "location_tag": "",
+          "transport": "地圖",
+          "remarks": "營業時間：11:30–15:00\n營業時間：17:00–20:30",
+          "price": "",
+          "booked": "還未訂",
+          "category": "sightseeing"
         },
         {
           "id": "day2-6",
@@ -511,6 +525,20 @@
           "price": "",
           "booked": "",
           "category": "shopping"
+        },
+        {
+          "id": "day2-21",
+          "day": "Day 2",
+          "date": "2026-11-13",
+          "time_start": "",
+          "time_end": "",
+          "spot": "燒肉",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
         }
       ]
     },
@@ -524,12 +552,12 @@
           "id": "day3-1",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "07:00",
-          "time_end": "08:30",
-          "spot": "馬關條約",
-          "location_tag": "馬關條約",
-          "transport": "馬關條約",
-          "remarks": "",
+          "time_start": "06:30",
+          "time_end": "06:40",
+          "spot": "H01/K09  中洲川端",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "6:37/6:45",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -538,26 +566,26 @@
           "id": "day3-2",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "小蒼城",
-          "location_tag": "小蒼城",
+          "time_start": "06:30",
+          "time_end": "08:30",
+          "spot": "博多搭乘JR",
+          "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "07:03発 → 08:49\n07:14発 → 09:03",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "transport"
         },
         {
           "id": "day3-3",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "皿倉山",
-          "location_tag": "皿倉山",
+          "time_start": "09:00",
+          "time_end": "09:20",
+          "spot": "買票＆門司港到唐戶",
+          "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "約 5 分，每 20 分一班",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -566,15 +594,15 @@
           "id": "day3-4",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "焗烤咖哩",
-          "location_tag": "焗烤咖哩",
-          "transport": "",
+          "time_start": "07:00",
+          "time_end": "08:30",
+          "spot": "馬關條約",
+          "location_tag": "",
+          "transport": "馬關條約",
           "remarks": "",
           "price": "",
           "booked": "",
-          "category": "food"
+          "category": "sightseeing"
         },
         {
           "id": "day3-5",
@@ -582,7 +610,133 @@
           "date": "2026-11-14",
           "time_start": "",
           "time_end": "",
-          "spot": "天神或博多",
+          "spot": "日清講和記念館+唐戶市場",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-6",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "",
+          "spot": "出發回門司港",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-7",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "",
+          "spot": "午餐-燒咖哩",
+          "location_tag": "",
+          "transport": "KOGANEMUSHI",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "food"
+        },
+        {
+          "id": "day3-8",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "14:00",
+          "spot": "逛逛門司港",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-9",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "14:05",
+          "time_end": "14:35",
+          "spot": "出發前往西小倉",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-10",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "15:20",
+          "spot": "小蒼城",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "目標：日落(約17:15)前上山，只逛小倉城外圍＋八坂神社\n【去程】門司港 14:05発 → 西小倉 14:25（普通・直方行）\n備案 14:23発 → 14:46（區間快速，逛的時間會縮短）\n西小倉站步行約 10 分到小倉城，外圍約 14:35–15:20\n【回程】15:20 離開，步行約 10 分回西小倉\n西小倉 15:34発 → 八幡 15:53（普通・遠賀川行）\n備案 15:47発 → 15:59（區間快速）\n八幡站接駁車 16:05発（約 10 分）→ 纜車 16:20 → 約 16:35 到山頂\n沒趕上：接駁車 16:25 → 纜車 16:40 → 約 16:55 到山頂（仍在日落前）\n纜車上山末班 19:20；回八幡接駁車末班 20:15",
+          "price": "",
+          "booked": "",
+          "category": "transport"
+        },
+        {
+          "id": "day3-11",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "",
+          "spot": "西小倉 → 八幡(福岡)",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "transport"
+        },
+        {
+          "id": "day3-12",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "16:05",
+          "time_end": "16:35",
+          "spot": "搭纜車上山",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-13",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "",
+          "spot": "皿倉山",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "八幡東區日落：11/15 為 17:15，11/20 為 17:12。",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-14",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "",
+          "time_end": "",
+          "spot": "鳥雞研究團",
           "location_tag": "",
           "transport": "",
           "remarks": "",
@@ -602,214 +756,18 @@
           "id": "day4-1",
           "day": "Day 4",
           "date": "2026-11-15",
-          "time_start": "07:00",
-          "time_end": "",
-          "spot": "吃早餐",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "food"
-        },
-        {
-          "id": "day4-2",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "08:00",
-          "time_end": "",
-          "spot": "出門",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "不適用",
-          "category": "transport"
-        },
-        {
-          "id": "day4-3",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "熊本車站",
-          "location_tag": "",
-          "transport": "熊本車站",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "transport"
-        },
-        {
-          "id": "day4-4",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "熊本城",
-          "location_tag": "",
-          "transport": "熊本城",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-5",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "城彩苑",
-          "location_tag": "",
-          "transport": "城彩苑",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-6",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "上通商店街",
-          "location_tag": "",
-          "transport": "上通商店",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-7",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "熊本熊廣場",
-          "location_tag": "",
-          "transport": "熊本熊廣場",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-8",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "溫泉",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-9",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "我要成為海賊王",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-10",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "06:00",
-          "time_end": "07:00",
-          "spot": "太宰府滿宮",
-          "location_tag": "太宰府滿宮",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-11",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "10:00",
-          "time_end": "11:00",
-          "spot": "如意輪寺",
-          "location_tag": "如意輪寺",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-12",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "12:00",
-          "time_end": "16:00",
-          "spot": "鳥栖outlate",
-          "location_tag": "鳥栖outlate",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "shopping"
-        },
-        {
-          "id": "day4-13",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "16:00",
-          "time_end": "17:30",
-          "spot": "回博多",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-14",
-          "day": "Day 4",
-          "date": "2026-11-15",
-          "time_start": "",
-          "time_end": "",
-          "spot": "天神或博多",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "category": "sightseeing"
-        },
-        {
-          "id": "day4-15",
-          "day": "Day 4",
-          "date": "2026-11-15",
           "time_start": "",
           "time_end": "",
           "spot": "尤布院",
           "location_tag": "",
           "transport": "",
-          "remarks": "車須預約",
+          "remarks": "時刻表",
           "price": "",
           "booked": "",
           "category": "sightseeing"
         },
         {
-          "id": "day4-16",
+          "id": "day4-2",
           "day": "Day 4",
           "date": "2026-11-15",
           "time_start": "09:00",
@@ -823,7 +781,7 @@
           "category": "transport"
         },
         {
-          "id": "day4-17",
+          "id": "day4-3",
           "day": "Day 4",
           "date": "2026-11-15",
           "time_start": "13:00",
@@ -837,7 +795,7 @@
           "category": "sightseeing"
         },
         {
-          "id": "day4-18",
+          "id": "day4-4",
           "day": "Day 4",
           "date": "2026-11-15",
           "time_start": "14:00",
@@ -851,7 +809,7 @@
           "category": "sightseeing"
         },
         {
-          "id": "day4-19",
+          "id": "day4-5",
           "day": "Day 4",
           "date": "2026-11-15",
           "time_start": "15:00",
@@ -865,7 +823,7 @@
           "category": "sightseeing"
         },
         {
-          "id": "day4-20",
+          "id": "day4-6",
           "day": "Day 4",
           "date": "2026-11-15",
           "time_start": "16:00",
@@ -879,7 +837,7 @@
           "category": "transport"
         },
         {
-          "id": "day4-21",
+          "id": "day4-7",
           "day": "Day 4",
           "date": "2026-11-15",
           "time_start": "17:00",
@@ -932,9 +890,9 @@
           "id": "day5-3",
           "day": "Day 5",
           "date": "2026-11-16",
-          "time_start": "",
+          "time_start": "09:30",
           "time_end": "",
-          "spot": "天神或博多",
+          "spot": "退房",
           "location_tag": "",
           "transport": "",
           "remarks": "",
@@ -960,21 +918,49 @@
           "id": "day5-5",
           "day": "Day 5",
           "date": "2026-11-16",
-          "time_start": "",
+          "time_start": "11:10",
           "time_end": "",
-          "spot": "麵包超人博物館",
+          "spot": "佐川急便人工寄物",
           "location_tag": "",
-          "transport": "麵包超人",
-          "remarks": "10月買票\n要買票大概提前兩個月訂",
+          "transport": "寄行李",
+          "remarks": "",
           "price": "",
           "booked": "",
-          "category": "food"
+          "category": "transport"
         },
         {
           "id": "day5-6",
           "day": "Day 5",
           "date": "2026-11-16",
-          "time_start": "14:50",
+          "time_start": "11:30",
+          "time_end": "12:30",
+          "spot": "大東園博多",
+          "location_tag": "",
+          "transport": "神社附近",
+          "remarks": "大東園定食：2,860 日圓\n匠定食：4,290 日圓\n平日（週一至週五）：11:30 ～ 14:30（最後點餐時間 L.O. 為 14:00）",
+          "price": "",
+          "booked": "",
+          "category": "food"
+        },
+        {
+          "id": "day5-7",
+          "day": "Day 5",
+          "date": "2026-11-16",
+          "time_start": "12:50",
+          "time_end": "13:30",
+          "spot": "櫛田神社",
+          "location_tag": "",
+          "transport": "櫛田神社",
+          "remarks": "社務所／授與所（御守、御朱印）： 09:00 – 17:00",
+          "price": "",
+          "booked": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day5-8",
+          "day": "Day 5",
+          "date": "2026-11-16",
+          "time_start": "13:00",
           "time_end": "",
           "spot": "博多運河城",
           "location_tag": "",
@@ -985,7 +971,7 @@
           "category": "food"
         },
         {
-          "id": "day5-7",
+          "id": "day5-9",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "15:00",
@@ -999,7 +985,7 @@
           "category": "shopping"
         },
         {
-          "id": "day5-8",
+          "id": "day5-10",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "",
@@ -1013,7 +999,7 @@
           "category": "shopping"
         },
         {
-          "id": "day5-9",
+          "id": "day5-11",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "15:00",
@@ -1027,7 +1013,7 @@
           "category": "sightseeing"
         },
         {
-          "id": "day5-10",
+          "id": "day5-12",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "15:00",
@@ -1041,7 +1027,7 @@
           "category": "flight"
         },
         {
-          "id": "day5-11",
+          "id": "day5-13",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "",
@@ -1055,7 +1041,7 @@
           "category": "sightseeing"
         },
         {
-          "id": "day5-12",
+          "id": "day5-14",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "16:00",
@@ -1069,7 +1055,7 @@
           "category": "flight"
         },
         {
-          "id": "day5-13",
+          "id": "day5-15",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "17:55",
@@ -1083,7 +1069,7 @@
           "category": "flight"
         },
         {
-          "id": "day5-14",
+          "id": "day5-16",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "19:40",
@@ -1097,7 +1083,7 @@
           "category": "flight"
         },
         {
-          "id": "day5-15",
+          "id": "day5-17",
           "day": "Day 5",
           "date": "2026-11-16",
           "time_start": "21:00",
@@ -1224,13 +1210,9 @@
   "attractions": [
     {
       "day": "Day 1",
-      "type": "景點",
-      "content": "大丸心齋橋店 地下食品街"
-    },
-    {
-      "day": "Day 1",
-      "type": "注意事項",
-      "content": "大丸心齋橋店 地下食品街\n距離：​約800公尺，步行約10分鐘\n特色：​地下食品街內有多家高級肉品專賣店，提供各式和牛肉品，包括神戶牛。"
+      "title": "大丸心齋橋店 地下食品街",
+      "details": "大丸心齋橋店 地下食品街\n距離：​約800公尺，步行約10分鐘\n特色：​地下食品街內有多家高級肉品專賣店，提供各式和牛肉品，包括神戶牛。",
+      "extra": ""
     },
     {
       "day": "Day 1",
@@ -1243,44 +1225,36 @@
       "content": "10:00–20:00"
     },
     {
-      "day": "Day 1",
+      "day": "Day 2",
       "type": "前往方法",
       "content": "公車"
     },
     {
-      "day": "Day 1",
+      "day": "Day 2",
       "type": "營業時間",
       "content": "6:00~18:00"
     },
     {
-      "day": "Day 1",
+      "day": "Day 2",
       "type": "注意事項",
       "content": "七条河原町 上車\n清水道 下車"
     },
     {
-      "day": "Day 1",
-      "type": "景點",
-      "content": "景點 錦市場"
+      "day": "Day 2",
+      "title": "景點 錦市場",
+      "details": "景點 錦市場",
+      "extra": ""
     },
     {
-      "day": "Day 1",
-      "type": "注意事項",
-      "content": "景點 錦市場"
-    },
-    {
-      "day": "Day 1",
+      "day": "Day 3",
       "type": "營業時間",
       "content": "官網開放時間：8：30-21：00"
     },
     {
-      "day": "Day 1",
-      "type": "景點",
-      "content": "大阪木津卸売市場"
-    },
-    {
-      "day": "Day 1",
-      "type": "注意事項",
-      "content": "大阪木津卸売市場"
+      "day": "Day 3",
+      "title": "大阪木津卸売市場",
+      "details": "大阪木津卸売市場",
+      "extra": ""
     }
   ],
   "todos": [
@@ -1289,7 +1263,8 @@
       "items": [
         "燒肉",
         "拉麵",
-        "水吹鍋"
+        "水吹鍋",
+        "北斯港吃啥"
       ]
     },
     {
@@ -1298,27 +1273,27 @@
         "麵包超人",
         "研究JR 3日怎麼買划算",
         "去程的計程車",
-        "北司港的行程",
+        "北司港的行程+夜景",
         "寄放行李便宜(博多or運河城)"
       ]
     },
     {
       "category": "育",
       "items": [
-        "貓咪"
+        "貓咪請人餵食"
       ]
     },
     {
       "category": "前置處理",
       "items": [
-        "退稅",
-        "進出入境申報"
+        "11月如何機場退稅",
+        "進出入境線上申報"
       ]
     }
   ],
   "tickets": [
-    "D4 大阪周遊一日卷",
-    "交通套票憑證.pdf"
+    "中洲川端站往博多時刻表",
+    "中洲川端"
   ],
   "practical": {
     "emergency_contacts": [
