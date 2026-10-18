@@ -19,6 +19,27 @@ import openpyxl
 
 WEEKDAYS_ZH = ["週一", "週二", "週三", "週四", "週五", "週六", "週日"]
 
+# Output is published publicly; mask personal location info from the Excel source.
+SENSITIVE_EXACT = {"土城": "市區出發"}
+SENSITIVE_REPLACEMENTS = [
+    ("土城→桃園機場", "出發前往桃園機場"),
+    ("回土城", "返家休息"),
+    ("土城", "住處"),
+]
+
+def desensitize(obj):
+    """Recursively mask sensitive strings in the output payload."""
+    if isinstance(obj, dict):
+        return {k: desensitize(v) for k, v in obj.items()}
+    if isinstance(obj, list):
+        return [desensitize(v) for v in obj]
+    if isinstance(obj, str):
+        if obj in SENSITIVE_EXACT:
+            return SENSITIVE_EXACT[obj]
+        for old, new in SENSITIVE_REPLACEMENTS:
+            obj = obj.replace(old, new)
+    return obj
+
 def serialize_cell(val):
     """Normalize Excel cell values into clean serializable types."""
     if val is None:
@@ -430,6 +451,7 @@ def main():
         "tickets": tickets,
         "practical": practical
     }
+    result = desensitize(result)
 
     # Ensure output directory exists
     output_path.parent.mkdir(parents=True, exist_ok=True)
