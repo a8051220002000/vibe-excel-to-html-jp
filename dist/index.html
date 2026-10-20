@@ -604,7 +604,69 @@
     .info-text { min-width: 0; flex: 1; }
     .info-note { font-size: 12px; color: var(--text-sub); margin-top: 6px; overflow-wrap: anywhere; }
 
-    .todo-list { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; }
+    /* ===== Rain plans ===== */
+    .rain-card {
+      margin-top: 4px;
+      border: 1px solid #bfdbfe;
+      background: linear-gradient(180deg, #eff6ff, #ffffff);
+      border-radius: var(--radius-md);
+      padding: 10px 14px;
+    }
+    .rain-card summary {
+      font-size: 14px;
+      font-weight: 800;
+      color: #1d4ed8;
+      cursor: pointer;
+      list-style: none;
+    }
+    .rain-card summary::-webkit-details-marker { display: none; }
+    .rain-card summary::after { content: " ▸"; font-weight: 600; }
+    .rain-card[open] summary::after { content: " ▾"; }
+    .rain-card ul { margin: 8px 0 2px; padding-left: 18px; display: grid; gap: 6px; }
+    .rain-card li { font-size: 13px; color: var(--text-sub); overflow-wrap: anywhere; }
+
+    /* ===== Todo checklist ===== */
+    .todo-card { padding: 12px 14px 6px; }
+    .todo-head { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 8px; }
+    .todo-head .info-name { margin: 0; }
+    .todo-count { flex: 0 0 auto; font-size: 11px; font-weight: 700; color: var(--text-muted); }
+    .todo-bar { height: 4px; border-radius: var(--radius-pill); background: var(--border-subtle); overflow: hidden; margin-bottom: 6px; }
+    .todo-bar span { display: block; height: 100%; background: var(--accent-teal); border-radius: inherit; transition: width 0.25s ease; }
+    .todo-list { list-style: none; }
+    .todo-item { border-top: 1px dashed var(--border-subtle); }
+    .todo-item:first-child { border-top: none; }
+    .todo-item label { display: flex; gap: 10px; align-items: flex-start; padding: 8px 0; cursor: pointer; }
+    .todo-item input {
+      flex: 0 0 auto;
+      width: 20px;
+      height: 20px;
+      margin-top: 1px;
+      accent-color: var(--accent-teal);
+    }
+    .todo-text { min-width: 0; }
+    .todo-title { display: block; font-size: 14px; font-weight: 600; color: var(--text-main); overflow-wrap: anywhere; }
+    .todo-detail { display: block; font-size: 12px; color: var(--text-sub); margin-top: 2px; overflow-wrap: anywhere; }
+    .todo-item.done .todo-title { color: var(--text-muted); text-decoration: line-through; }
+    .todo-item.done .todo-detail { color: var(--text-muted); }
+
+    /* ===== JR pass ===== */
+    .jr-card { border-top: 3px solid var(--accent-teal); }
+    .jr-table { width: 100%; border-collapse: collapse; margin: 8px 0; font-size: 12px; }
+    .jr-table td { padding: 6px 0; border-bottom: 1px dashed var(--border-subtle); vertical-align: top; overflow-wrap: anywhere; }
+    .jr-table td:first-child { width: 48px; color: var(--text-muted); font-weight: 700; }
+    .jr-table td:last-child { text-align: right; white-space: nowrap; padding-left: 8px; font-variant-numeric: tabular-nums; }
+    .jr-table tr.total td { border-bottom: none; font-weight: 800; color: var(--text-main); font-size: 13px; }
+    .jr-verdict {
+      font-size: 13px;
+      font-weight: 700;
+      color: #047857;
+      background: #ecfdf5;
+      border: 1px solid #a7f3d0;
+      border-radius: var(--radius-sm);
+      padding: 8px 10px;
+    }
+    .note-list { margin: 8px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+    .note-list li { font-size: 12px; color: var(--text-sub); overflow-wrap: anywhere; }
   </style>
 </head>
 <body>
@@ -627,7 +689,7 @@
         <div class="hero-title">福岡之旅 2026</div>
         <div class="hero-meta">
           <span class="hero-tag">📅 11/12 (四) ~ 11/16 (一)</span>
-          <span class="hero-tag">📍 博多・天神・門司港・熊本</span>
+          <span class="hero-tag">📍 博多・天神・門司港・由布院</span>
           <span class="hero-tag">✈️ 華航/星宇 TPE ⇄ FUK</span>
         </div>
       </section>
@@ -811,9 +873,12 @@
         `<h2>${esc(day.day)}・${esc(day.title || '')}</h2><span class="count">${esc(day.date)} ${esc(day.weekday || '')}・${day.items.length} 站</span>`;
 
       const items = day.items.filter(it => it.day === day.day);
-      document.getElementById('timeline').innerHTML = items.length
+      const rain = (APP.data.rain_plans || {})[day.day] || [];
+      const rainCard = rain.length
+        ? `<details class="rain-card"><summary>☔ 雨天備案</summary><ul>${rain.map(r => `<li>${esc(r)}</li>`).join('')}</ul></details>` : '';
+      document.getElementById('timeline').innerHTML = (items.length
         ? items.map(renderTimelineItem).join('')
-        : '<div class="empty-state">這天尚未安排行程</div>';
+        : '<div class="empty-state">這天尚未安排行程</div>') + rainCard;
 
       // Keep the day bar in view without jumping above the timeline
       const bar = document.getElementById('dayBar');
@@ -965,6 +1030,39 @@
       const p = APP.data.practical || {};
       const html = [];
 
+      const todos = APP.data.todos || [];
+      if (todos.length) {
+        html.push('<div class="sub-title">📝 待辦清單</div>');
+        html.push(todos.map((t, gi) => `<div class="card todo-card" data-todo-group="${gi}">
+            <div class="todo-head"><div class="info-name">${esc(t.category)}</div><span class="todo-count"></span></div>
+            <div class="todo-bar"><span></span></div>
+            <ul class="todo-list">${(t.items || []).map(renderTodoItem).join('')}</ul>
+          </div>`).join(''));
+      }
+
+      const jr = p.jr_pass;
+      if (jr) {
+        html.push('<div class="sub-title">🚄 JR 周遊券試算</div>');
+        html.push(`<div class="card jr-card">
+            <div class="info-name">${esc(jr.title)}</div>
+            <div class="tl-meta"><span class="tag booked-yes">🎫 ${esc(jr.pass_price)}</span></div>
+            <table class="jr-table">
+              ${(jr.segments || []).map(s => `<tr><td>${esc(s.day)}</td><td>${esc(s.route)}</td><td>${esc(s.fare)}</td></tr>`).join('')}
+              <tr class="total"><td></td><td>合計</td><td>${esc(jr.total)}</td></tr>
+            </table>
+            <div class="jr-verdict">👉 ${esc(jr.verdict)}</div>
+            ${jr.notes?.length ? `<ul class="note-list">${jr.notes.map(n => `<li>${esc(n)}</li>`).join('')}</ul>` : ''}
+          </div>`);
+      }
+
+      if (p.tips?.length) {
+        html.push('<div class="sub-title">💡 旅日提醒</div>');
+        html.push(p.tips.map(t => `<div class="card">
+            <div class="info-name">${esc(t.title)}</div>
+            <div class="info-note">${esc(t.desc)}</div>
+          </div>`).join(''));
+      }
+
       if (p.accommodations?.length) {
         html.push('<div class="sub-title">🏨 住宿</div>');
         html.push(p.accommodations.map(a => `<div class="card">
@@ -1005,17 +1103,50 @@
           </div>`).join(''));
       }
 
-      const todos = APP.data.todos || [];
-      if (todos.length) {
-        html.push('<div class="sub-title">📝 待辦與口袋清單</div>');
-        html.push(todos.map(t => `<div class="card">
-            <div class="info-name">${esc(t.category)}</div>
-            <ul class="todo-list">${(t.items || []).map(i => `<li class="tag">${esc(i)}</li>`).join('')}</ul>
-          </div>`).join(''));
-      }
-
       el.innerHTML = html.join('') || '<div class="empty-state">尚無實用資訊</div>';
+      el.querySelectorAll('.todo-card').forEach(updateTodoProgress);
     }
+
+    // ===== Todo checklist =====
+    // Items marked ✅ in Excel are done for everyone; extra ticks are per-phone (localStorage).
+    const TODO_KEY = 'japan2026.todoDone';
+    function loadTodoTicks() {
+      try { return JSON.parse(localStorage.getItem(TODO_KEY)) || {}; } catch (_) { return {}; }
+    }
+    function saveTodoTicks(ticks) {
+      try { localStorage.setItem(TODO_KEY, JSON.stringify(ticks)); } catch (_) {}
+    }
+
+    function renderTodoItem(item) {
+      const it = typeof item === 'string' ? { text: item, detail: '', done: false } : item;
+      const done = it.done || !!loadTodoTicks()[it.text];
+      return `<li class="todo-item ${done ? 'done' : ''}">
+          <label>
+            <input type="checkbox" data-todo="${esc(it.text)}" ${done ? 'checked' : ''} ${it.done ? 'disabled' : ''}>
+            <span class="todo-text">
+              <span class="todo-title">${esc(it.text)}</span>
+              ${it.detail ? `<span class="todo-detail">${esc(it.detail)}</span>` : ''}
+            </span>
+          </label>
+        </li>`;
+    }
+
+    function updateTodoProgress(card) {
+      const boxes = card.querySelectorAll('input[data-todo]');
+      const done = [...boxes].filter(b => b.checked).length;
+      card.querySelector('.todo-count').textContent = `${done}/${boxes.length}`;
+      card.querySelector('.todo-bar span').style.width = boxes.length ? `${(done / boxes.length) * 100}%` : '0';
+    }
+
+    document.addEventListener('change', (e) => {
+      const box = e.target.closest('input[data-todo]');
+      if (!box) return;
+      const ticks = loadTodoTicks();
+      if (box.checked) ticks[box.dataset.todo] = true; else delete ticks[box.dataset.todo];
+      saveTodoTicks(ticks);
+      box.closest('.todo-item').classList.toggle('done', box.checked);
+      updateTodoProgress(box.closest('.todo-card'));
+    });
 
     // ===== Boot =====
     async function loadData() {

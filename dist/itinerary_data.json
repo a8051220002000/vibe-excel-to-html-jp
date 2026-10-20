@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-18T14:48:03.303885",
+  "generated_at": "2026-10-20T20:32:02.956601",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -65,7 +65,7 @@
           "spot": "福岡機場→中洲川端站",
           "location_tag": "",
           "transport": "車站",
-          "remarks": "",
+          "remarks": "🚃 國際線入境後先搭免費接駁巴士到國內線（約15分），再搭地鐵空港線直達中洲川端（約11分，不用換車）",
           "price": "",
           "booked": "",
           "category": "flight"
@@ -79,7 +79,7 @@
           "spot": "一蘭(可選：如果肚子餓）",
           "location_tag": "",
           "transport": "離車站近",
-          "remarks": "",
+          "remarks": "營業時間：24小時，全年無休\n🚃 中洲川端站步行約1分",
           "price": "",
           "booked": "",
           "category": "transport"
@@ -93,9 +93,9 @@
           "spot": "寄放行李＆麵包超人博物館",
           "location_tag": "",
           "transport": "麵包超人",
-          "remarks": "10月買票\n搭乘福岡市地下鐵空港線至「中洲川端站」，\n由川端口 6 號出口出站，直接進入博多 Riverain Mall 並搭乘電梯至 5 樓入口。",
+          "remarks": "10月買票\n搭乘福岡市地下鐵空港線至「中洲川端站」，\n由川端口 6 號出口出站，直接進入博多 Riverain Mall 並搭乘電梯至 5 樓入口。\n營業時間：10:00–17:00（最終入場16:00）；11/12 正常營業",
           "price": "2200",
-          "booked": "",
+          "booked": "已訂",
           "category": "food"
         },
         {
@@ -107,7 +107,7 @@
           "spot": "Chocolate Shop",
           "location_tag": "",
           "transport": "民宿走路會到",
-          "remarks": "",
+          "remarks": "營業時間：10:00–19:00（不定休）\n🚃 Riverain Mall 步行約5分（近吳服町站）",
           "price": "",
           "booked": "",
           "category": "hotel"
@@ -121,7 +121,7 @@
           "spot": "CHECK-IN",
           "location_tag": "",
           "transport": "民宿",
-          "remarks": "",
+          "remarks": "🚃 Chocolate Shop 步行約7分",
           "price": "",
           "booked": "",
           "category": "hotel"
@@ -135,10 +135,10 @@
           "spot": "搭車到博多",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🚃 吳服町站搭地鐵箱崎線→中洲川端換空港線→博多（約10分）",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "transport"
         },
         {
           "id": "day1-10",
@@ -149,7 +149,7 @@
           "spot": "晚餐 牛腸鍋 六花舍",
           "location_tag": "",
           "transport": "牛腸鍋",
-          "remarks": "",
+          "remarks": "營業時間：17:00–23:00（午餐僅週六 12:30–14:30）；公休日於 IG 公告\n🚃 博多站博多口步行約10分",
           "price": "",
           "booked": "",
           "category": "food"
@@ -163,7 +163,7 @@
           "spot": "博多運河城",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "營業時間：商店 10:00–21:00／餐廳 11:00–23:00，無休\n🚃 六花舍步行約10–15分",
           "price": "",
           "booked": "",
           "category": "shopping"
@@ -191,7 +191,7 @@
           "spot": "中洲屋台(經過)",
           "location_tag": "",
           "transport": "中州屋台",
-          "remarks": "",
+          "remarks": "各攤營業時間不同，多為 18:30–01:00 左右；雨天常臨時休\n🚃 運河城步行約10分",
           "price": "",
           "booked": "",
           "category": "food"
@@ -205,10 +205,10 @@
           "spot": "逛超市",
           "location_tag": "",
           "transport": "sunny-24H",
-          "remarks": "",
+          "remarks": "營業時間：24小時（部分除外）\n🚃 中洲步行約12分；離民宿步行約5分",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "hotel"
         },
         {
           "id": "day1-15",
@@ -219,7 +219,7 @@
           "spot": "Shin-Shin 古門戸町店",
           "location_tag": "",
           "transport": "地圖",
-          "remarks": "營業時間： 11:00–01:00",
+          "remarks": "營業時間： 11:00–01:00\n🚃 中洲川端站步行約5分",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -250,26 +250,26 @@
           "id": "day2-1",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "06:30",
-          "time_end": "",
+          "time_start": "07:00",
+          "time_end": "08:00",
           "spot": "Dacomecca麵包",
           "location_tag": "",
           "transport": "麵包",
-          "remarks": "營業時間： 07:00–19:00",
+          "remarks": "營業時間： 07:00–19:00\n🚃 民宿→吳服町站搭地鐵（中洲川端換空港線）→博多站博多口步行約5分；吃完搭空港線博多→天神（約5分）",
           "price": "",
           "booked": "",
-          "category": "food"
+          "category": "transport"
         },
         {
           "id": "day2-2",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "12:00",
-          "time_end": "13:00",
-          "spot": "福岡三越",
+          "time_start": "10:00",
+          "time_end": "12:00",
+          "spot": "天神地下街",
           "location_tag": "血拼不完",
-          "transport": "福岡三越",
-          "remarks": "",
+          "transport": "天神地下街",
+          "remarks": "營業時間：商店 10:00–20:00／餐飲至 21:00\n🚃 天神站直通",
           "price": "",
           "booked": "",
           "category": "shopping"
@@ -278,12 +278,12 @@
           "id": "day2-3",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "10:00",
-          "time_end": "12:00",
-          "spot": "天神地下街",
+          "time_start": "12:00",
+          "time_end": "13:00",
+          "spot": "福岡三越",
           "location_tag": "10-20點",
-          "transport": "天神地下街",
-          "remarks": "",
+          "transport": "福岡三越",
+          "remarks": "營業時間：10:00–20:00\n🚃 天神站直通（地下街連通）",
           "price": "",
           "booked": "",
           "category": "shopping"
@@ -293,13 +293,13 @@
           "day": "Day 2",
           "date": "2026-11-13",
           "time_start": "13:00",
-          "time_end": "15:00",
-          "spot": "福岡PARCO",
+          "time_end": "14:00",
+          "spot": "葫蘆壽司",
           "location_tag": "",
-          "transport": "PARCO",
-          "remarks": "",
+          "transport": "地圖",
+          "remarks": "營業時間：11:30–15:00\n營業時間：17:00–20:30\n不定休\n🚃 三越／天神地下街步行約3分",
           "price": "",
-          "booked": "",
+          "booked": "還未訂",
           "category": "shopping"
         },
         {
@@ -307,14 +307,14 @@
           "day": "Day 2",
           "date": "2026-11-13",
           "time_start": "14:00",
-          "time_end": "",
-          "spot": "葫蘆壽司",
+          "time_end": "15:00",
+          "spot": "福岡PARCO",
           "location_tag": "",
-          "transport": "地圖",
-          "remarks": "營業時間：11:30–15:00\n營業時間：17:00–20:30",
+          "transport": "PARCO",
+          "remarks": "營業時間：10:00–20:30\n🚃 天神地下街直通",
           "price": "",
-          "booked": "還未訂",
-          "category": "sightseeing"
+          "booked": "",
+          "category": "shopping"
         },
         {
           "id": "day2-6",
@@ -325,7 +325,7 @@
           "spot": "À la campagne 三越福岡店",
           "location_tag": "",
           "transport": "千層蛋糕",
-          "remarks": "",
+          "remarks": "🚃 在三越館內",
           "price": "",
           "booked": "",
           "category": "food"
@@ -335,11 +335,11 @@
           "day": "Day 2",
           "date": "2026-11-13",
           "time_start": "15:30",
-          "time_end": "17:00",
+          "time_end": "16:30",
           "spot": "岩田屋",
           "location_tag": "",
           "transport": "岩田屋",
-          "remarks": "",
+          "remarks": "營業時間：10:00–20:00（新館7F餐廳街 11:00–22:00），不定休\n🚃 三越步行約3分",
           "price": "",
           "booked": "",
           "category": "shopping"
@@ -348,12 +348,12 @@
           "id": "day2-8",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "17:00",
-          "time_end": "17:30",
+          "time_start": "16:30",
+          "time_end": "17:15",
           "spot": "水果派 Qu'il fait bon",
           "location_tag": "",
           "transport": "水果派",
-          "remarks": "",
+          "remarks": "營業時間：商店 11:00–19:00／咖啡 11:00–18:00（LO 17:00）\n行程已改 16:30 到，咖啡內用趕得上 LO 17:00\n🚃 岩田屋步行約5分",
           "price": "",
           "booked": "",
           "category": "food"
@@ -367,7 +367,7 @@
           "spot": "いちごや cafe TANNAL 福岡大名店｜天神 モーニング 夜カフェ",
           "location_tag": "",
           "transport": "草莓",
-          "remarks": "",
+          "remarks": "🚃 水果派步行約10分（大名區）",
           "price": "",
           "booked": "",
           "category": "food"
@@ -535,10 +535,10 @@
           "spot": "燒肉",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🚃 回程：天神站搭空港線→中洲川端（約3分），步行約10分回民宿",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "transport"
         }
       ]
     },
@@ -557,17 +557,17 @@
           "spot": "H01/K09  中洲川端",
           "location_tag": "",
           "transport": "",
-          "remarks": "6:37/6:45",
+          "remarks": "6:37/6:45\n🚃 民宿步行約10分到中洲川端，搭空港線到博多（約5分）",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "hotel"
         },
         {
           "id": "day3-2",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "06:30",
-          "time_end": "08:30",
+          "time_start": "07:03",
+          "time_end": "08:49",
           "spot": "博多搭乘JR",
           "location_tag": "",
           "transport": "",
@@ -594,12 +594,12 @@
           "id": "day3-4",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "07:00",
-          "time_end": "08:30",
+          "time_start": "09:30",
+          "time_end": "10:15",
           "spot": "馬關條約",
           "location_tag": "",
           "transport": "馬關條約",
-          "remarks": "",
+          "remarks": "日清講和記念館 營業時間：09:00–17:00（入館至16:30），全年無休，免費\n🚃 門司港搭關門汽船到唐戶（約5分），唐戶市場步行約10分（赤間神宮旁）",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -608,12 +608,12 @@
           "id": "day3-5",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
+          "time_start": "10:15",
+          "time_end": "11:15",
           "spot": "日清講和記念館+唐戶市場",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "唐戶市場 活きいき馬関街：週六有營業，約至 15:00 結束（賣完提早收）\n🚃 唐戶棧橋旁，下船步行約2分",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -622,12 +622,12 @@
           "id": "day3-6",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
+          "time_start": "11:15",
+          "time_end": "11:30",
           "spot": "出發回門司港",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🚃 唐戶搭關門汽船回門司港（約5分，約每20分一班）",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -636,12 +636,12 @@
           "id": "day3-7",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
+          "time_start": "11:45",
+          "time_end": "12:45",
           "spot": "午餐-燒咖哩",
           "location_tag": "",
           "transport": "KOGANEMUSHI",
-          "remarks": "",
+          "remarks": "營業時間：午餐 11:45–14:30／晚餐 17:00–21:30，賣完為止\n⚠️ 週五公休（11/14 週六有開）；常 13 點多就賣完，建議早點到\n🚃 門司港站步行約7分",
           "price": "",
           "booked": "",
           "category": "food"
@@ -650,7 +650,7 @@
           "id": "day3-8",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
+          "time_start": "12:45",
           "time_end": "14:00",
           "spot": "逛逛門司港",
           "location_tag": "",
@@ -711,7 +711,7 @@
           "spot": "搭纜車上山",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "纜車 11–3月：10:00–20:00（上山末班 19:20）\n週二公休（11/14 週六有開）",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -725,10 +725,10 @@
           "spot": "皿倉山",
           "location_tag": "",
           "transport": "",
-          "remarks": "八幡東區日落：11/15 為 17:15，11/20 為 17:12。",
+          "remarks": "八幡東區日落：11/15 為 17:15，11/20 為 17:12。\n🚃 回程：纜車下山→接駁車到八幡站→JR鹿兒島本線回博多（快速約1小時）",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "transport"
         },
         {
           "id": "day3-14",
@@ -750,7 +750,7 @@
       "day": "Day 4",
       "date": "2026-11-15",
       "weekday": "週日",
-      "title": "熊本城／太宰府／由布院多選漫遊",
+      "title": "由布院溫泉小鎮漫遊",
       "items": [
         {
           "id": "day4-1",
@@ -775,7 +775,7 @@
           "spot": "湯之坪街道",
           "location_tag": "",
           "transport": "",
-          "remarks": "09:17 博多開車 ➡️ 11:31 抵達由布院。",
+          "remarks": "09:17 博多開車 ➡️ 11:31 抵達由布院。\n🚃 由布院站步行約5分即到街道入口",
           "price": "",
           "booked": "",
           "category": "transport"
@@ -789,7 +789,7 @@
           "spot": "湯布院花卉村",
           "location_tag": "",
           "transport": "",
-          "remarks": "如果要更早，就搭一般車，過去10點",
+          "remarks": "如果要更早，就搭一般車，過去10點\n營業時間：09:30–17:30\n🚃 位在湯之坪街道中段，由布院站步行約15分",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -803,7 +803,7 @@
           "spot": "OWL'S FOREST（貓頭鷹餐廳/森林）",
           "location_tag": "",
           "transport": "",
-          "remarks": "貓頭貓  很重要",
+          "remarks": "貓頭貓  很重要\n營業時間：09:30–17:30（年中無休，惡劣天候可能休）\n🚃 在花卉村裡面",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -817,7 +817,7 @@
           "spot": "金鱗湖畔漫步",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🚃 花卉村步行約10分（湯之坪街道走到底）",
           "price": "",
           "booked": "",
           "category": "sightseeing"
@@ -831,7 +831,7 @@
           "spot": "由布院車站足湯",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🚃 金鱗湖步行約25分回車站（走不動可搭計程車約5分）",
           "price": "",
           "booked": "",
           "category": "transport"
@@ -845,10 +845,10 @@
           "spot": "博多",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🚃 JR特急ゆふいんの森（全車指定席，週日熱門要先劃位）或特急ゆふ，約2小時15分；備案：高速巴士由布院站前→博多巴士總站約2小時15分",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "transport"
         }
       ]
     },
@@ -909,7 +909,7 @@
           "spot": "Chocolate Shop",
           "location_tag": "",
           "transport": "民宿走路會到",
-          "remarks": "營業時間10:00–19:00\n巧克力海綿蛋糕最推、生乳捲也推\n伴手禮推生巧克力夾心餅 / 烤生巧克力",
+          "remarks": "營業時間10:00–19:00\n巧克力海綿蛋糕最推、生乳捲也推\n伴手禮推生巧克力夾心餅 / 烤生巧克力\n🚃 民宿步行約7分",
           "price": "",
           "booked": "",
           "category": "shopping"
@@ -923,7 +923,7 @@
           "spot": "佐川急便人工寄物",
           "location_tag": "",
           "transport": "寄行李",
-          "remarks": "",
+          "remarks": "🚃 Chocolate Shop 步行約18分；帶行李建議計程車（約5分）",
           "price": "",
           "booked": "",
           "category": "transport"
@@ -937,7 +937,7 @@
           "spot": "大東園博多",
           "location_tag": "",
           "transport": "神社附近",
-          "remarks": "大東園定食：2,860 日圓\n匠定食：4,290 日圓\n平日（週一至週五）：11:30 ～ 14:30（最後點餐時間 L.O. 為 14:00）",
+          "remarks": "大東園定食：2,860 日圓\n匠定食：4,290 日圓\n平日（週一至週五）：11:30 ～ 14:30（最後點餐時間 L.O. 為 14:00）\n全日營業 11:30–23:00（LO 22:30），無公休\n🚃 佐川急便步行約12分",
           "price": "",
           "booked": "",
           "category": "food"
@@ -951,10 +951,10 @@
           "spot": "櫛田神社",
           "location_tag": "",
           "transport": "櫛田神社",
-          "remarks": "社務所／授與所（御守、御朱印）： 09:00 – 17:00",
+          "remarks": "社務所／授與所（御守、御朱印）： 09:00 – 17:00\n境內參拜：04:00–22:00\n🚃 大東園步行約3分",
           "price": "",
           "booked": "",
-          "category": "sightseeing"
+          "category": "food"
         },
         {
           "id": "day5-8",
@@ -965,7 +965,7 @@
           "spot": "博多運河城",
           "location_tag": "",
           "transport": "草莓",
-          "remarks": "",
+          "remarks": "🚃 櫛田神社步行約5分",
           "price": "",
           "booked": "",
           "category": "food"
@@ -1021,7 +1021,7 @@
           "spot": "福岡機場",
           "location_tag": "",
           "transport": "福岡機場",
-          "remarks": "",
+          "remarks": "🚃 博多站搭地鐵空港線到福岡空港（約5分），再搭免費接駁巴士到國際線（約15分）；或博多巴士總站搭西鐵巴士直達國際線（約20分）",
           "price": "",
           "booked": "",
           "category": "flight"
@@ -1099,6 +1099,29 @@
       ]
     }
   ],
+  "rain_plans": {
+    "Day 1": [
+      "麵包超人博物館、博多運河城都在室內，照常走",
+      "中洲屋台雨天常臨時休 → 改在運河城多逛，或去博多站直結的 AMU PLAZA／KITTE 博多"
+    ],
+    "Day 2": [
+      "天神地下街串連三越、PARCO、岩田屋，下雨幾乎不用走到地面",
+      "水果派、いちごや 要走一段地面，記得帶傘"
+    ],
+    "Day 3": [
+      "唐戶：市場旁的海響館（水族館）是室內，可以補位",
+      "門司港：九州鐵道紀念館（門司港站旁，09:00–17:00，每月第 2 個週三休，11/14 週六有開）、海峽 Dramaship（關門海峽博物館）",
+      "小倉城：改進天守閣內參觀，旁邊 Riverwalk 北九州是室內商場",
+      "皿倉山：下雨或起霧看不到夜景，強風時纜車可能停駛 → 出發前看官網運行狀況；備案改逛小倉站 AMU PLAZA 或直接回博多"
+    ],
+    "Day 4": [
+      "湯之坪街道店家多有屋簷，撐傘可逛；花卉村、貓頭鷹森林有室內區",
+      "金鱗湖雨天可略過，改泡日歸溫泉（車站周邊、金鱗湖旁都有）"
+    ],
+    "Day 5": [
+      "博多站 AMU PLAZA／KITTE 博多、運河城都在室內；櫛田神社參拜時間短，撐傘即可"
+    ]
+  },
   "flights": [
     {
       "id": "flight-outbound",
@@ -1259,35 +1282,103 @@
   ],
   "todos": [
     {
-      "category": "餐廳",
+      "category": "🎫 訂票・預約",
       "items": [
-        "燒肉",
-        "拉麵",
-        "水吹鍋",
-        "北斯港吃啥"
+        {
+          "text": "麵包超人門票",
+          "detail": "11/12 已訂",
+          "done": true
+        },
+        {
+          "text": "JR 北部九州 3 日券",
+          "detail": "11/14–11/16 用，試算見「實用資訊」",
+          "done": false
+        },
+        {
+          "text": "ゆふいんの森 指定席",
+          "detail": "11/15 去回程，乘車日 1 個月前 10:00 開賣，可用 JR Pass 劃位",
+          "done": false
+        },
+        {
+          "text": "葫蘆壽司 訂位",
+          "detail": "Day 2 13:00，目前還未訂",
+          "done": false
+        },
+        {
+          "text": "去程計程車",
+          "detail": "11/12 03:40 出發",
+          "done": false
+        }
       ]
     },
     {
-      "category": "交通",
+      "category": "🧳 行前準備",
       "items": [
-        "麵包超人",
-        "研究JR 3日怎麼買划算",
-        "去程的計程車",
-        "北司港的行程+夜景",
-        "寄放行李便宜(博多or運河城)"
+        {
+          "text": "Visit Japan Web",
+          "detail": "入境資料先填好，截圖 QR Code",
+          "done": false
+        },
+        {
+          "text": "11 月新退稅制度",
+          "detail": "11/1 起購物先付含稅價，出境時機場海關確認後退稅，免稅品別先拆用",
+          "done": false
+        },
+        {
+          "text": "寄放行李",
+          "detail": "比較博多站 or 運河城寄物",
+          "done": false
+        },
+        {
+          "text": "貓咪請人餵食",
+          "detail": "",
+          "done": false
+        }
       ]
     },
     {
-      "category": "育",
+      "category": "🗺️ 行程規劃",
       "items": [
-        "貓咪請人餵食"
+        {
+          "text": "研究 JR 3 日券怎麼買划算",
+          "detail": "結論見「實用資訊」",
+          "done": true
+        },
+        {
+          "text": "門司港行程＋夜景",
+          "detail": "Day 3 已排（皿倉山夜景）",
+          "done": true
+        },
+        {
+          "text": "雨天備案",
+          "detail": "每日行程最下方",
+          "done": true
+        }
       ]
     },
     {
-      "category": "前置處理",
+      "category": "🍜 想吃清單",
       "items": [
-        "11月如何機場退稅",
-        "進出入境線上申報"
+        {
+          "text": "燒肉",
+          "detail": "",
+          "done": false
+        },
+        {
+          "text": "拉麵",
+          "detail": "",
+          "done": false
+        },
+        {
+          "text": "水炊鍋",
+          "detail": "",
+          "done": false
+        },
+        {
+          "text": "門司港吃什麼",
+          "detail": "燒咖哩 こがねむし",
+          "done": true
+        }
       ]
     }
   ],
@@ -1342,6 +1433,12 @@
         "notes": "鄰近博多車站，步行約 5-8 分鐘"
       }
     ],
+    "tips": [
+      {
+        "title": "11 月起退稅新制（リファンド方式）",
+        "desc": "2026/11/1 起免稅店先收含稅價，出境時在機場海關確認物品後才退稅。同店同日滿 ¥5,000（未稅）適用；免稅品出境前別先拆用，Day 5 機場要預留時間。"
+      }
+    ],
     "useful_links": [
       {
         "title": "Visit Japan Web 入境手續",
@@ -1358,6 +1455,45 @@
         "url": "https://subway.city.fukuoka.lg.jp/",
         "desc": "博多、天神、福岡機場乘車指引"
       }
-    ]
+    ],
+    "jr_pass": {
+      "title": "JR 北部九州 3 日券值得買嗎？",
+      "pass_price": "¥15,000（3 日券，11/14–11/16 連續使用）",
+      "segments": [
+        {
+          "day": "Day 3",
+          "route": "博多 → 門司港",
+          "fare": "¥1,730"
+        },
+        {
+          "day": "Day 3",
+          "route": "門司港 → 西小倉",
+          "fare": "約 ¥340"
+        },
+        {
+          "day": "Day 3",
+          "route": "西小倉 → 八幡",
+          "fare": "約 ¥340"
+        },
+        {
+          "day": "Day 3",
+          "route": "八幡 → 博多",
+          "fare": "約 ¥1,300（推估）"
+        },
+        {
+          "day": "Day 4",
+          "route": "博多 ⇄ 由布院 ゆふいんの森（指定席）",
+          "fare": "¥6,130 × 2 = ¥12,260"
+        }
+      ],
+      "total": "單買約 ¥16,000",
+      "verdict": "建議買：比單買省約 ¥1,000，還能免費劃 6 次指定席，ゆふいんの森 去回程都能用 Pass 劃位。",
+      "notes": [
+        "限持短期滯在入境的外國旅客，到 JR 博多站兌換／購買",
+        "ゆふいんの森 全車指定席，乘車日 1 個月前 10:00 開放劃位，週日熱門建議早劃",
+        "不能搭博多–小倉新幹線、地鐵與巴士（這趟行程用不到）",
+        "如果 ゆふいんの森 改買九州網路車票（片道 ¥5,600），單買總額約 ¥14,900，跟 Pass 差不多"
+      ]
+    }
   }
 }

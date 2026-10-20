@@ -111,7 +111,7 @@ def parse_schedule(sheet):
                 "Day 1": "抵達福岡・博多運河與屋台漫遊",
                 "Day 2": "天神商圈・地下街甜點購物之旅",
                 "Day 3": "門司港・小倉城・下關海鮮探索",
-                "Day 4": "熊本城／太宰府／由布院多選漫遊",
+                "Day 4": "由布院溫泉小鎮漫遊",
                 "Day 5": "伴手禮採買・福岡機場返台"
             }
 
@@ -282,6 +282,13 @@ def parse_attractions(sheet):
 
     return attractions
 
+def parse_todo_item(raw):
+    """'✅ 標題｜說明' -> {text, detail, done}; ✅ prefix marks a finished item."""
+    done = raw.startswith("✅")
+    text = raw.lstrip("✅").strip()
+    text, _, detail = text.partition("｜")
+    return {"text": text.strip(), "detail": detail.strip(), "done": done}
+
 def parse_todos_and_tickets(todo_sheet, ticket_sheet):
     """Parse 'todo' and '交通套票資訊' sheets."""
     todos = []
@@ -294,7 +301,7 @@ def parse_todos_and_tickets(todo_sheet, ticket_sheet):
             for c in range(2, (todo_sheet.max_column or 0) + 1):
                 item = serialize_cell(todo_sheet.cell(r, c).value)
                 if item:
-                    items.append(item)
+                    items.append(parse_todo_item(item))
             if items:
                 todos.append({
                     "category": category,
@@ -367,6 +374,54 @@ def build_flights_info(schedule):
     ]
     return flights
 
+def build_rain_plans():
+    """Indoor fallbacks per day, shown at the bottom of each day's timeline."""
+    return {
+        "Day 1": [
+            "麵包超人博物館、博多運河城都在室內，照常走",
+            "中洲屋台雨天常臨時休 → 改在運河城多逛，或去博多站直結的 AMU PLAZA／KITTE 博多",
+        ],
+        "Day 2": [
+            "天神地下街串連三越、PARCO、岩田屋，下雨幾乎不用走到地面",
+            "水果派、いちごや 要走一段地面，記得帶傘",
+        ],
+        "Day 3": [
+            "唐戶：市場旁的海響館（水族館）是室內，可以補位",
+            "門司港：九州鐵道紀念館（門司港站旁，09:00–17:00，每月第 2 個週三休，11/14 週六有開）、海峽 Dramaship（關門海峽博物館）",
+            "小倉城：改進天守閣內參觀，旁邊 Riverwalk 北九州是室內商場",
+            "皿倉山：下雨或起霧看不到夜景，強風時纜車可能停駛 → 出發前看官網運行狀況；備案改逛小倉站 AMU PLAZA 或直接回博多",
+        ],
+        "Day 4": [
+            "湯之坪街道店家多有屋簷，撐傘可逛；花卉村、貓頭鷹森林有室內區",
+            "金鱗湖雨天可略過，改泡日歸溫泉（車站周邊、金鱗湖旁都有）",
+        ],
+        "Day 5": [
+            "博多站 AMU PLAZA／KITTE 博多、運河城都在室內；櫛田神社參拜時間短，撐傘即可",
+        ],
+    }
+
+def build_jr_pass_info():
+    """JR Kyushu Rail Pass (Northern) vs. single tickets for Day 3 + Day 4."""
+    return {
+        "title": "JR 北部九州 3 日券值得買嗎？",
+        "pass_price": "¥15,000（3 日券，11/14–11/16 連續使用）",
+        "segments": [
+            {"day": "Day 3", "route": "博多 → 門司港", "fare": "¥1,730"},
+            {"day": "Day 3", "route": "門司港 → 西小倉", "fare": "約 ¥340"},
+            {"day": "Day 3", "route": "西小倉 → 八幡", "fare": "約 ¥340"},
+            {"day": "Day 3", "route": "八幡 → 博多", "fare": "約 ¥1,300（推估）"},
+            {"day": "Day 4", "route": "博多 ⇄ 由布院 ゆふいんの森（指定席）", "fare": "¥6,130 × 2 = ¥12,260"},
+        ],
+        "total": "單買約 ¥16,000",
+        "verdict": "建議買：比單買省約 ¥1,000，還能免費劃 6 次指定席，ゆふいんの森 去回程都能用 Pass 劃位。",
+        "notes": [
+            "限持短期滯在入境的外國旅客，到 JR 博多站兌換／購買",
+            "ゆふいんの森 全車指定席，乘車日 1 個月前 10:00 開放劃位，週日熱門建議早劃",
+            "不能搭博多–小倉新幹線、地鐵與巴士（這趟行程用不到）",
+            "如果 ゆふいんの森 改買九州網路車票（片道 ¥5,600），單買總額約 ¥14,900，跟 Pass 差不多",
+        ],
+    }
+
 def build_practical_info():
     """Practical travel information for Japan trip."""
     return {
@@ -382,6 +437,9 @@ def build_practical_info():
         ],
         "accommodations": [
             {"name": "博多市區精選民宿 / 飯店", "address": "福岡市博多區博多站前", "check_in": "15:00", "check_out": "11:00", "notes": "鄰近博多車站，步行約 5-8 分鐘"}
+        ],
+        "tips": [
+            {"title": "11 月起退稅新制（リファンド方式）", "desc": "2026/11/1 起免稅店先收含稅價，出境時在機場海關確認物品後才退稅。同店同日滿 ¥5,000（未稅）適用；免稅品出境前別先拆用，Day 5 機場要預留時間。"},
         ],
         "useful_links": [
             {"title": "Visit Japan Web 入境手續", "url": "https://www.vjw.digital.go.jp/", "desc": "入境日本前填寫海關與入境審查 QR Code"},
@@ -432,6 +490,7 @@ def main():
 
     # 6. Practical Info
     practical = build_practical_info()
+    practical["jr_pass"] = build_jr_pass_info()
 
     # Compile Full Payload
     result = {
@@ -444,6 +503,7 @@ def main():
             "version": "1.0.0"
         },
         "schedule": schedule,
+        "rain_plans": build_rain_plans(),
         "flights": flights,
         "coupons": coupons,
         "attractions": attractions,
