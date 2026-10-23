@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-23T19:36:39.083737",
+  "generated_at": "2026-10-23T19:38:38.986112",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -1226,7 +1226,7 @@
       "id": "flight-inbound",
       "type": "回程航班",
       "airline": "台灣虎航",
-      "flight_no": "FUK ➔ TPE",
+      "flight_no": "IT-721・FUK ➔ TPE",
       "date": "2026-11-16",
       "day": "Day 5",
       "departure": {

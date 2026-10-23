@@ -353,7 +353,7 @@ def build_flights_info(schedule):
             "id": "flight-inbound",
             "type": "回程航班",
             "airline": "台灣虎航",
-            "flight_no": "FUK ➔ TPE",
+            "flight_no": "IT-721・FUK ➔ TPE",
             "date": "2026-11-16",
             "day": "Day 5",
             "departure": {
