@@ -424,8 +424,8 @@ def build_rain_plans():
 def build_jr_pass_info():
     """JR Kyushu Rail Pass (Northern) vs. single tickets for Day 3 + Day 4 (fares checked on ekitan / JR Kyushu)."""
     return {
-        "title": "JR 北部九州 3 日券（決定購買）",
-        "pass_price": "¥15,000 ＋ 去程線上劃位 ¥1,500 ＝ ¥16,500（11/14–11/16）",
+        "title": "JR 北部九州 3 日券（已購買）",
+        "pass_price": "¥14,000＋10%＝¥15,400 ＋ 去程線上劃位 ¥1,500 ＝ ¥16,900（11/14–11/16）",
         "segments": [
             {"day": "Day 3", "route": "博多 → 門司港", "fare": "¥1,730"},
             {"day": "Day 3", "route": "門司港 → 西小倉", "fare": "¥340"},
@@ -434,7 +434,7 @@ def build_jr_pass_info():
             {"day": "Day 4", "route": "博多 ⇄ 由布院 ゆふいんの森（網路票 ¥5,600 × 2）", "fare": "¥11,200"},
         ],
         "total": "單買 ¥14,910",
-        "verdict": "買三日券：比單買多 ¥1,590，換回程不綁班次、第三四天臨時多搭 JR 也不用另外付錢。",
+        "verdict": "已用官網線上購買：比單買多 ¥1,990，換回程不綁班次、第三四天臨時多搭 JR 也不用另外付錢。",
         "notes": [
             "官網 JR KYUSHU RAIL PASS Online Booking 購買，去程 ゆふいんの森 1 號（09:17→11:31）同時線上劃位（觀光列車每段 ¥1,500）",
             "11/12 落地可在福岡機場國際線 1F 兌換（09:00–17:00），需護照正本",
