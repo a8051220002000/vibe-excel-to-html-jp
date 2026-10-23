@@ -253,39 +253,35 @@ def parse_coupons(sheet):
 
     return coupons
 
+ATTRACTION_FIELDS = {"地點": "location", "前往方法": "access", "營業時間": "hours", "費用": "cost", "注意事項": "notes"}
+
 def parse_attractions(sheet):
-    """Parse '景點資料' sheet."""
+    """
+    Parse '景點資料' sheet: each Day owns a column pair (label | value) and repeats
+    7-row blocks — title (merged), photo, then 地點/前往方法/營業時間/費用/注意事項.
+    An untouched block still shows the label '景點' as its title and is skipped.
+    """
     attractions = []
     if not sheet:
         return attractions
 
-    # Scan pairs of columns
     max_col = sheet.max_column or 0
+    max_row = sheet.max_row or 0
     for c in range(1, max_col + 1, 2):
         day_tag = serialize_cell(sheet.cell(1, c).value)
         if not day_tag.startswith("Day"):
             continue
-
-        # Look for custom notes
-        for r in range(2, (sheet.max_row or 0) + 1):
-            val1 = serialize_cell(sheet.cell(r, c).value)
-            val2 = serialize_cell(sheet.cell(r, c+1).value)
-            if not val1 and not val2:
+        for r in range(2, max_row + 1, 7):
+            title = serialize_cell(sheet.cell(r, c).value)
+            if not title or title == "景點":
                 continue
-            if val1 in ["景點", "相片(如有)", "地點", "前往方法", "營業時間", "費用", "注意事項"]:
-                if val2:
-                    attractions.append({
-                        "day": day_tag,
-                        "type": val1,
-                        "content": val2
-                    })
-            elif "大丸心齋橋" in val1 or "錦市場" in val1 or "木津" in val1:
-                attractions.append({
-                    "day": day_tag,
-                    "title": val1.split("\n")[0].strip(),
-                    "details": val1,
-                    "extra": val2
-                })
+            item = {"day": day_tag, "title": title}
+            for k in range(2, 7):
+                label = serialize_cell(sheet.cell(r + k, c).value)
+                key = ATTRACTION_FIELDS.get(label)
+                if key:
+                    item[key] = serialize_cell(sheet.cell(r + k, c + 1).value)
+            attractions.append(item)
 
     return attractions
 

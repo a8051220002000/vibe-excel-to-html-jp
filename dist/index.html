@@ -644,6 +644,32 @@
     .now-clock { font-size: 11px; opacity: 0.6; margin-bottom: 6px; }
     .now-panel .btn { margin-top: 8px; }
 
+    /* ===== Attraction notes ===== */
+    .guide-block { margin-top: 4px; margin-bottom: 10px; }
+    .guide-block > .sub-title { margin: 6px 0 8px; }
+    .guide-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 3px solid var(--accent-amber);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      margin-bottom: 8px;
+    }
+    .guide-card summary {
+      font-size: 14px;
+      font-weight: 700;
+      cursor: pointer;
+      list-style: none;
+      overflow-wrap: anywhere;
+    }
+    .guide-card summary::-webkit-details-marker { display: none; }
+    .guide-card summary::after { content: " ▸"; color: var(--text-muted); font-weight: 600; }
+    .guide-card[open] summary::after { content: " ▾"; }
+    .guide-row { margin-top: 8px; }
+    .guide-row .info-label { margin-bottom: 2px; }
+    .guide-row .info-value { font-size: 13px; white-space: pre-line; overflow-wrap: anywhere; }
+    .guide-row.notes .info-value { background: var(--bg-muted); border-radius: var(--radius-sm); padding: 8px 10px; color: var(--text-sub); }
+
     /* ===== Rain plans ===== */
     .rain-card {
       margin-top: 4px;
@@ -896,6 +922,23 @@
         </article>`;
     }
 
+    // ===== Attraction notes (景點資料 sheet) =====
+    const GUIDE_FIELDS = [['location', '📍 地點'], ['access', '🚃 前往方法'], ['hours', '🕘 營業時間'], ['cost', '💴 費用'], ['notes', '💡 推薦與注意']];
+    function renderGuide(dayLabel) {
+      const list = (APP.data.attractions || []).filter(a => a.day === dayLabel && a.title);
+      if (!list.length) return '';
+      const cards = list.map(a => {
+        const rows = GUIDE_FIELDS.filter(([k]) => a[k]).map(([k, label]) => {
+          const value = k === 'location'
+            ? `${esc(a[k])} <a class="map-link" href="${mapUrl(a[k])}" target="_blank" rel="noopener">🗺️</a>`
+            : esc(a[k]);
+          return `<div class="guide-row ${k}"><div class="info-label">${label}</div><div class="info-value">${value}</div></div>`;
+        }).join('');
+        return `<details class="guide-card"><summary>${esc(a.title)}</summary>${rows}</details>`;
+      }).join('');
+      return `<section class="guide-block"><div class="sub-title">📖 景點・美食筆記（${list.length}）</div>${cards}</section>`;
+    }
+
     function selectDay(idx) {
       const days = APP.data.schedule;
       if (!days[idx]) idx = 0;
@@ -922,7 +965,7 @@
         ? `<details class="rain-card"><summary>☔ 雨天備案</summary><ul>${rain.map(r => `<li>${esc(r)}</li>`).join('')}</ul></details>` : '';
       document.getElementById('timeline').innerHTML = (items.length
         ? items.map(renderTimelineItem).join('')
-        : '<div class="empty-state">這天尚未安排行程</div>') + rainCard;
+        : '<div class="empty-state">這天尚未安排行程</div>') + renderGuide(day.day) + rainCard;
       updateNow();
 
       // Keep the day bar in view without jumping above the timeline
