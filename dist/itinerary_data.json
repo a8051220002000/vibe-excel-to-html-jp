@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-23T19:40:55.538636",
+  "generated_at": "2026-10-23T19:41:52.878114",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -318,7 +318,7 @@
           "transport": "地圖",
           "remarks": "營業時間：11:30–15:00\n營業時間：17:00–20:30\n不定休\n🚃 三越／天神地下街步行約3分",
           "price": "",
-          "booked": "還未訂",
+          "booked": "不可訂位",
           "deadline": "",
           "category": "shopping"
         },
@@ -1376,8 +1376,8 @@
         },
         {
           "text": "葫蘆壽司 訂位",
-          "detail": "Day 2 13:00，目前還未訂",
-          "done": false
+          "detail": "不可訂位，Day 2 13:00 直接去",
+          "done": true
         },
         {
           "text": "去程計程車",
