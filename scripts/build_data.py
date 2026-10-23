@@ -319,10 +319,21 @@ def parse_todos_and_tickets(todo_sheet, ticket_sheet):
 
     return todos, tickets
 
-def build_flights_info(schedule):
+def parse_flight_sheet(sheet):
+    """'機票資訊' rows: 日期 | 班號 | 起飛 | 抵達 (no header row; first row = outbound)."""
+    rows = []
+    if not sheet:
+        return rows
+    for r in range(1, (sheet.max_row or 0) + 1):
+        date, no, dep, arr = (serialize_cell(sheet.cell(r, c).value) for c in range(1, 5))
+        if date and no:
+            rows.append({"date": date, "flight_no": no, "dep": dep, "arr": arr})
+    return rows
+
+def build_flights_info(schedule, flight_rows=()):
     """
-    Extract or synthesize structured flight data from itinerary.
     Day 1 outbound (TPE -> FUK) and Day 5 inbound (FUK -> TPE).
+    Flight numbers, dates and times come from '機票資訊'; the rest is descriptive text.
     """
     flights = [
         {
@@ -374,6 +385,14 @@ def build_flights_info(schedule):
             "notes": "虎航櫃檯約起飛前 45 分鐘關閉（約 17:10），加上 11 月新制退稅要過海關，最晚 14:15 從運河城出發。"
         }
     ]
+    routes = ["TPE ➔ FUK", "FUK ➔ TPE"]
+    for flight, row, route in zip(flights, flight_rows, routes):
+        flight["flight_no"] = f"{row['flight_no']}・{route}"
+        flight["date"] = row["date"]
+        if row["dep"]:
+            flight["departure"]["time"] = row["dep"]
+        if row["arr"]:
+            flight["arrival"]["time"] = row["arr"]
     return flights
 
 def build_rain_plans():
@@ -488,7 +507,8 @@ def main():
     print(f"Parsed {len(todos)} todo groups and {len(tickets)} tickets.")
 
     # 5. Build Flights
-    flights = build_flights_info(schedule)
+    flight_sheet = wb["機票資訊"] if "機票資訊" in wb.sheetnames else None
+    flights = build_flights_info(schedule, parse_flight_sheet(flight_sheet))
 
     # 6. Practical Info
     practical = build_practical_info()
