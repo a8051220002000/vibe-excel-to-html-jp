@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-23T21:44:04.357626",
+  "generated_at": "2026-10-23T21:49:11.041097",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -49,7 +49,7 @@
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "10:00",
-          "time_end": "12:00",
+          "time_end": "11:30",
           "spot": "福岡機場入境辦理",
           "location_tag": "博多",
           "transport": "",
@@ -63,8 +63,23 @@
           "id": "day1-4",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "12:00",
-          "time_end": "12:15",
+          "time_start": "11:30",
+          "time_end": "11:50",
+          "spot": "兌換 JR 北部九州三日券",
+          "location_tag": "",
+          "transport": "",
+          "remarks": "📍 國際線航廈 1F 入境大廳「Access Hall」JR 九州兌換櫃檯（09:00–17:00，年中無休）\n帶護照正本＋線上購買的預約資料；兌換後不會啟用，11/14 才開始算\n🚃 出關就在入境大廳，不用移動",
+          "price": "",
+          "booked": "訂好了！",
+          "deadline": "",
+          "category": "flight"
+        },
+        {
+          "id": "day1-5",
+          "day": "Day 1",
+          "date": "2026-11-12",
+          "time_start": "11:55",
+          "time_end": "12:25",
           "spot": "福岡機場→中洲川端站",
           "location_tag": "",
           "transport": "車站",
@@ -75,11 +90,11 @@
           "category": "flight"
         },
         {
-          "id": "day1-5",
+          "id": "day1-6",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "12:20",
-          "time_end": "13:00",
+          "time_start": "12:30",
+          "time_end": "13:10",
           "spot": "一蘭(可選：如果肚子餓）",
           "location_tag": "",
           "transport": "離車站近",
@@ -90,10 +105,10 @@
           "category": "transport"
         },
         {
-          "id": "day1-6",
+          "id": "day1-7",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "13:00",
+          "time_start": "13:10",
           "time_end": "15:20",
           "spot": "寄放行李＆麵包超人博物館",
           "location_tag": "",
@@ -105,7 +120,7 @@
           "category": "transport"
         },
         {
-          "id": "day1-7",
+          "id": "day1-8",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "15:30",
@@ -120,7 +135,7 @@
           "category": "hotel"
         },
         {
-          "id": "day1-8",
+          "id": "day1-9",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "16:00",
@@ -135,7 +150,7 @@
           "category": "hotel"
         },
         {
-          "id": "day1-9",
+          "id": "day1-10",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "16:40",
@@ -150,7 +165,7 @@
           "category": "transport"
         },
         {
-          "id": "day1-10",
+          "id": "day1-11",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "17:20",
@@ -165,7 +180,7 @@
           "category": "food"
         },
         {
-          "id": "day1-11",
+          "id": "day1-12",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "19:00",
@@ -180,7 +195,7 @@
           "category": "shopping"
         },
         {
-          "id": "day1-12",
+          "id": "day1-13",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "20:00",
@@ -195,7 +210,7 @@
           "category": "shopping"
         },
         {
-          "id": "day1-13",
+          "id": "day1-14",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "21:00",
@@ -210,7 +225,7 @@
           "category": "food"
         },
         {
-          "id": "day1-14",
+          "id": "day1-15",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "21:30",
@@ -225,7 +240,7 @@
           "category": "hotel"
         },
         {
-          "id": "day1-15",
+          "id": "day1-16",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "",
@@ -240,7 +255,7 @@
           "category": "sightseeing"
         },
         {
-          "id": "day1-16",
+          "id": "day1-17",
           "day": "Day 1",
           "date": "2026-11-12",
           "time_start": "22:00",
