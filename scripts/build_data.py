@@ -84,6 +84,7 @@ def parse_schedule(sheet):
         col_remark = serialize_cell(cells[7])     # Col 8: 特別備註
         col_cost = serialize_cell(cells[9]) if len(cells) > 9 else ""     # Col 10: 票價
         col_booked = serialize_cell(cells[10]) if len(cells) > 10 else "" # Col 11: 已經訂好了？
+        col_deadline = serialize_cell(cells[11]) if len(cells) > 11 else "" # Col 12: 必趕（硬時間點）
 
         # Detect Day declaration: Day 1, Day 2, etc.
         if col_day.startswith("Day"):
@@ -175,6 +176,7 @@ def parse_schedule(sheet):
             "remarks": combined_remarks,
             "price": col_cost,
             "booked": col_booked,
+            "deadline": col_deadline,
             "category": category
         }
         current_day_dict["items"].append(item)

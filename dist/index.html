@@ -604,6 +604,46 @@
     .info-text { min-width: 0; flex: 1; }
     .info-note { font-size: 12px; color: var(--text-sub); margin-top: 6px; overflow-wrap: anywhere; }
 
+    /* ===== Must-catch & live progress ===== */
+    .tl-deadline {
+      margin-top: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: #b91c1c;
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      border-radius: var(--radius-sm);
+      padding: 4px 8px;
+      overflow-wrap: anywhere;
+    }
+    .tl-item.is-hard .tl-card { border-color: #fca5a5; }
+    .tl-item.is-flex .tl-card { background: var(--bg-muted); box-shadow: none; }
+    .tl-item.is-flex .tl-title { color: var(--text-sub); font-weight: 600; }
+    .tl-item.is-past { opacity: 0.5; }
+    .tl-item.is-now .tl-card { border: 2px solid var(--primary); box-shadow: 0 4px 14px rgba(232, 90, 113, 0.18); }
+    .tl-item.is-now .tl-dot { animation: pulse 1.6s ease-in-out infinite; }
+    @keyframes pulse { 50% { transform: scale(1.15); } }
+
+    .now-panel {
+      display: none;
+      margin-bottom: 12px;
+      border-radius: var(--radius-md);
+      padding: 12px 14px;
+      color: #fff;
+      background: linear-gradient(135deg, #0f172a, #334155);
+      box-shadow: var(--shadow-md);
+    }
+    .now-panel.show { display: block; }
+    .now-row { display: flex; gap: 8px; align-items: baseline; font-size: 13px; }
+    .now-row + .now-row { margin-top: 6px; }
+    .now-row .k { flex: 0 0 auto; font-size: 11px; font-weight: 700; opacity: 0.7; min-width: 52px; }
+    .now-row .v { min-width: 0; overflow-wrap: anywhere; }
+    .now-row .left { font-weight: 800; color: #fde68a; white-space: nowrap; }
+    .now-row.hard .left { color: #fca5a5; }
+    .now-row.urgent .left { color: #f87171; }
+    .now-clock { font-size: 11px; opacity: 0.6; margin-bottom: 6px; }
+    .now-panel .btn { margin-top: 8px; }
+
     /* ===== Rain plans ===== */
     .rain-card {
       margin-top: 4px;
@@ -698,6 +738,7 @@
       <div id="view-schedule" class="tab-view active">
         <nav class="day-bar" id="dayBar" aria-label="選擇日期"></nav>
         <div id="schedule-container">
+          <div class="now-panel" id="nowPanel" aria-live="polite"></div>
           <div class="day-summary" id="daySummary"></div>
           <div class="timeline" id="timeline">
             <div class="loading-state empty-state">
@@ -841,11 +882,14 @@
         ? `<a class="map-link" href="${mapUrl(it.spot)}" target="_blank" rel="noopener">🗺️ 地圖</a>` : '';
       const remarks = it.remarks
         ? `<details class="tl-remarks"><summary>備註</summary><p>${esc(it.remarks)}</p></details>` : '';
-      return `<article class="tl-item cat-${esc(it.category || 'other')}" data-day="${esc(it.day)}" id="${esc(it.id)}">
+      const deadline = it.deadline ? `<div class="tl-deadline">🔴 必趕・${esc(it.deadline)}</div>` : '';
+      const state = it.deadline ? 'is-hard' : (it.time_start ? '' : 'is-flex');
+      return `<article class="tl-item cat-${esc(it.category || 'other')} ${state}" data-day="${esc(it.day)}" id="${esc(it.id)}">
           <div class="tl-time">${time}</div>
           <div class="tl-dot" aria-hidden="true">${CAT_ICON[it.category] || '📌'}</div>
           <div class="tl-card">
             <div class="tl-title"><span>${esc(it.spot || '（未命名）')}</span>${map}</div>
+            ${deadline}
             ${tags.length ? `<div class="tl-meta">${tags.join('')}</div>` : ''}
             ${remarks}
           </div>
@@ -879,6 +923,7 @@
       document.getElementById('timeline').innerHTML = (items.length
         ? items.map(renderTimelineItem).join('')
         : '<div class="empty-state">這天尚未安排行程</div>') + rainCard;
+      updateNow();
 
       // Keep the day bar in view without jumping above the timeline
       const bar = document.getElementById('dayBar');
@@ -890,10 +935,83 @@
       }
     }
 
+    // ===== Live progress (Japan time) =====
+    // Test with ?now=2026-11-14T13:40 (read as Japan wall-clock time).
+    function nowJST() {
+      const override = new URLSearchParams(location.search).get('now');
+      if (override && /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}$/.test(override)) {
+        return { date: override.slice(0, 10), min: Number(override.slice(11, 13)) * 60 + Number(override.slice(14, 16)), hhmm: override.slice(11) };
+      }
+      const parts = Object.fromEntries(new Intl.DateTimeFormat('en-CA', {
+        timeZone: 'Asia/Tokyo', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
+      }).formatToParts(new Date()).map(p => [p.type, p.value]));
+      return { date: `${parts.year}-${parts.month}-${parts.day}`, min: Number(parts.hour) * 60 + Number(parts.minute), hhmm: `${parts.hour}:${parts.minute}` };
+    }
+    const toMin = (hhmm) => /^\d{1,2}:\d{2}/.test(hhmm || '') ? Number(hhmm.split(':')[0]) * 60 + Number(hhmm.split(':')[1].slice(0, 2)) : null;
+    // First HH:MM inside free text, e.g. "最晚 14:15 離開運河城" -> 855
+    const firstTime = (text) => { const m = /(\d{1,2}):(\d{2})/.exec(text || ''); return m ? Number(m[1]) * 60 + Number(m[2]) : null; };
+    // Taiwan-side legs run on Taiwan time, so they are left out of the countdown
+    const TAIWAN_LEG = /桃園|^入境$|返家/;
+    const fmtLeft = (m) => m >= 60 ? `${Math.floor(m / 60)} 小時 ${m % 60} 分` : `${m} 分`;
+
+    function updateNow() {
+      const panel = document.getElementById('nowPanel');
+      if (!panel || !APP.data) return;
+      const now = nowJST();
+      const days = APP.data.schedule;
+      const todayIdx = days.findIndex(d => d.date === now.date);
+      const day = days[APP.dayIndex];
+
+      document.querySelectorAll('#timeline .tl-item').forEach(el => el.classList.remove('is-now', 'is-past'));
+
+      if (todayIdx < 0) {
+        const first = days[0]?.date;
+        const diff = first ? Math.ceil((new Date(first + 'T00:00:00+09:00') - new Date(now.date + 'T00:00:00+09:00')) / 86400000) : -1;
+        panel.innerHTML = diff > 0 ? `<div class="now-row"><span class="k">倒數</span><span class="v">距離出發還有 <span class="left">${diff} 天</span></span></div>` : '';
+        panel.classList.toggle('show', diff > 0);
+        return;
+      }
+      if (todayIdx !== APP.dayIndex) {
+        panel.innerHTML = `<div class="now-row"><span class="k">今天</span><span class="v">${esc(days[todayIdx].day)}・${esc(days[todayIdx].title)}</span></div>
+          <button type="button" class="btn btn-primary" data-goto-day="${todayIdx}">回到今天的行程</button>`;
+        panel.classList.add('show');
+        return;
+      }
+
+      const timed = day.items
+        .map(it => ({ it, start: toMin(it.time_start), end: toMin(it.time_end), due: firstTime(it.deadline) ?? toMin(it.time_start) }))
+        .filter(x => x.start !== null && !TAIWAN_LEG.test(x.it.spot));
+      let current = null;
+      timed.forEach((x, i) => {
+        const until = x.end ?? timed[i + 1]?.start ?? x.start + 60;
+        if (x.start <= now.min && now.min < until) current = x;
+        if (until <= now.min) document.getElementById(x.it.id)?.classList.add('is-past');
+      });
+      if (current) document.getElementById(current.it.id)?.classList.add('is-now');
+      const next = timed.find(x => x.start > now.min && x !== current);
+      const hard = timed.find(x => x.it.deadline && x.due > now.min);
+
+      const rows = [`<div class="now-clock">🕒 日本時間 ${esc(now.hhmm)}</div>`];
+      if (current) rows.push(`<div class="now-row"><span class="k">進行中</span><span class="v">${esc(current.it.spot)}${current.it.time_end ? `（到 ${esc(current.it.time_end)}）` : ''}</span></div>`);
+      if (next) rows.push(`<div class="now-row"><span class="k">下一站</span><span class="v">${esc(next.it.time_start)} ${esc(next.it.spot)}・還有 <span class="left">${fmtLeft(next.start - now.min)}</span></span></div>`);
+      if (hard) {
+        const left = hard.due - now.min;
+        rows.push(`<div class="now-row hard ${left <= 30 ? 'urgent' : ''}"><span class="k">🔴 必趕</span><span class="v">${esc(hard.it.deadline)}・還有 <span class="left">${fmtLeft(left)}</span></span></div>`);
+      }
+      if (!current && !next) rows.push('<div class="now-row"><span class="k">今天</span><span class="v">行程都走完了，辛苦了 🎉</span></div>');
+      panel.innerHTML = rows.join('');
+      panel.classList.add('show');
+    }
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-goto-day]');
+      if (btn) selectDay(Number(btn.dataset.gotoDay));
+    });
+    setInterval(updateNow, 30000);
+    document.addEventListener('visibilitychange', () => { if (!document.hidden) updateNow(); });
+
     function initialDayIndex() {
-      const today = new Date();
-      const iso = `${today.getFullYear()}-${String(today.getMonth() + 1).padStart(2, '0')}-${String(today.getDate()).padStart(2, '0')}`;
-      const t = APP.data.schedule.findIndex(d => d.date === iso);
+      const t = APP.data.schedule.findIndex(d => d.date === nowJST().date);
       if (t >= 0) return t;
       const saved = Number(localStorage.getItem(DAY_KEY));
       return Number.isInteger(saved) && APP.data.schedule[saved] ? saved : 0;
