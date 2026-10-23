@@ -328,8 +328,8 @@ def build_flights_info(schedule):
         {
             "id": "flight-outbound",
             "type": "去程航班",
-            "airline": "中華航空 / 星宇航空",
-            "flight_no": "TPE ➔ FUK",
+            "airline": "台灣虎航",
+            "flight_no": "IT-240・TPE ➔ FUK",
             "date": "2026-11-12",
             "day": "Day 1",
             "departure": {
@@ -345,14 +345,14 @@ def build_flights_info(schedule):
                 "action": "預計 10:00 抵達，辦理入境審查與領取行李"
             },
             "duration": "2 小時 15 分",
-            "baggage": "託運行李 23kg / 件、手提 7kg",
+            "baggage": "手提 1 件＋個人物品共 10kg、託運依購買方案",
             "status": "準時預定",
             "notes": "入境後搭乘機場接駁車至國內線航廈，轉乘地下鐵至博多車站（車程約 5 分鐘）。"
         },
         {
             "id": "flight-inbound",
             "type": "回程航班",
-            "airline": "中華航空 / 星宇航空",
+            "airline": "台灣虎航",
             "flight_no": "FUK ➔ TPE",
             "date": "2026-11-16",
             "day": "Day 5",
@@ -369,9 +369,9 @@ def build_flights_info(schedule):
                 "action": "19:40 抵達桃園機場，完成入境查驗，預計 21:00-22:00 返家休息"
             },
             "duration": "2 小時 45 分",
-            "baggage": "託運行李 23kg / 件、手提 7kg",
+            "baggage": "手提 1 件＋個人物品共 10kg、託運依購買方案",
             "status": "準時預定",
-            "notes": "福岡機場免稅店人潮眾多，建議提早於 15:00 抵達國際線航廈。"
+            "notes": "虎航櫃檯約起飛前 45 分鐘關閉（約 17:10），加上 11 月新制退稅要過海關，最晚 14:15 從運河城出發。"
         }
     ]
     return flights
