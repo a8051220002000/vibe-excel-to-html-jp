@@ -13,6 +13,7 @@ import argparse
 import datetime
 import json
 import os
+import re
 import sys
 from pathlib import Path
 import openpyxl
@@ -27,6 +28,9 @@ SENSITIVE_REPLACEMENTS = [
     ("土城", "住處"),
 ]
 
+# Booking IDs stay in the local Excel only
+BOOKING_ID = re.compile(r"(訂位編號[:：]\s*)[A-Za-z0-9-]+")
+
 def desensitize(obj):
     """Recursively mask sensitive strings in the output payload."""
     if isinstance(obj, dict):
@@ -38,6 +42,7 @@ def desensitize(obj):
             return SENSITIVE_EXACT[obj]
         for old, new in SENSITIVE_REPLACEMENTS:
             obj = obj.replace(old, new)
+        obj = BOOKING_ID.sub(r"\1（見 Excel）", obj)
     return obj
 
 def serialize_cell(val):
