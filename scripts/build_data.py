@@ -65,7 +65,7 @@ def serialize_cell(val):
 CATEGORY_KEYWORDS = [
     # Names that would otherwise hit a broader keyword (麵包超人 ≠ 麵包, 車站足湯, À la campagne is in 三越)
     ("sightseeing", ["麵包超人", "貓頭鷹", "owl", "足湯"]),
-    ("food", ["à la campagne"]),
+    ("food", ["à la campagne", "必買"]),
     ("flight", ["機場", "飛機", "出境", "入境", "回台", "土城→桃園"]),
     ("transport", ["→", "出門", "取行李", "車站", "博多開車", "公車", "寄物", "寄行李"]),
     ("food", ["早餐", "午餐", "晚餐", "大東園", "麵包", "水果派", "千層蛋糕", "草莓", "屋台", "cafe", "咖哩", "抹茶"]),
