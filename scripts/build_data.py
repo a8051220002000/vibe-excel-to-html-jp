@@ -62,6 +62,26 @@ def serialize_cell(val):
         return str(val)
     return str(val).strip()
 
+CATEGORY_KEYWORDS = [
+    # Names that would otherwise hit a broader keyword (麵包超人 ≠ 麵包, 車站足湯, À la campagne is in 三越)
+    ("sightseeing", ["麵包超人", "貓頭鷹", "owl", "足湯"]),
+    ("food", ["à la campagne"]),
+    ("flight", ["機場", "飛機", "出境", "入境", "回台", "土城→桃園"]),
+    ("transport", ["→", "出門", "取行李", "車站", "博多開車", "公車", "寄物", "寄行李"]),
+    ("food", ["早餐", "午餐", "晚餐", "大東園", "麵包", "水果派", "千層蛋糕", "草莓", "屋台", "cafe", "咖哩", "抹茶"]),
+    ("shopping", ["地下街", "三越", "parco", "岩田屋", "無印", "優衣褲", "gu", "beams", "3conis", "mina", "big cream", "運河城", "plaza", "mart", "迪士尼", "outlate", "血拼", "伴手禮"]),
+    ("hotel", ["check-in", "民宿", "晚安", "回家"]),
+    ("sightseeing", ["神社", "博物館", "城", "山", "廣場", "溫泉", "街道", "花卉村", "金鱗湖", "足湯", "海賊王", "條約"]),
+]
+
+def classify_category(text):
+    """Return the first category whose keywords appear in text, or None."""
+    text = text.lower()
+    for category, keywords in CATEGORY_KEYWORDS:
+        if any(k in text for k in keywords):
+            return category
+    return None
+
 def parse_schedule(sheet):
     """
     Parse '行程表' sheet with Forward Fill logic.
@@ -143,21 +163,11 @@ def parse_schedule(sheet):
             else:
                 continue
 
-        # Determine category for better UI presentation
-        category = "sightseeing"
-        title_lower = (col_spot + " " + col_trans + " " + col_remark).lower()
-        if any(k in title_lower for k in ["機場", "飛機", "出境", "入境", "回台", "土城→桃園"]):
-            category = "flight"
-        elif any(k in title_lower for k in ["→", "出門", "取行李", "車站", "博多開車", "公車", "寄物", "寄行李"]):
-            category = "transport"
-        elif any(k in title_lower for k in ["早餐", "午餐", "晚餐", "大東園", "麵包", "水果派", "千層蛋糕", "草莓", "屋台", "cafe", "咖哩", "抹茶"]):
-            category = "food"
-        elif any(k in title_lower for k in ["地下街", "三越", "parco", "岩田屋", "無印", "優衣褲", "gu", "beams", "3conis", "mina", "big cream", "運河城", "plaza", "mart", "迪士尼", "outlate", "血拼", "伴手禮"]):
-            category = "shopping"
-        elif any(k in title_lower for k in ["check-in", "民宿", "晚安", "回家"]):
-            category = "hotel"
-        elif any(k in title_lower for k in ["神社", "博物館", "城", "山", "廣場", "溫泉", "街道", "花卉村", "金鱗湖", "足湯", "海賊王", "條約"]):
-            category = "sightseeing"
+        # Determine category for better UI presentation: the spot name decides first,
+        # remarks only when the name alone matches nothing (long remarks mention other places)
+        category = (classify_category(col_spot)
+                    or classify_category(col_spot + " " + col_trans + " " + col_remark)
+                    or "sightseeing")
 
         # Combine remarks cleanly
         remarks_list = []

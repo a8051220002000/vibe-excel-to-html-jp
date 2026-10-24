@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-24T12:35:47.258641",
+  "generated_at": "2026-10-24T15:16:39.408117",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -118,7 +118,7 @@
           "price": "2200",
           "booked": "已訂",
           "deadline": "最晚 16:00 入場",
-          "category": "transport",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=789785663476518999"
         },
         {
@@ -306,27 +306,27 @@
           "id": "day2-2",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "11:30",
-          "time_end": "13:00",
-          "spot": "湯之坪街道",
+          "time_start": "11:50",
+          "time_end": "12:40",
+          "spot": "OWL'S FOREST（貓頭鷹森林）",
           "location_tag": "",
           "transport": "",
-          "remarks": "09:17 博多開車 ➡️ 11:31 抵達由布院。\n🚃 由布院站步行約5分即到街道入口",
-          "price": "",
+          "remarks": "貓頭鷹很重要，一到由布院先來\n🚃 由布院站出站直走湯之坪街道，步行約 15 分到花卉村（貓頭鷹森林在花卉村裡面）\n營業時間：09:30 開門；平日（11/13 週五）可能 17:00 就關，以現場為準\n門票：13 歲以上約 ¥700、4–12 歲 ¥500（旅遊網站資料；村莊免費，手乘體驗另收）\n💡 拍照不要開閃光燈\n【先買再去看貓頭鷹】兩家都在由布院站往花卉村的路上\n① カランドネル（可麗露）：賣完就關店（11:00–17:00）\n② B-speak（Pロール ¥1,620）：一開門就排隊，約 15 點可能賣完；最好前一天電話預約\n之後午餐再排 由布院ミルヒ（店外常排隊）",
+          "price": "約 ¥700（13 歲以上，以現場為準）",
           "booked": "",
           "deadline": "",
-          "category": "transport"
+          "category": "sightseeing"
         },
         {
           "id": "day2-3",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "13:00",
-          "time_end": "14:00",
+          "time_start": "12:40",
+          "time_end": "13:10",
           "spot": "湯布院花卉村",
           "location_tag": "",
           "transport": "",
-          "remarks": "如果要更早，就搭一般車，過去10點\n營業時間：09:30–17:30\n🚃 位在湯之坪街道中段，由布院站步行約15分",
+          "remarks": "就在貓頭鷹森林旁邊，英國科茲窩風小鎮街景，村莊免費入場\n營業時間：09:30–17:30（平日可能較早關）",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -336,27 +336,27 @@
           "id": "day2-4",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "14:00",
-          "time_end": "15:00",
-          "spot": "OWL'S FOREST（貓頭鷹餐廳/森林）",
+          "time_start": "13:10",
+          "time_end": "14:30",
+          "spot": "湯之坪街道（午餐・邊走邊吃）",
           "location_tag": "",
           "transport": "",
-          "remarks": "貓頭貓  很重要\n營業時間：09:30–17:30（年中無休，惡劣天候可能休）\n🚃 在花卉村裡面",
+          "remarks": "從花卉村往金鱗湖方向邊走邊吃（街道後半段）\n【推薦】\n・湯布院 金賞コロッケ：全國可樂餅大賽金賞，現點現炸，約 ¥170–220\n・鞠智（くくち）：古民家和菓子店，一口地瓜燒、現烤銅鑼燒\n・由布院ミルヒ：半熟起司蛋糕、布丁\n・CARANDONEL（カランドネル）：可麗露專賣，在車站往街道的路上\n・花麹菊家：湯の坪横丁入口，ぷりんどら（布丁銅鑼燒）\n・B-speak：Pロール（若早上沒買到，回程再看看）\n⚠️ 店家多 10:00–17:00，午餐尖峰排隊多",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "food"
         },
         {
           "id": "day2-5",
           "day": "Day 2",
           "date": "2026-11-13",
-          "time_start": "15:00",
-          "time_end": "16:00",
+          "time_start": "14:30",
+          "time_end": "15:15",
           "spot": "金鱗湖畔漫步",
           "location_tag": "",
           "transport": "",
-          "remarks": "🚃 花卉村步行約10分（湯之坪街道走到底）",
+          "remarks": "🚃 湯之坪街道走到底就是金鱗湖\n湖一圈約 400m，走 15–20 分；天祖神社的鳥居是拍照點",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -371,11 +371,11 @@
           "spot": "由布院車站足湯",
           "location_tag": "",
           "transport": "",
-          "remarks": "🚃 金鱗湖步行約25分回車站（走不動可搭計程車約5分）",
+          "remarks": "🚃 15:15 從金鱗湖沿湯之坪街道走回車站約 25 分，順路買伴手禮（ミルヒ、B-speak）\n走不動可搭計程車約 5 分\n⚠️ 16:50 前離開足湯，趕 17:17 ゆふいんの森 6 號",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "transport"
+          "category": "sightseeing"
         },
         {
           "id": "day2-7",
@@ -413,7 +413,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "transport",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=3049944856696640556"
         },
         {
@@ -886,7 +886,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "transport",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=1371327252959948136"
         },
         {
@@ -917,7 +917,7 @@
           "price": "¥1,230（纜車＋斜坡纜車往返通し券）；接駁車免費",
           "booked": "",
           "deadline": "16:05 八幡接駁車（備案 16:25）",
-          "category": "transport",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=5282697707216040956"
         },
         {
@@ -933,7 +933,7 @@
           "price": "",
           "booked": "",
           "deadline": "日落 17:15；回八幡接駁車末班 20:15",
-          "category": "transport",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=15617041537211558758"
         },
         {
@@ -1066,7 +1066,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=11639954002556587428"
         },
         {
@@ -1082,7 +1082,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food",
+          "category": "shopping",
           "map_url": "https://maps.google.com/?cid=16207815243977726417"
         },
         {
@@ -1434,15 +1434,15 @@
       "access": "由布院站步行約 5 分到街道入口",
       "hours": "店家多為 9:30／10:00 開到 17:00／17:30（由布院很早關門）",
       "cost": "",
-      "notes": "【吃什麼】\n・湯布院 金賞コロッケ（きんしょうころっけ）：全國可樂餅大賽金賞，現點現炸，約 ¥170–220\n・由布院ミルヒ（ゆふいんみるひ）：起司蛋糕、湯布院布丁\n・B-speak（びーすぴーく）：Pロール（瑞士捲）整條約 ¥1,520–1,620，常下午就賣完，可電話預約\n建議一到由布院先去 B-speak"
+      "notes": "【吃什麼】\n・湯布院 金賞コロッケ（きんしょうころっけ）：全國可樂餅大賽金賞，現點現炸，約 ¥170–220\n・鞠智（くくち）：古民家和菓子店，一口地瓜燒、現烤銅鑼燒\n・由布院ミルヒ（ゆふいんみるひ）：半熟起司蛋糕、湯布院布丁\n・B-speak（びーすぴーく）：Pロール（瑞士捲）整條約 ¥1,520–1,620，常下午就賣完，可電話預約\n・CARANDONEL（カランドネル）：可麗露專賣，在車站往街道的路上\n・花麹菊家（はなこうじきくや）：湯の坪横丁入口，ぷりんどら（布丁銅鑼燒）\n建議往花卉村路上經過 B-speak 就先買"
     },
     {
       "day": "Day 2",
       "title": "湯布院フローラルヴィレッジ＋フクロウの森（花卉村＋貓頭鷹森林）",
       "location": "由布市湯布院町川上1503-3",
-      "access": "在湯之坪街道中段，由布院站步行約 15 分",
+      "access": "在湯之坪街道中段，由布院站步行約 15 分；一到由布院就先去",
       "hours": "09:30–17:30，年中無休（惡劣天候可能休）",
-      "cost": "村莊免費；フクロウの森門票另收（各網站價格不一，以現場為準）",
+      "cost": "村莊免費；フクロウの森 13 歲以上約 ¥700、4–12 歲 ¥500（旅遊網站資料，以現場為準）",
       "notes": "英國科茲窩風小鎮街景\n貓頭鷹拍照不要開閃光燈"
     },
     {
