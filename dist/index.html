@@ -9,6 +9,10 @@
   <meta name="apple-mobile-web-app-title" content="福岡2026">
   <meta name="description" content="2026 福岡・九州自由行五日隨身數位手冊">
   <title>2026 福岡・九州自由行 | 行程隨身手冊</title>
+  <script>
+    // Apply the saved theme before first paint so dark mode doesn't flash white
+    try { if (localStorage.getItem('japan2026.theme') === 'dark') document.documentElement.dataset.theme = 'dark'; } catch (_) {}
+  </script>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛩️</text></svg>">
@@ -43,6 +47,81 @@
       --safe-left: env(safe-area-inset-left, 0px);
       --safe-right: env(safe-area-inset-right, 0px);
       --nav-height: 64px;
+      /* Translucent bars and tinted surfaces (redefined for dark mode below) */
+      --bg-glass: rgba(255, 255, 255, 0.88);
+      --bg-glass-strong: rgba(255, 255, 255, 0.94);
+      --border-glass: rgba(226, 232, 240, 0.85);
+      --shadow-shell: 0 0 40px rgba(0, 0, 0, 0.06);
+      --tint-blue: #eaf2ff;
+      --tint-blue-border: #cfe0ff;
+      --tint-purple: #f3ecff;
+      --tint-amber: #fff5e6;
+      --tint-teal: #e7fbf5;
+      --tint-slate: #eef2f7;
+      --success-text: #047857;
+      --success-bg: #ecfdf5;
+      --success-border: #a7f3d0;
+      --danger-text: #b91c1c;
+      --danger-bg: #fef2f2;
+      --danger-border: #fecaca;
+      --danger-strong: #fca5a5;
+      --info-text: #1d4ed8;
+      --info-bg: #eff6ff;
+      --info-border: #bfdbfe;
+      --warn-text: #78350f;
+      --warn-bg: #fde68a;
+      --now-bg: linear-gradient(135deg, #0f172a, #334155);
+      --hero-bg: linear-gradient(135deg, #e85a71 0%, #fa709a 100%);
+      --past-opacity: 0.5;
+    }
+
+    :root[data-theme="dark"] {
+      color-scheme: dark;
+      --primary: #e0566e; /* white text on it must stay at least as readable as light mode */
+      --primary-dark: #ff9db0;
+      --primary-light: #3b1d26;
+      --primary-subtle: #5b2a37;
+      --accent-blue: #7aafff;
+      --accent-teal: #34d6a8;
+      --accent-amber: #fbbf24;
+      --accent-purple: #a78bfa;
+      --bg-canvas: #020617;
+      --bg-surface: #0f172a;
+      --bg-card: #1e293b;
+      --bg-muted: #172235;
+      --border-subtle: #334155;
+      --border-focus: #475569;
+      --text-main: #e2e8f0;
+      --text-sub: #cbd5e1;
+      --text-muted: #94a3b8;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+      --shadow-md: 0 4px 16px -2px rgba(0, 0, 0, 0.5);
+      --shadow-lg: 0 10px 25px -3px rgba(0, 0, 0, 0.6);
+      --bg-glass: rgba(15, 23, 42, 0.88);
+      --bg-glass-strong: rgba(15, 23, 42, 0.94);
+      --border-glass: rgba(51, 65, 85, 0.85);
+      --shadow-shell: 0 0 40px rgba(0, 0, 0, 0.5);
+      --tint-blue: #1c2a46;
+      --tint-blue-border: #2c4475;
+      --tint-purple: #2a2344;
+      --tint-amber: #3a2b12;
+      --tint-teal: #12332c;
+      --tint-slate: #243042;
+      --success-text: #6ee7b7;
+      --success-bg: #0f2e25;
+      --success-border: #1f5f4a;
+      --danger-text: #fca5a5;
+      --danger-bg: #3a1619;
+      --danger-border: #7f1d1d;
+      --danger-strong: #b45454;
+      --info-text: #93c5fd;
+      --info-bg: #172554;
+      --info-border: #1e3a8a;
+      --warn-text: #fde68a;
+      --warn-bg: #78350f;
+      --now-bg: linear-gradient(135deg, #1e293b, #334155);
+      --hero-bg: linear-gradient(135deg, #5b2a37 0%, #1e293b 100%); /* no bright pink block at night */
+      --past-opacity: 0.7; /* 0.5 drops past cards below AA on dark */
     }
 
     /* Reset & Base System */
@@ -81,7 +160,7 @@
       display: flex;
       flex-direction: column;
       position: relative;
-      box-shadow: 0 0 40px rgba(0, 0, 0, 0.06);
+      box-shadow: var(--shadow-shell);
       overflow-x: hidden;
       overflow-x: clip; /* clip doesn't create a scroll container, keeps position: sticky working */
       padding-top: var(--safe-top);
@@ -95,10 +174,10 @@
       position: sticky;
       top: 0;
       z-index: 90;
-      background: rgba(255, 255, 255, 0.88);
+      background: var(--bg-glass);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      border-bottom: 1px solid rgba(226, 232, 240, 0.8);
+      border-bottom: 1px solid var(--border-glass);
       padding: 12px 18px;
       display: flex;
       align-items: center;
@@ -138,6 +217,22 @@
       color: var(--text-muted);
       letter-spacing: 0.2px;
     }
+
+    .header-actions { display: flex; align-items: center; gap: 8px; }
+    .theme-toggle {
+      width: 40px;
+      height: 40px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      line-height: 1;
+      border-radius: 50%;
+      border: 1px solid var(--border-subtle);
+      background: var(--bg-muted);
+      cursor: pointer;
+    }
+    .theme-toggle:active { transform: scale(0.94); }
 
     .header-badge {
       display: inline-flex;
@@ -192,7 +287,7 @@
     }
 
     .hero-banner {
-      background: linear-gradient(135deg, #e85a71 0%, #fa709a 100%);
+      background: var(--hero-bg);
       color: #ffffff;
       border-radius: var(--radius-md);
       padding: 18px 20px;
@@ -245,10 +340,10 @@
       max-width: 480px;
       height: calc(var(--nav-height) + var(--safe-bottom));
       padding-bottom: var(--safe-bottom);
-      background: rgba(255, 255, 255, 0.92);
+      background: var(--bg-glass-strong);
       backdrop-filter: blur(20px);
       -webkit-backdrop-filter: blur(20px);
-      border-top: 1px solid rgba(226, 232, 240, 0.9);
+      border-top: 1px solid var(--border-glass);
       display: flex;
       justify-content: space-around;
       align-items: center;
@@ -326,7 +421,7 @@
       z-index: 80;
       margin: 0 -16px 12px;
       padding: 10px 16px;
-      background: rgba(255, 255, 255, 0.94);
+      background: var(--bg-glass-strong);
       backdrop-filter: blur(14px);
       -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-subtle);
@@ -409,12 +504,12 @@
       position: relative;
       z-index: 1;
     }
-    .cat-flight .tl-dot { background: #eaf2ff; border-color: var(--accent-blue); }
-    .cat-transport .tl-dot { background: #f3ecff; border-color: var(--accent-purple); }
-    .cat-food .tl-dot { background: #fff5e6; border-color: var(--accent-amber); }
+    .cat-flight .tl-dot { background: var(--tint-blue); border-color: var(--accent-blue); }
+    .cat-transport .tl-dot { background: var(--tint-purple); border-color: var(--accent-purple); }
+    .cat-food .tl-dot { background: var(--tint-amber); border-color: var(--accent-amber); }
     .cat-shopping .tl-dot { background: var(--primary-light); border-color: var(--primary); }
-    .cat-sightseeing .tl-dot { background: #e7fbf5; border-color: var(--accent-teal); }
-    .cat-hotel .tl-dot { background: #eef2f7; border-color: #64748b; }
+    .cat-sightseeing .tl-dot { background: var(--tint-teal); border-color: var(--accent-teal); }
+    .cat-hotel .tl-dot { background: var(--tint-slate); border-color: var(--text-muted); }
 
     .tl-card {
       min-width: 0;
@@ -440,7 +535,7 @@
       font-weight: 600;
       text-decoration: none;
       color: var(--accent-blue);
-      background: #eaf2ff;
+      background: var(--tint-blue);
       border-radius: var(--radius-pill);
       padding: 2px 8px;
     }
@@ -459,7 +554,7 @@
       padding: 2px 8px;
       overflow-wrap: anywhere;
     }
-    .tag.booked-yes { color: #047857; background: #ecfdf5; border-color: #a7f3d0; }
+    .tag.booked-yes { color: var(--success-text); background: var(--success-bg); border-color: var(--success-border); }
 
     .tl-remarks { margin-top: 8px; }
     .tl-remarks summary {
@@ -595,7 +690,7 @@
     }
     .btn:active { transform: scale(0.97); }
     .btn-primary { background: var(--primary); border-color: var(--primary); color: #fff; }
-    .btn-blue { background: #eaf2ff; border-color: #cfe0ff; color: var(--accent-blue); }
+    .btn-blue { background: var(--tint-blue); border-color: var(--tint-blue-border); color: var(--accent-blue); }
 
     .info-row { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
     .info-row + .info-row { margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--border-subtle); }
@@ -611,17 +706,17 @@
       margin-top: 6px;
       font-size: 12px;
       font-weight: 700;
-      color: #b91c1c;
-      background: #fef2f2;
-      border: 1px solid #fecaca;
+      color: var(--danger-text);
+      background: var(--danger-bg);
+      border: 1px solid var(--danger-border);
       border-radius: var(--radius-sm);
       padding: 4px 8px;
       overflow-wrap: anywhere;
     }
-    .tl-item.is-hard .tl-card { border-color: #fca5a5; }
+    .tl-item.is-hard .tl-card { border-color: var(--danger-strong); }
     .tl-item.is-flex .tl-card { background: var(--bg-muted); box-shadow: none; }
     .tl-item.is-flex .tl-title { color: var(--text-sub); font-weight: 600; }
-    .tl-item.is-past { opacity: 0.5; }
+    .tl-item.is-past { opacity: var(--past-opacity); }
     .tl-item.is-now .tl-card { border: 2px solid var(--primary); box-shadow: 0 4px 14px rgba(232, 90, 113, 0.18); }
     .tl-item.is-now .tl-dot { animation: pulse 1.6s ease-in-out infinite; }
     @keyframes pulse { 50% { transform: scale(1.15); } }
@@ -632,7 +727,7 @@
       border-radius: var(--radius-md);
       padding: 12px 14px;
       color: #fff;
-      background: linear-gradient(135deg, #0f172a, #334155);
+      background: var(--now-bg);
       box-shadow: var(--shadow-md);
     }
     .now-panel.show { display: block; }
@@ -644,8 +739,8 @@
       font-size: 12px;
       font-weight: 600;
       text-align: center;
-      color: #78350f;
-      background: #fde68a;
+      color: var(--warn-text);
+      background: var(--warn-bg);
     }
     .offline-bar[hidden] { display: none; }
     .now-row { display: flex; gap: 8px; align-items: baseline; font-size: 13px; }
@@ -687,15 +782,15 @@
     /* ===== Rain plans ===== */
     .rain-card {
       margin-top: 4px;
-      border: 1px solid #bfdbfe;
-      background: linear-gradient(180deg, #eff6ff, #ffffff);
+      border: 1px solid var(--info-border);
+      background: linear-gradient(180deg, var(--info-bg), var(--bg-card));
       border-radius: var(--radius-md);
       padding: 10px 14px;
     }
     .rain-card summary {
       font-size: 14px;
       font-weight: 800;
-      color: #1d4ed8;
+      color: var(--info-text);
       cursor: pointer;
       list-style: none;
     }
@@ -739,9 +834,9 @@
     .jr-verdict {
       font-size: 13px;
       font-weight: 700;
-      color: #047857;
-      background: #ecfdf5;
-      border: 1px solid #a7f3d0;
+      color: var(--success-text);
+      background: var(--success-bg);
+      border: 1px solid var(--success-border);
       border-radius: var(--radius-sm);
       padding: 8px 10px;
     }
@@ -760,7 +855,10 @@
           <div class="brand-subtitle">2026.11.12 - 11.16・5 Days</div>
         </div>
       </div>
-      <div class="header-badge">5天4夜</div>
+      <div class="header-actions">
+        <div class="header-badge">5天4夜</div>
+        <button type="button" class="theme-toggle" id="themeToggle" aria-label="切換深色模式" aria-pressed="false">🌙</button>
+      </div>
     </header>
     <div class="offline-bar" id="offlineBar" role="status" hidden>📴 離線中・顯示上次存下的行程</div>
 
@@ -1364,6 +1462,24 @@
         document.getElementById('timeline').innerHTML =
           '<div class="empty-state">⚠️ 無法載入行程資料，請確認網路或重新整理。</div>';
       });
+
+    // ===== Light / dark toggle =====
+    const THEME_KEY = 'japan2026.theme';
+    const LIGHT_BAR = document.querySelector('meta[name="theme-color"]').content;
+    function applyTheme(dark) {
+      document.documentElement.dataset.theme = dark ? 'dark' : 'light';
+      document.querySelector('meta[name="theme-color"]').content = dark ? '#0f172a' : LIGHT_BAR;
+      const btn = document.getElementById('themeToggle');
+      btn.textContent = dark ? '☀️' : '🌙';
+      btn.setAttribute('aria-pressed', String(dark));
+      btn.setAttribute('aria-label', dark ? '切換淺色模式' : '切換深色模式');
+    }
+    applyTheme(document.documentElement.dataset.theme === 'dark');
+    document.getElementById('themeToggle').addEventListener('click', () => {
+      const dark = document.documentElement.dataset.theme !== 'dark';
+      applyTheme(dark);
+      try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch (_) {}
+    });
 
     // ===== Offline support (Task 3.1) =====
     function syncOnline() {

@@ -14,7 +14,8 @@ itinerary.xlsx ──▶ scripts/build_data.py ──▶ dist/itinerary_data.jso
 | `itinerary.xlsx` | 行程原始資料（行程表、景點資料、機票資訊、交通套票資訊、todo、遊日優惠） |
 | `scripts/build_data.py` | Excel → JSON 轉換 CLI（Forward Fill、型別正規化、空白列過濾） |
 | `scripts/inspect_sheets.py` | 檢視各工作表名稱、標題列與資料列數 |
-| `scripts/verify_*.py` | 各功能的驗收腳本 |
+| `scripts/verify_*.py` | 各功能的驗收腳本（`verify_browser.py` 為瀏覽器回歸測試） |
+| `AGENTS.md`、`CLAUDE.md` | 給 agent 的專案說明與驗證流程 |
 | `dist/index.html` | 手機版網頁（每日行程 / 航班資訊 / 優惠券 / 實用資訊） |
 | `dist/itinerary_data.json` | 轉換產出的資料檔（**請勿手動編輯**，以 Excel 為準） |
 | `dist/sw.js` | Service Worker，離線快取 index.html、資料檔與 App 圖示 |
@@ -84,3 +85,12 @@ python3 scripts/verify_timeline.py        # 每日行程時間軸與 Day 過濾
 python3 scripts/verify_cards.py           # 航班卡片、優惠券、一鍵複製
 python3 scripts/verify_offline.py         # Service Worker 離線快取
 ```
+
+瀏覽器回歸測試（Playwright，375×812；用本機已安裝的 Edge／Chrome，約 10 秒跑完）：
+
+```bash
+python3 -m venv .venv && .venv/bin/pip install playwright   # 第一次
+.venv/bin/python scripts/verify_browser.py                   # 全部；--only 指定項目、--shots 存截圖
+```
+
+給 agent（Claude、agy）的驗證流程寫在 `AGENTS.md`。

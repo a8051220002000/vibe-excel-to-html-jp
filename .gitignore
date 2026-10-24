@@ -12,3 +12,6 @@ __pycache__/
 # Scratch
 scratch/
 dist/test_run.json
+
+# Browser test environment (see AGENTS.md)
+.venv/
