@@ -17,7 +17,8 @@ itinerary.xlsx ──▶ scripts/build_data.py ──▶ dist/itinerary_data.jso
 | `scripts/verify_*.py` | 各功能的驗收腳本 |
 | `dist/index.html` | 手機版網頁（每日行程 / 航班資訊 / 優惠券 / 實用資訊） |
 | `dist/itinerary_data.json` | 轉換產出的資料檔（**請勿手動編輯**，以 Excel 為準） |
-| `dist/sw.js` | Service Worker，離線快取 index.html 與資料檔 |
+| `dist/sw.js` | Service Worker，離線快取 index.html、資料檔與 App 圖示 |
+| `dist/manifest.webmanifest`、`dist/icon*` | 「加入主畫面」用的 App 名稱與圖示 |
 | `dist/.nojekyll` | 關閉 GitHub Pages 的 Jekyll 處理 |
 | `.github/workflows/pages.yml` | push 到 `main` 時自動把 `dist/` 發布到 GitHub Pages |
 
@@ -64,7 +65,7 @@ itinerary.xlsx ──▶ scripts/build_data.py ──▶ dist/itinerary_data.jso
    git push origin main
    ```
 
-> 手機端採 **network-first** 快取策略：有網路時會自動抓到最新的 `itinerary_data.json`，離線時則使用上次快取的版本。
+> 手機端採 **stale-while-revalidate** 快取策略：先秒開上次快取的版本，同時在背景抓最新的 `itinerary_data.json`；資料有變時頁面會自動重新顯示並跳出「行程已更新」。離線時就沿用快取。
 > 只有在 `dist/` 新增或更名需要預先快取的檔案時，才需要修改 `dist/sw.js` 的 `PRECACHE_URLS` 並遞增 `CACHE_VERSION`。
 
 ## 🚀 GitHub Pages 發布設定（首次）

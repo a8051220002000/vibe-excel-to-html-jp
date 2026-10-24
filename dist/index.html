@@ -9,6 +9,8 @@
   <meta name="apple-mobile-web-app-title" content="福岡2026">
   <meta name="description" content="2026 福岡・九州自由行五日隨身數位手冊">
   <title>2026 福岡・九州自由行 | 行程隨身手冊</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⛩️</text></svg>">
   <style>
     :root {
@@ -320,7 +322,7 @@
 
     .day-bar {
       position: sticky;
-      top: calc(var(--safe-top) + var(--header-h));
+      top: calc(var(--safe-top) + var(--header-h) + var(--offline-h, 0px));
       z-index: 80;
       margin: 0 -16px 12px;
       padding: 10px 16px;
@@ -634,6 +636,18 @@
       box-shadow: var(--shadow-md);
     }
     .now-panel.show { display: block; }
+    .offline-bar {
+      position: sticky;
+      top: calc(var(--safe-top) + var(--header-h));
+      z-index: 85;
+      padding: 6px 18px;
+      font-size: 12px;
+      font-weight: 600;
+      text-align: center;
+      color: #78350f;
+      background: #fde68a;
+    }
+    .offline-bar[hidden] { display: none; }
     .now-row { display: flex; gap: 8px; align-items: baseline; font-size: 13px; }
     .now-row + .now-row { margin-top: 6px; }
     .now-row .k { flex: 0 0 auto; font-size: 11px; font-weight: 700; opacity: 0.7; min-width: 52px; }
@@ -748,6 +762,7 @@
       </div>
       <div class="header-badge">5天4夜</div>
     </header>
+    <div class="offline-bar" id="offlineBar" role="status" hidden>📴 離線中・顯示上次存下的行程</div>
 
     <!-- Main Content Container -->
     <main class="main-content">
@@ -885,6 +900,8 @@
             <span class="chip-date">${esc(md)} ${esc((d.weekday || '').replace('週', ''))}</span>
           </button>`;
       }).join('');
+      if (bar.dataset.bound) return; // re-rendered when fresh data arrives
+      bar.dataset.bound = '1';
       bar.addEventListener('click', (e) => {
         const chip = e.target.closest('.day-chip');
         if (chip) selectDay(Number(chip.dataset.dayIndex));
@@ -1032,6 +1049,7 @@
       });
       if (current) document.getElementById(current.it.id)?.classList.add('is-now');
       const next = timed.find(x => x.start > now.min && x !== current);
+      APP.focusId = (current || next)?.it.id || null;
       const hard = timed.find(x => x.it.deadline && x.due > now.min);
 
       const rows = [`<div class="now-clock">🕒 日本時間 ${esc(now.hhmm)}</div>`];
@@ -1042,6 +1060,9 @@
         rows.push(`<div class="now-row hard ${left <= 30 ? 'urgent' : ''}"><span class="k">🔴 必趕</span><span class="v">${esc(hard.it.deadline)}・還有 <span class="left">${fmtLeft(left)}</span></span></div>`);
       }
       if (!current && !next) rows.push('<div class="now-row"><span class="k">今天</span><span class="v">行程都走完了，辛苦了 🎉</span></div>');
+      const tomorrow = days[todayIdx + 1];
+      const firstStop = now.min >= 23 * 60 && tomorrow?.items.find(it => toMin(it.time_start) !== null && !TAIWAN_LEG.test(it.spot));
+      if (firstStop) rows.push(`<div class="now-row"><span class="k">⏰ 明天</span><span class="v">第一站 ${esc(firstStop.time_start)} ${esc(firstStop.spot)}・記得設鬧鐘</span></div>`);
       panel.innerHTML = rows.join('');
       panel.classList.add('show');
     }
@@ -1053,6 +1074,13 @@
     setInterval(updateNow, 30000);
     document.addEventListener('visibilitychange', () => { if (!document.hidden) updateNow(); });
 
+    // On a trip day, bring the in-progress (or next) stop into view once after load
+    function scrollToFocus() {
+      const todayIdx = APP.data.schedule.findIndex(d => d.date === nowJST().date);
+      const el = todayIdx === APP.dayIndex && APP.focusId && document.getElementById(APP.focusId);
+      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
     function initialDayIndex() {
       const t = APP.data.schedule.findIndex(d => d.date === nowJST().date);
       if (t >= 0) return t;
@@ -1062,7 +1090,9 @@
 
     function renderSchedule() {
       renderDayBar();
-      selectDay(initialDayIndex());
+      // A background data refresh keeps whichever day the user is looking at
+      selectDay(APP.rendered ? APP.dayIndex : initialDayIndex());
+      APP.rendered = true;
     }
 
     // ===== Copy utility + Toast (Task 2.4) =====
@@ -1316,13 +1346,18 @@
       return res.json();
     }
 
+    function renderAll(data) {
+      APP.data = data;
+      // Render each view independently so one malformed section can't blank the others
+      [renderSchedule, renderFlights, renderCoupons, renderPractical].forEach(fn => {
+        try { fn(); } catch (err) { console.warn(fn.name + ' failed', err); }
+      });
+    }
+
     loadData()
       .then(data => {
-        APP.data = data;
-        // Render each view independently so one malformed section can't blank the others
-        [renderSchedule, renderFlights, renderCoupons, renderPractical].forEach(fn => {
-          try { fn(); } catch (err) { console.warn(fn.name + ' failed', err); }
-        });
+        renderAll(data);
+        scrollToFocus();
       })
       .catch(err => {
         console.warn('Failed to load itinerary data', err);
@@ -1331,7 +1366,23 @@
       });
 
     // ===== Offline support (Task 3.1) =====
+    function syncOnline() {
+      const bar = document.getElementById('offlineBar');
+      bar.hidden = navigator.onLine;
+      // Push the sticky day bar below the offline bar while it shows
+      document.documentElement.style.setProperty('--offline-h', bar.offsetHeight + 'px');
+    }
+    window.addEventListener('online', syncOnline);
+    window.addEventListener('offline', syncOnline);
+    if ('ResizeObserver' in window) new ResizeObserver(syncOnline).observe(document.getElementById('offlineBar'));
+    syncOnline();
+
     if ('serviceWorker' in navigator) {
+      // The worker serves the cached copy first; re-render when it fetched a changed itinerary
+      navigator.serviceWorker.addEventListener('message', (e) => {
+        if (e.data?.type !== 'data-updated') return;
+        loadData().then(data => { renderAll(data); showToast('行程已更新'); }).catch(() => {});
+      });
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('./sw.js', { scope: './' })
           .then(reg => console.log('Service worker registered:', reg.scope))
