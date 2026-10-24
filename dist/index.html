@@ -905,7 +905,7 @@
       }
       const isRoute = /→|➔|->/.test(it.spot);
       const map = it.spot && !isRoute
-        ? `<a class="map-link" href="${mapUrl(it.spot)}" target="_blank" rel="noopener">🗺️ 地圖</a>` : '';
+        ? `<a class="map-link" href="${esc(it.map_url || mapUrl(it.spot))}" target="_blank" rel="noopener">🗺️ 地圖</a>` : '';
       const remarks = it.remarks
         ? `<details class="tl-remarks"><summary>備註</summary><p>${esc(it.remarks)}</p></details>` : '';
       const deadline = it.deadline ? `<div class="tl-deadline">🔴 必趕・${esc(it.deadline)}</div>` : '';
@@ -930,7 +930,7 @@
       const cards = list.map(a => {
         const rows = GUIDE_FIELDS.filter(([k]) => a[k]).map(([k, label]) => {
           const value = k === 'location'
-            ? `${esc(a[k])} <a class="map-link" href="${mapUrl(a[k])}" target="_blank" rel="noopener">🗺️</a>`
+            ? `${esc(a[k])} <a class="map-link" href="${esc(a.map_url || mapUrl(a[k]))}" target="_blank" rel="noopener">🗺️</a>`
             : esc(a[k]);
           return `<div class="guide-row ${k}"><div class="info-label">${label}</div><div class="info-value">${value}</div></div>`;
         }).join('');

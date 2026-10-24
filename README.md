@@ -10,6 +10,7 @@ itinerary.xlsx ──▶ scripts/build_data.py ──▶ dist/itinerary_data.jso
 
 | 路徑 | 說明 |
 | --- | --- |
+| `map_links.json` | 行程名稱／景點標題 → Google Maps 地點連結（cid）對照表，來源為 Google Maps 清單「福岡-四天三夜」「20261112-福岡」；沒列到的項目網頁會退回用名稱搜尋 |
 | `itinerary.xlsx` | 行程原始資料（行程表、景點資料、機票資訊、交通套票資訊、todo、遊日優惠） |
 | `scripts/build_data.py` | Excel → JSON 轉換 CLI（Forward Fill、型別正規化、空白列過濾） |
 | `scripts/inspect_sheets.py` | 檢視各工作表名稱、標題列與資料列數 |

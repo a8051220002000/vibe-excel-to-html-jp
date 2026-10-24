@@ -471,10 +471,34 @@ def build_practical_info():
         ]
     }
 
+def load_map_links(path):
+    """Load spot/title -> Google Maps place URL pairs curated from the shared Maps lists."""
+    if not path.exists():
+        return {}
+    with open(path, encoding="utf-8") as f:
+        return json.load(f).get("links", {})
+
+def attach_map_links(schedule, attractions, links):
+    """Set map_url on timeline items (by spot) and attraction notes (by title) found in links."""
+    hits = 0
+    for day in schedule:
+        for item in day["items"]:
+            url = links.get(item["spot"])
+            if url:
+                item["map_url"] = url
+                hits += 1
+    for a in attractions:
+        url = links.get(a["title"])
+        if url:
+            a["map_url"] = url
+            hits += 1
+    return hits
+
 def main():
     parser = argparse.ArgumentParser(description="Convert itinerary.xlsx to JSON pipeline.")
     parser.add_argument("--input", default="itinerary.xlsx", help="Path to input Excel file")
     parser.add_argument("--output", default="dist/itinerary_data.json", help="Path to output JSON file")
+    parser.add_argument("--map-links", default="map_links.json", help="Path to spot -> Google Maps URL mapping")
     args = parser.parse_args()
 
     input_path = Path(args.input)
@@ -501,6 +525,10 @@ def main():
     attractions_sheet = wb["景點資料"] if "景點資料" in wb.sheetnames else None
     attractions = parse_attractions(attractions_sheet)
     print(f"Parsed {len(attractions)} attraction notes.")
+
+    # 3b. Attach Google Maps place links
+    hits = attach_map_links(schedule, attractions, load_map_links(Path(args.map_links)))
+    print(f"Attached {hits} Google Maps place links.")
 
     # 4. Parse Todos & Tickets
     todo_sheet = wb["todo"] if "todo" in wb.sheetnames else None
