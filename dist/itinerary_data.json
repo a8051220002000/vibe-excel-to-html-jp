@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-24T15:16:39.408117",
+  "generated_at": "2026-10-24T15:27:09.659606",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -300,7 +300,8 @@
           "price": "",
           "booked": "",
           "deadline": "09:17 博多發車 ゆふいんの森 1號",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=9981118884584608729"
         },
         {
           "id": "day2-2",
@@ -315,7 +316,8 @@
           "price": "約 ¥700（13 歲以上，以現場為準）",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=2696757303103107704"
         },
         {
           "id": "day2-3",
@@ -330,7 +332,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=2696757303103107704"
         },
         {
           "id": "day2-4",
@@ -360,7 +363,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=10265864507533133798"
         },
         {
           "id": "day2-6",
@@ -375,7 +379,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=9981118884584608729"
         },
         {
           "id": "day2-7",
@@ -1443,7 +1448,8 @@
       "access": "在湯之坪街道中段，由布院站步行約 15 分；一到由布院就先去",
       "hours": "09:30–17:30，年中無休（惡劣天候可能休）",
       "cost": "村莊免費；フクロウの森 13 歲以上約 ¥700、4–12 歲 ¥500（旅遊網站資料，以現場為準）",
-      "notes": "英國科茲窩風小鎮街景\n貓頭鷹拍照不要開閃光燈"
+      "notes": "英國科茲窩風小鎮街景\n貓頭鷹拍照不要開閃光燈",
+      "map_url": "https://maps.google.com/?cid=2696757303103107704"
     },
     {
       "day": "Day 2",
@@ -1452,7 +1458,8 @@
       "access": "花卉村步行約 10 分（湯之坪街道走到底）",
       "hours": "自由參觀",
       "cost": "免費",
-      "notes": "湖畔天祖神社的鳥居是拍照點；一圈約 400m，走 15–20 分\n有名的朝霧要秋冬清晨才看得到，下午去不會有"
+      "notes": "湖畔天祖神社的鳥居是拍照點；一圈約 400m，走 15–20 分\n有名的朝霧要秋冬清晨才看得到，下午去不會有",
+      "map_url": "https://maps.google.com/?cid=10265864507533133798"
     },
     {
       "day": "Day 2",
