@@ -358,7 +358,7 @@ def build_flights_info(schedule, flight_rows=()):
                 "airport": "桃園國際機場 (TPE)",
                 "terminal": "第一航廈 (預定)",
                 "time": "06:45",
-                "action": "03:40 出發前往機場，04:30 抵達桃機辦理報到與行李託運"
+                "action": "03:45 出發，04:00 上車前往機場，04:30 抵達桃機辦理報到與行李託運"
             },
             "arrival": {
                 "airport": "福岡機場 (FUK)",

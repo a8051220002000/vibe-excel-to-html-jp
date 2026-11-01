@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-10-24T15:50:28.844763",
+  "generated_at": "2026-11-01T22:16:54.901839",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -18,12 +18,12 @@
           "id": "day1-1",
           "day": "Day 1",
           "date": "2026-11-12",
-          "time_start": "03:40",
+          "time_start": "03:45",
           "time_end": "04:30",
           "spot": "出發前往桃園機場",
           "location_tag": "市區出發",
           "transport": "",
-          "remarks": "（06:45飛機)",
+          "remarks": "（06:45飛機)\n🚕 計程車已預約：04:00 要在 85度C 上車",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -68,7 +68,7 @@
           "spot": "兌換 JR 北部九州三日券",
           "location_tag": "",
           "transport": "",
-          "remarks": "📍 國際線航廈 1F 入境大廳「Access Hall」JR 九州兌換櫃檯（09:00–17:00，年中無休）\n帶護照正本＋線上購買的預約資料；兌換後不會啟用，11/13 才開始算（⚠️ 三日券開始日要先改成 11/13）\n🚃 出關就在入境大廳，不用移動\n💡 這個櫃檯只做兌換、不賣票；購買時刷的信用卡建議帶著\n💡 回程 ゆふいんの森 6 號（11/13 17:17）可在同一櫃檯一起劃位",
+          "remarks": "📍 國際線航廈 1F 入境大廳「Access Hall」JR 九州兌換櫃檯（09:00–17:00，年中無休）\n帶護照正本＋線上購買的預約資料；兌換後不會啟用，11/13 才開始算（✅ 三日券開始日已改成 11/13）\n🚃 出關就在入境大廳，不用移動\n💡 這個櫃檯只做兌換、不賣票；購買時刷的信用卡建議帶著\n💡 回程 ゆふいんの森 6 號（11/13 17:17）可在同一櫃檯一起劃位",
           "price": "",
           "booked": "訂好了！",
           "deadline": "",
@@ -257,7 +257,7 @@
           "spot": "Shin-Shin 古門戸町店",
           "location_tag": "",
           "transport": "地圖",
-          "remarks": "營業時間： 11:00–01:00\n🚃 中洲川端站步行約5分",
+          "remarks": "營業時間：17:00–翌 01:00（L.O. 00:30），只開晚上；週日、每月第 4 個週一公休（11/12 週四有開）\n🚃 中洲川端站步行約5分",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -458,10 +458,56 @@
           "day": "Day 3",
           "date": "2026-11-14",
           "time_start": "10:00",
-          "time_end": "12:00",
-          "spot": "天神地下街",
+          "time_end": "10:40",
+          "spot": "岩田屋 本館（第一站）",
           "location_tag": "血拼不完",
-          "transport": "天神地下街",
+          "transport": "岩田屋",
+          "remarks": "營業時間：10:00–20:00（新館7F餐廳街 11:00–22:00），不定休\n🚃 天神站步行約3分",
+          "price": "",
+          "booked": "",
+          "deadline": "",
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=16672159947948753998"
+        },
+        {
+          "id": "day3-3",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "10:40",
+          "time_end": "11:05",
+          "spot": "大丸福岡天神店（第二站）",
+          "location_tag": "10-20點",
+          "transport": "大丸",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "deadline": "",
+          "category": "sightseeing"
+        },
+        {
+          "id": "day3-4",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "11:05",
+          "time_end": "11:20",
+          "spot": "Big Cream【必買】",
+          "location_tag": "",
+          "transport": "必買",
+          "remarks": "",
+          "price": "",
+          "booked": "",
+          "deadline": "",
+          "category": "food"
+        },
+        {
+          "id": "day3-5",
+          "day": "Day 3",
+          "date": "2026-11-14",
+          "time_start": "11:20",
+          "time_end": "11:40",
+          "spot": "天神地下街（甜點）",
+          "location_tag": "",
+          "transport": "甜點",
           "remarks": "營業時間：商店 10:00–20:00／餐飲至 21:00\n🚃 天神站直通",
           "price": "",
           "booked": "",
@@ -470,46 +516,14 @@
           "map_url": "https://maps.google.com/?cid=12006416572707283355"
         },
         {
-          "id": "day3-3",
+          "id": "day3-6",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "12:00",
-          "time_end": "13:00",
-          "spot": "福岡三越",
-          "location_tag": "10-20點",
-          "transport": "福岡三越",
-          "remarks": "營業時間：10:00–20:00\n🚃 天神站直通（地下街連通）",
-          "price": "",
-          "booked": "",
-          "deadline": "",
-          "category": "shopping",
-          "map_url": "https://maps.google.com/?cid=13677976679874591356"
-        },
-        {
-          "id": "day3-4",
-          "day": "Day 3",
-          "date": "2026-11-14",
-          "time_start": "13:00",
-          "time_end": "14:00",
-          "spot": "とんかつ わか葉 天神本店（WAKABA 炸豬排）",
+          "time_start": "11:40",
+          "time_end": "12:00",
+          "spot": "福岡PARCO 新館 1F–2F【BEAMS】",
           "location_tag": "",
-          "transport": "炸豬排",
-          "remarks": "營業時間：午餐 11:00–14:30／晚餐 週一–六 17:00–20:45（各網站寫法不一，週六中午都有開）\n人氣店常排隊，13:00 準時到\n💡 必點：上ロースかつ定食（上等里肌）、上ヒレかつ定食（上等腰內肉）；切面偏白是低溫調理，不是沒熟\n💡 推薦吃法、日文點餐：見「景點資料」Day 3\n🚃 三越步行約 7 分（天神 1 丁目，往北）",
-          "price": "",
-          "booked": "",
-          "deadline": "",
-          "category": "food",
-          "map_url": "https://maps.google.com/?cid=14658244469363238389"
-        },
-        {
-          "id": "day3-5",
-          "day": "Day 3",
-          "date": "2026-11-14",
-          "time_start": "14:00",
-          "time_end": "15:00",
-          "spot": "福岡PARCO",
-          "location_tag": "",
-          "transport": "PARCO",
+          "transport": "BEAMS",
           "remarks": "營業時間：10:00–20:30\n🚃 天神地下街直通",
           "price": "",
           "booked": "",
@@ -518,79 +532,60 @@
           "map_url": "https://maps.google.com/?cid=5083421680458460640"
         },
         {
-          "id": "day3-6",
-          "day": "Day 3",
-          "date": "2026-11-14",
-          "time_start": "15:00",
-          "time_end": "15:30",
-          "spot": "À la campagne 三越福岡店",
-          "location_tag": "",
-          "transport": "千層蛋糕",
-          "remarks": "🚃 在三越館內",
-          "price": "",
-          "booked": "",
-          "deadline": "",
-          "category": "food",
-          "map_url": "https://maps.google.com/?cid=12980015526247359946"
-        },
-        {
           "id": "day3-7",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "15:30",
-          "time_end": "16:30",
-          "spot": "岩田屋",
+          "time_start": "12:00",
+          "time_end": "12:10",
+          "spot": "mina天神 B1F【conis】",
           "location_tag": "",
-          "transport": "岩田屋",
-          "remarks": "營業時間：10:00–20:00（新館7F餐廳街 11:00–22:00），不定休\n🚃 三越步行約3分",
+          "transport": "conis",
+          "remarks": "",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping",
-          "map_url": "https://maps.google.com/?cid=16672159947948753998"
+          "category": "shopping"
         },
         {
           "id": "day3-8",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "16:30",
-          "time_end": "17:15",
-          "spot": "水果派 Qu'il fait bon",
+          "time_start": "12:10",
+          "time_end": "12:25",
+          "spot": "mina天神 1F–2F【UNIQLO 優衣庫】",
           "location_tag": "",
-          "transport": "水果派",
-          "remarks": "營業時間：11/1 起改為 11:00–18:00（官網公告）\n咖啡 LO 17:00\n行程已改 16:30 到，咖啡內用趕得上 LO 17:00\n🚃 岩田屋步行約5分",
+          "transport": "UNIQLO",
+          "remarks": "💡 有連通道可以走到隔壁棟的無印",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food",
-          "map_url": "https://maps.google.com/?cid=5064671345540062334"
+          "category": "shopping"
         },
         {
           "id": "day3-9",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "17:30",
-          "time_end": "18:00",
-          "spot": "いちごや cafe TANNAL 福岡大名店｜天神 モーニング 夜カフェ",
+          "time_start": "12:25",
+          "time_end": "12:35",
+          "spot": "mina天神 3F【GU】",
           "location_tag": "",
-          "transport": "草莓",
-          "remarks": "🚃 水果派步行約10分（大名區）",
+          "transport": "GU",
+          "remarks": "",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food",
-          "map_url": "https://maps.google.com/?cid=10261518042650538052"
+          "category": "shopping"
         },
         {
           "id": "day3-10",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "19:00",
-          "time_end": "20:00",
-          "spot": "無印",
+          "time_start": "12:35",
+          "time_end": "12:45",
+          "spot": "天神ショッパーズ福岡 2F【無印良品】",
           "location_tag": "",
-          "transport": "",
-          "remarks": "",
+          "transport": "無印",
+          "remarks": "⏰ 12:45 前出發，13:00 要到わか葉吃午餐",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -600,69 +595,73 @@
           "id": "day3-11",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "優衣褲",
+          "time_start": "13:00",
+          "time_end": "14:00",
+          "spot": "とんかつ わか葉 天神本店（WAKABA 炸豬排）",
           "location_tag": "",
-          "transport": "",
-          "remarks": "",
+          "transport": "炸豬排",
+          "remarks": "營業時間：午餐 11:00–14:30／晚餐 週一–六 17:00–20:45（各網站寫法不一，週六中午都有開）\n人氣店常排隊，13:00 準時到\n💡 必點：上ロースかつ定食（上等里肌）、上ヒレかつ定食（上等腰內肉）；切面偏白是低溫調理，不是沒熟\n💡 推薦吃法、日文點餐：見「景點資料」Day 3\n🚃 天神ショッパーズ走過去（天神 1 丁目）",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=14658244469363238389"
         },
         {
           "id": "day3-12",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "GU",
+          "time_start": "14:10",
+          "time_end": "14:25",
+          "spot": "À la campagne 三越福岡店",
           "location_tag": "",
-          "transport": "",
-          "remarks": "",
+          "transport": "千層蛋糕",
+          "remarks": "⚠️ 只能外帶，不能內用（官網咖啡廳名單沒有三越店；想內用要去博多店 Amu Plaza 博多 1F）\n🚃 福岡三越 B2",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=12980015526247359946"
         },
         {
           "id": "day3-13",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "BEAMS",
+          "time_start": "14:40",
+          "time_end": "15:30",
+          "spot": "水果派 Qu'il fait bon",
           "location_tag": "",
-          "transport": "",
-          "remarks": "",
+          "transport": "水果派",
+          "remarks": "營業時間：11/1 起改為 11:00–18:00（官網公告）\n咖啡 LO 17:00（14:40 到，時間充裕）\n🚃 岩田屋附近",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=5064671345540062334"
         },
         {
           "id": "day3-14",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "3conis",
+          "time_start": "15:45",
+          "time_end": "16:30",
+          "spot": "いちごや cafe TANNAL 福岡大名店｜天神 モーニング 夜カフェ",
           "location_tag": "",
-          "transport": "",
-          "remarks": "",
+          "transport": "草莓",
+          "remarks": "⚠️ 6–11 月沒有新鮮あまおう，生草莓品項吃不到（官網）\n🚃 水果派步行約10分（大名區）",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=10261518042650538052"
         },
         {
           "id": "day3-15",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "mina",
+          "time_start": "16:45",
+          "time_end": "17:00",
+          "spot": "BOUL'ANGE 天神地下街店",
           "location_tag": "",
           "transport": "",
           "remarks": "",
@@ -675,38 +674,8 @@
           "id": "day3-16",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "Big Cream",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "deadline": "",
-          "category": "shopping"
-        },
-        {
-          "id": "day3-17",
-          "day": "Day 3",
-          "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
-          "spot": "BOUL'ANGE 天神地下街店",
-          "location_tag": "",
-          "transport": "",
-          "remarks": "",
-          "price": "",
-          "booked": "",
-          "deadline": "",
-          "category": "shopping"
-        },
-        {
-          "id": "day3-18",
-          "day": "Day 3",
-          "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
+          "time_start": "17:00",
+          "time_end": "17:15",
           "spot": "RINGO 天神地下街店",
           "location_tag": "",
           "transport": "",
@@ -718,11 +687,11 @@
           "map_url": "https://maps.google.com/?cid=3611396079151595456"
         },
         {
-          "id": "day3-19",
+          "id": "day3-17",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
+          "time_start": "17:15",
+          "time_end": "17:45",
           "spot": "MACCHA HOUSE 抹茶館 天神地下街店",
           "location_tag": "",
           "transport": "",
@@ -733,11 +702,11 @@
           "category": "food"
         },
         {
-          "id": "day3-20",
+          "id": "day3-18",
           "day": "Day 3",
           "date": "2026-11-14",
-          "time_start": "",
-          "time_end": "",
+          "time_start": "17:45",
+          "time_end": "18:15",
           "spot": "PLAZA 天神地下街店",
           "location_tag": "",
           "transport": "",
@@ -748,7 +717,7 @@
           "category": "shopping"
         },
         {
-          "id": "day3-21",
+          "id": "day3-19",
           "day": "Day 3",
           "date": "2026-11-14",
           "time_start": "",
@@ -950,7 +919,7 @@
           "spot": "搭纜車上山",
           "location_tag": "",
           "transport": "",
-          "remarks": "【1. 接駁車】JR 八幡站出剪票口 → 站前圓環「左側」西鉄巴士站旁，有「皿倉山ケーブルカー無料シャトルバス」看板，在看板處排隊，發車時再走到車旁\n免費、約 10 分到纜車山麓站；11–3 月週末假日八幡站首班 9:45、山麓站回程末班 20:15（11/15 週日有開）\n預計搭 16:05 班（沒趕上搭 16:25）；官網時刻表是圖片，以現場看板為準\n【2. 買票】山麓站窗口買「ケーブルカー＆スロープカー 通し券」往返 ¥1,230（中學生以上）\n現金可；刷卡／電子支付只限山麓站窗口，Edy・nanaco・QUICPay・PiTaPa 不能用\n【3. 纜車】ケーブルカー 山麓站 → 山上站，約 5 分\n上山班次 16:00／16:20／16:40／17:00／17:30／18:00／18:20…末班 19:20（約 20 分一班，17 點台 30 分一班）\n【4. 轉斜坡纜車】山上站下車直接轉スロープカー → 山頂展望台站，約 3 分（配合纜車發車，人多時可能要等下一班）\n例：纜車 16:20 → 斜坡纜車 16:28 → 約 16:31 到山頂\n⚠️ 週二公休（11/15 週日有開）",
+          "remarks": "【1. 接駁車】JR 八幡站出剪票口 → 站前圓環「左側」西鉄巴士站旁，有「皿倉山ケーブルカー無料シャトルバス」看板，在看板處排隊，發車時再走到車旁\n免費、約 10 分到纜車山麓站；11–3 月週末假日八幡站首班 9:45、山麓站回程末班 20:15（11/15 週日有開）\n預計搭 16:05 班（沒趕上搭 16:25）；已對照官網 11–3 月週末時刻表：八幡站每小時 :05、:25 發車\n【2. 買票】山麓站窗口買「ケーブルカー＆スロープカー 通し券」往返 ¥1,230（中學生以上）\n現金可；刷卡／電子支付只限山麓站窗口，Edy・nanaco・QUICPay・PiTaPa 不能用\n【3. 纜車】ケーブルカー 山麓站 → 山上站，約 5 分\n上山班次 16:00／16:20／16:40／17:00／17:30／18:00／18:20…末班 19:20（約 20 分一班，17 點台 30 分一班）\n【4. 轉斜坡纜車】山上站下車直接轉スロープカー → 山頂展望台站，約 3 分（配合纜車發車，人多時可能要等下一班）\n例：纜車 16:20 → 斜坡纜車 16:28 → 約 16:31 到山頂\n⚠️ 週二公休（11/15 週日有開）",
           "price": "¥1,230（纜車＋斜坡纜車往返通し券）；接駁車免費",
           "booked": "",
           "deadline": "16:05 八幡接駁車（備案 16:25）",
@@ -1297,7 +1266,7 @@
         "airport": "桃園國際機場 (TPE)",
         "terminal": "第一航廈 (預定)",
         "time": "06:45",
-        "action": "03:40 出發前往機場，04:30 抵達桃機辦理報到與行李託運"
+        "action": "03:45 出發，04:00 上車前往機場，04:30 抵達桃機辦理報到與行李託運"
       },
       "arrival": {
         "airport": "福岡機場 (FUK)",
@@ -1431,7 +1400,7 @@
       "access": "六花舍步行約 10–15 分",
       "hours": "商店 10:00–21:00／餐廳 11:00–23:00，無休",
       "cost": "免費入場",
-      "notes": "水舞秀在 B1F 中庭，晚上時刻未確認（見待確認）\n5F 有拉麵競技場（ラーメンスタジアム）",
+      "notes": "水舞秀在 B1F 中庭；11/12 晚上 18:00–21:00 每 30 分一場，20:00 是 Canal Aqua Panorama「Imagination」（約 5 分）\n5F 有拉麵競技場（ラーメンスタジアム）",
       "map_url": "https://maps.google.com/?cid=16207815243977726417"
     },
     {
@@ -1459,7 +1428,7 @@
       "title": "博多らーめん ShinShin 古門戸町店",
       "location": "福岡市博多區古門戸町2-4 KSコモンドビル 1F",
       "access": "中洲川端站步行約 5 分",
-      "hours": "原備註 11:00–01:00；有資料說這家只開晚上（見待確認）",
+      "hours": "只開晚上 17:00–翌 01:00（L.O. 00:30）；週日、每月第 4 個週一公休",
       "cost": "",
       "notes": "招牌：博多ShinShinらーめん（豚骨拉麵），可加煮玉子（溏心蛋）\n【麵硬度】バリカタ（很硬）／カタ（硬）／普通／やわ（軟），第一次點カタ或普通\n【加麵】快吃完時說「替え玉お願いします」",
       "map_url": "https://maps.google.com/?cid=1299326936131306713"
@@ -1589,7 +1558,7 @@
       "access": "天神站直通",
       "hours": "10:00–20:00",
       "cost": "",
-      "notes": "À la campagne：神戶起家的水果塔店，以季節水果塔為主\n三越這家能不能內用未確認（見待確認）",
+      "notes": "À la campagne：神戶起家的水果塔店，以季節水果塔為主\n⚠️ 三越這家只能外帶，不能內用（想內用要去博多店 Amu Plaza 博多 1F）",
       "map_url": "https://maps.google.com/?cid=13677976679874591356"
     },
     {
@@ -1728,9 +1697,9 @@
           "done": false
         },
         {
-          "text": "去程計程車",
-          "detail": "11/12 03:40 出發",
-          "done": false
+          "text": "去程計程車已預約",
+          "detail": "11/12 04:00 在 85度C 上車",
+          "done": true
         }
       ]
     },
@@ -1738,9 +1707,9 @@
       "category": "🚄 JR 三日券流程",
       "items": [
         {
-          "text": "⚠️ ① 改三日券開始日＋去程劃位日期",
-          "detail": "已買 ¥15,400（原開始日 11/14、去程劃 11/15），由布院改到 11/13 → 上官網把開始日改成 11/13、去程 ゆふいんの森 1 號改成 11/13 09:17→11:31",
-          "done": false
+          "text": "① 三日券開始日已改 11/13",
+          "detail": "已買 ¥15,400；去程搭 07:43 特急ゆふ 1 號，不搭 ゆふいんの森，不用劃位",
+          "done": true
         },
         {
           "text": "② 行程有變先改日期",
@@ -1753,13 +1722,13 @@
           "done": false
         },
         {
-          "text": "④ 回程免費劃位",
-          "detail": "11/12 機場兌換時一起劃 11/13 6 號 17:17→19:27（隔天就要搭）；沒位子改搭特急ゆふ自由席",
-          "done": false
+          "text": "④ 回程已劃位",
+          "detail": "ゆふいんの森 6 號 11/13 17:17→19:27，1 號車 5A・5B",
+          "done": true
         },
         {
           "text": "⑤ 11/13 開始使用",
-          "detail": "09:17 博多搭 ゆふいんの森 1 號去由布院；11/15 門司港也用三日券",
+          "detail": "07:43 博多搭特急ゆふ 1 號去由布院；11/15 門司港也用三日券",
           "done": false
         }
       ]
@@ -1769,8 +1738,8 @@
       "items": [
         {
           "text": "Visit Japan Web",
-          "detail": "入境資料先填好，截圖 QR Code",
-          "done": false
+          "detail": "入境資料已填好，記得截圖 QR Code",
+          "done": true
         },
         {
           "text": "11 月新退稅制度",
@@ -1858,19 +1827,19 @@
           "done": true
         },
         {
-          "text": "潮風號 11/15 有沒有開",
-          "detail": "門司港觀光小火車 ¥500，非 JR、三日券不能用，可排在門司港下午空檔",
-          "done": false
+          "text": "潮風號 11/15（日）有開",
+          "detail": "官網 2026 運行日曆；九州鐵道記念館站 10:00–16:40 每 40 分一班，大人 ¥500，非 JR、三日券不能用",
+          "done": true
         },
         {
-          "text": "ゆふいんの森 11/13（五）有沒有開",
-          "detail": "改劃位時官網會顯示",
-          "done": false
+          "text": "ゆふいんの森 6 號 11/13（五）有開",
+          "detail": "JR 九州 11 月運行日曆：全列車運轉日",
+          "done": true
         },
         {
           "text": "八幡接駁車 11/15 時刻",
-          "detail": "16:05（備案 16:25）是照週六寫的，非 JR 要另外查",
-          "done": false
+          "detail": "官網 11–3 月週末時刻表：八幡站 16:05、16:25 發車，山麓站末班 20:15",
+          "done": true
         }
       ]
     },
@@ -1885,11 +1854,6 @@
         {
           "text": "地鐵能否用 IC 卡（Suica／Hayakaken）",
           "detail": "一般可以，未重新查證",
-          "done": false
-        },
-        {
-          "text": "ゆふいんの森 博多發車月台",
-          "detail": "看當天站內電子看板",
           "done": false
         },
         {
@@ -1928,24 +1892,24 @@
       "category": "❓ 待確認（景點資料）",
       "items": [
         {
-          "text": "運河城水舞秀 11/12 晚上時刻",
-          "detail": "各網站寫法不一",
-          "done": false
+          "text": "運河城水舞秀 11/12 晚上",
+          "detail": "官網：18:00–21:00 每 30 分一場，20:00 是 Canal Aqua Panorama「Imagination」（約 5 分），21:30 起停演",
+          "done": true
         },
         {
-          "text": "ShinShin 古門戸町店是否只開晚上",
-          "detail": "原備註 11:00–01:00，有資料說 17:00 才開",
-          "done": false
+          "text": "ShinShin 古門戸町店只開晚上",
+          "detail": "17:00–翌 01:00（L.O. 00:30），週日、每月第 4 個週一公休；11/12 週四有開",
+          "done": true
         },
         {
-          "text": "À la campagne 三越店能否內用",
-          "detail": "Gemini 說只能外帶，未證實",
-          "done": false
+          "text": "À la campagne 三越店只能外帶",
+          "detail": "官網咖啡廳名單只有博多店（Amu Plaza 博多 1F）",
+          "done": true
         },
         {
-          "text": "いちごや TANNAL 11/14 有沒有草莓甜點",
-          "detail": "本店草莓品項是 12–5 月限定",
-          "done": false
+          "text": "いちごや TANNAL 11/14 沒有新鮮草莓",
+          "detail": "官網：6–11 月沒有新鮮あまおう，部分品項暫停",
+          "done": true
         },
         {
           "text": "Chocolate Shop 定休日",
@@ -1953,19 +1917,19 @@
           "done": false
         },
         {
-          "text": "フクロウの森 門票價格",
-          "detail": "¥700／¥900 各網站不一",
-          "done": false
+          "text": "フクロウの森 門票 ¥700（13 歲以上）",
+          "detail": "花卉村官方頁；¥900 是舊部落格",
+          "done": true
         },
         {
-          "text": "小倉城 11 月營業時間與門票",
-          "detail": "只逛外圍可不管",
-          "done": false
+          "text": "小倉城 11 月 9:00–17:00（16:30 停止入館）、天守閣 ¥350",
+          "detail": "旅遊網站資料；只逛外圍不影響",
+          "done": true
         },
         {
-          "text": "ゆふいんの森 車上賣什麼",
-          "detail": "便當要不要預約、B-speak 還有沒有賣",
-          "done": false
+          "text": "ゆふいんの森 車上",
+          "detail": "有販賣部（飲料、甜點、地啤）；便當要在乘車 3 個營業日前預約（ゆふいんの森弁当 ¥1,800），回程 11/13 最晚約 11/10；有沒有賣 B-speak 查不到",
+          "done": true
         }
       ]
     }
