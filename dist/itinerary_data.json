@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-11-07T17:43:49.426540",
+  "generated_at": "2026-11-07T18:05:05.653519",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -68,7 +68,7 @@
           "spot": "兌換 JR 北部九州三日券",
           "location_tag": "",
           "transport": "",
-          "remarks": "📍 國際線航廈 1F 入境大廳「Access Hall」JR 九州兌換櫃檯（09:00–17:00，年中無休）\n⚠️ 兩人都要到櫃檯；帶兩人護照正本、e-Ticket（列印或手機畫面）、購買時刷的信用卡\n兌換後不會啟用，11/13 才開始算（✅ 三日券開始日已改成 11/13）\n🚃 出關就在入境大廳，不用移動\n💡 這個櫃檯只做兌換、不賣票\n💡 回程 ゆふいんの森 6 號指定席票（已線上訂好）兌換時一起拿，確認車票上是 1 號車 5A・5B\n\n🎫 順便免費劃去程指定席（給人員看）\n🗣️ \"We'd like to reserve 2 seats with our rail passes, please.\"\n\"Limited Express Yufu No. 1, November 13th, Hakata 7:43 to Yufuin.\"\n\"Two seats together, please. Window seat, if possible.\"\n🇯🇵「11月13日の特急ゆふ1号、博多から由布院まで、指定席を2席並びでお願いします。」\n（11/13 特急ゆふ 1 號，博多→由布院，兩個相鄰指定席）\n• 列車：特急ゆふ 1号（別府行）／ Limited Express Yufu 1\n• 日期：11月13日（金）／ Nov 13 (Fri)\n• 區間：博多 7:43 → 由布院 10:02\n• 人數：大人 2名／ 2 adults\n• 票券：JR九州レールパス（北部九州 3日間），劃位免費\n💬 \"Window or aisle?\"＝窗邊或走道 →「Window, please.」\n💬 \"Reserved seats are full. Non-reserved OK?\"＝指定席滿了，自由席可以嗎 →「OK.」\n✅ 拿到後確認：11/13、ゆふ 1号、博多→由布院、2 張，記下車廂號碼；回程 6 號是 1 號車 5A・5B",
+          "remarks": "📍 國際線航廈 1F 入境大廳「Access Hall」JR 九州兌換櫃檯（09:00–17:00，年中無休）\n⚠️ 兩人都要到櫃檯；帶兩人護照正本、e-Ticket（列印或手機畫面）、購買時刷的信用卡\n兌換後不會啟用，11/13 才開始算（✅ 三日券開始日已改成 11/13）\n🚃 出關就在入境大廳，不用移動\n💡 這個櫃檯只做兌換、不賣票\n💡 回程 ゆふいんの森 6 號指定席票（已線上訂好）兌換時一起拿，確認車票上是 1 號車 5A・5B\n\n🎫 順便免費劃 2 班指定席（給人員看）\n🗣️ \"We'd like to reserve seats for two trains with our rail passes, please.\"\n\"First: Limited Express Yufu No. 1, November 13th, Hakata 7:43 to Yufuin.\"\n\"Second: Limited Express Sonic No. 3, November 15th, Hakata 7:00 to Kokura.\"\n\"Two seats together, please. Window seat, if possible.\"\n🇯🇵「11月13日の特急ゆふ1号 博多→由布院、11月15日の特急ソニック3号 博多→小倉、それぞれ指定席を2席並びでお願いします。」\n（兩班都要兩個相鄰指定席）\n① 特急ゆふ 1号（別府行）／ Limited Express Yufu 1\n　11月13日（金）博多 7:43 → 由布院 10:02\n② 特急ソニック 3号／ Limited Express Sonic 3\n　11月15日（日）博多 7:00 → 小倉 7:58\n• 人數：大人 2名／ 2 adults\n• 票券：JR九州レールパス（北部九州 3日間），劃位免費\n💬 \"Window or aisle?\"＝窗邊或走道 →「Window, please.」\n💬 \"Reserved seats are full. Non-reserved OK?\"＝指定席滿了，自由席可以嗎 →「OK.」\n✅ 拿到後確認：兩班的日期、車次、區間各 2 張，記下車廂號碼；回程 6 號是 1 號車 5A・5B\n💡 沒趕上 ソニック 3 號，指定席作廢，改搭 07:11 きらめき 2 號自由席",
           "price": "",
           "booked": "訂好了！",
           "deadline": "",
@@ -1705,6 +1705,11 @@
           "text": "ゆふいんの森弁当已訂",
           "detail": "6 號 1 號車，ゆふいんの森弁当 ×1 ¥1,800；11/13 17:20 起在車上販賣部出示取餐碼",
           "done": true
+        },
+        {
+          "text": "（不一定）B-speak 瑞士捲電話預約",
+          "detail": "11/13 取貨的話 11/8 起可打 +81-977-28-2166（10:00–17:00）；不訂也可以 10:10 到店直接買，賣完就算了",
+          "done": false
         }
       ]
     },
