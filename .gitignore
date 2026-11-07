@@ -15,3 +15,10 @@ dist/test_run.json
 
 # Browser test environment (see AGENTS.md)
 .venv/
+
+# Personal booking documents (passport numbers, card info, reservation numbers) — never commit
+*.pdf
+*.eml
+*.png
+!dist/**/*.png
+截圖*
