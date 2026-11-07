@@ -41,6 +41,12 @@ def test_cards():
     assert addrs and tels, "Need at least one address and one phone number to copy"
     print(f"✓ Copyable data: {len(addrs)} address(es), {len(tels)} phone number(s)")
 
+    # dist/ is public: booking IDs, order numbers and pickup codes must be masked by build_data.py
+    raw = json.dumps(data, ensure_ascii=False)
+    leaks = re.findall(r"(?:訂位編號|訂單號碼|取貨代碼|取餐碼)[:：]\s*[A-Za-z0-9-]+", raw)
+    assert not leaks, f"Unmasked booking identifiers in itinerary_data.json: {leaks}"
+    print("✓ Booking IDs, order numbers and pickup codes are masked")
+
     print("\n[PASSED] Flight cards, coupon grid and copy utilities verified.")
 
 

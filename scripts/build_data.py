@@ -28,8 +28,8 @@ SENSITIVE_REPLACEMENTS = [
     ("土城", "住處"),
 ]
 
-# Booking IDs stay in the local Excel only
-BOOKING_ID = re.compile(r"(訂位編號[:：]\s*)[A-Za-z0-9-]+")
+# Booking IDs, order numbers and pickup codes stay in the local Excel only
+BOOKING_ID = re.compile(r"((?:訂位編號|訂單號碼|取貨代碼|取餐碼)[:：]\s*)[A-Za-z0-9-]+")
 
 def desensitize(obj):
     """Recursively mask sensitive strings in the output payload."""
