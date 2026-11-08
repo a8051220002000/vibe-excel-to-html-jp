@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-11-08T11:54:22.041036",
+  "generated_at": "2026-11-08T12:41:30.573538",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -103,7 +103,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "transport",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=7524611293723795643"
         },
         {
@@ -135,7 +135,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "hotel",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=8619569029654548515"
         },
         {
@@ -214,7 +214,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=16207815243977726417"
         },
         {
@@ -262,7 +262,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=1299326936131306713"
         },
         {
@@ -294,7 +294,7 @@
           "date": "2026-11-13",
           "time_start": "07:43",
           "time_end": "10:02",
-          "spot": "尤布院",
+          "spot": "由布院",
           "location_tag": "",
           "transport": "",
           "remarks": "❌ ゆふいんの森 1 號沒訂到 → 改搭 特急ゆふ 1 號（別府行），博多 07:43 → 由布院 10:02\n三日券可搭；有自由席，也可在博多站綠色窗口免費劃指定席（11/12 先去劃）\n💡 博多站在來線月台看「ゆふ 1号 別府」，不要進新幹線剪票口\n💡 民宿到博多約 20 分（吳服町／中洲川端搭地鐵），最晚 07:15 出門",
@@ -448,7 +448,7 @@
           "spot": "Dacomecca麵包",
           "location_tag": "",
           "transport": "麵包",
-          "remarks": "營業時間： 07:00–19:00\n🚃 民宿→吳服町站搭地鐵（中洲川端換空港線）→博多站博多口步行約5分\n吃完搭空港線博多→天神（約5分）",
+          "remarks": "營業時間： 07:00–19:00\n🚃 民宿→吳服町站搭地鐵（中洲川端換空港線）→博多站博多口步行約5分\n吃完搭空港線博多→天神（約5分）\n🥐 多買幾個當 D4 早餐（D4 06:30 就出門）",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -484,7 +484,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing",
+          "category": "shopping",
           "map_url": "https://maps.google.com/?cid=14777074030141287736"
         },
         {
@@ -493,14 +493,14 @@
           "date": "2026-11-14",
           "time_start": "11:05",
           "time_end": "11:20",
-          "spot": "Big Cream【必買】",
+          "spot": "BIC CAMERA 天神2號館【必買】",
           "location_tag": "",
           "transport": "必買",
           "remarks": "",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food",
+          "category": "shopping",
           "map_url": "https://maps.google.com/?cid=5895427237111514620"
         },
         {
@@ -541,9 +541,9 @@
           "date": "2026-11-14",
           "time_start": "12:00",
           "time_end": "12:10",
-          "spot": "mina天神 B1F【conis】",
+          "spot": "mina天神 B1F【3COINS】",
           "location_tag": "",
-          "transport": "conis",
+          "transport": "3COINS",
           "remarks": "",
           "price": "",
           "booked": "",
@@ -672,7 +672,7 @@
           "spot": "BOUL'ANGE 天神地下街店",
           "location_tag": "",
           "transport": "",
-          "remarks": "",
+          "remarks": "🥐 多買幾個當 D4 早餐（D4 06:30 就出門，傍晚買比較新鮮）",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -736,27 +736,27 @@
           "spot": "晚餐：明太子居酒屋（4 選 1）",
           "location_tag": "",
           "transport": "",
-          "remarks": "🍻 4 家都能定位，點上方地圖按鈕（①–④）；週六晚上人多，建議先訂位\n① 博多やまや 福岡本店（春吉）⭐首選：明太子大廠直營｜明太子 3 種盛 ¥1,980、半熟蛋明太子馬鈴薯沙拉、明太子土鍋飯｜12:00–23:00（LO 22:00），無公休｜晚餐約 ¥4,500｜小孩 OK、全面禁煙、可推嬰兒車｜Hot Pepper 網路訂位\n② 博多弁天堂 西中洲店：招牌明太子牛腸鍋（用ふくや明太子）｜17:00–23:00，週日休｜套餐 ¥4,000 起｜Gurunavi 訂位\n③ 博多水炊き 大和：離民宿最近（中洲川端站旁）｜炙燒明太子＋雞肉水炊鍋｜17:00–24:00｜¥4,000–5,000\n④ 糸島産直 伊都の台所 本店：中洲川端站 1 分｜有明太子單點｜17:00–翌 1:00｜約 ¥3,500\n🚃 回程：①② 走到中洲川端站約 7 分，再步行約 10 分回民宿；③④ 直接走回民宿約 12 分",
+          "remarks": "🍻 依離民宿遠近排序，4 家都能定位，點上方地圖按鈕（①–④）；週六晚上人多，建議先訂位\n【民宿附近・中洲川端】\n① 博多水炊き 大和：離民宿最近（中洲川端站旁，走回民宿約 12–15 分）｜炙燒明太子＋雞肉水炊鍋｜17:00–24:00｜¥4,000–5,000｜Hot Pepper 訂位\n② 糸島産直 伊都の台所 本店：中洲川端站 1 分｜有明太子單點｜17:00–翌 1:00｜約 ¥3,500｜Hot Pepper 訂位\n【天神方向】\n③ 博多やまや 福岡本店（春吉）：明太子大廠直營，明太子菜最多｜明太子 3 種盛 ¥1,980、半熟蛋明太子馬鈴薯沙拉、明太子土鍋飯｜12:00–23:00（LO 22:00），無公休｜晚餐約 ¥4,500｜小孩 OK、全面禁煙、可推嬰兒車｜Hot Pepper 訂位\n④ 博多弁天堂 西中洲店：天神南站 4 分｜招牌明太子牛腸鍋（用ふくや明太子）｜17:00–23:00，週日休｜套餐 ¥4,000 起｜Gurunavi 訂位\n🚃 回程：①② 直接走回民宿；③④ 走到中洲川端站約 7 分，再步行約 10 分回民宿",
           "price": "",
           "booked": "",
           "deadline": "",
           "category": "food",
           "map_options": [
             {
-              "name": "① 博多やまや",
-              "url": "https://maps.google.com/?cid=8747918711521726191"
-            },
-            {
-              "name": "② 博多弁天堂",
-              "url": "https://maps.google.com/?cid=17905127755032054592"
-            },
-            {
-              "name": "③ 大和",
+              "name": "① 大和",
               "url": "https://maps.google.com/?cid=12926507207289517699"
             },
             {
-              "name": "④ 伊都の台所",
+              "name": "② 伊都の台所",
               "url": "https://maps.google.com/?cid=14111717458315015095"
+            },
+            {
+              "name": "③ 博多やまや",
+              "url": "https://maps.google.com/?cid=8747918711521726191"
+            },
+            {
+              "name": "④ 博多弁天堂",
+              "url": "https://maps.google.com/?cid=17905127755032054592"
             }
           ]
         }
@@ -777,11 +777,11 @@
           "spot": "H01/K09  中洲川端",
           "location_tag": "",
           "transport": "",
-          "remarks": "6:37/6:45\n🚃 民宿步行約10分到中洲川端，搭空港線到博多（約5分）",
+          "remarks": "6:37/6:45\n🚃 民宿步行約10分到中洲川端，搭空港線到博多（約5分）\n🥐 早餐：吃 D3 買的麵包（Dacomecca／BOUL'ANGE），車上吃",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "hotel",
+          "category": "transport",
           "map_url": "https://maps.google.com/?cid=15137173700584240056"
         },
         {
@@ -828,7 +828,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "transport",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=7791985743706569026"
         },
         {
@@ -860,7 +860,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "transport"
         },
         {
           "id": "day4-7",
@@ -907,7 +907,7 @@
           "price": "",
           "booked": "",
           "deadline": "14:05 門司港發車（備案 14:23）",
-          "category": "sightseeing"
+          "category": "transport"
         },
         {
           "id": "day4-10",
@@ -915,7 +915,7 @@
           "date": "2026-11-15",
           "time_start": "14:35",
           "time_end": "15:20",
-          "spot": "小蒼城",
+          "spot": "小倉城",
           "location_tag": "",
           "transport": "",
           "remarks": "目標：日落(約17:15)前上山，只逛小倉城外圍＋八坂神社\n【去程】門司港 14:05発 → 西小倉 14:25（普通・直方行）\n備案 14:23発 → 14:46（區間快速，逛的時間會縮短）\n西小倉站步行約 10 分到小倉城，外圍約 14:35–15:20\n【回程】15:20 離開，步行約 10 分回西小倉\n西小倉 15:34発 → 八幡 15:53（普通・遠賀川行）\n備案 15:47発 → 15:59（區間快速）\n八幡站接駁車 16:05発（約 10 分）→ 纜車 16:20 → 約 16:35 到山頂\n沒趕上：接駁車 16:25 → 纜車 16:40 → 約 16:55 到山頂（仍在日落前）\n纜車上山末班 19:20\n回八幡接駁車末班 20:15",
@@ -985,7 +985,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=2116234761678928324"
         }
       ]
@@ -1039,7 +1039,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "hotel"
         },
         {
           "id": "day5-4",
@@ -1054,7 +1054,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping",
+          "category": "food",
           "map_url": "https://maps.google.com/?cid=8619569029654548515"
         },
         {
@@ -1166,7 +1166,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "flight",
+          "category": "sightseeing",
           "map_url": "https://maps.google.com/?cid=15050275969203417903"
         },
         {
@@ -1197,7 +1197,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "flight"
         },
         {
           "id": "day5-14",
@@ -1257,7 +1257,7 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "hotel"
         }
       ]
     }

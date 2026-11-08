@@ -63,14 +63,15 @@ def serialize_cell(val):
     return str(val).strip()
 
 CATEGORY_KEYWORDS = [
-    # Names that would otherwise hit a broader keyword (麵包超人 ≠ 麵包, 車站足湯, À la campagne is in 三越)
-    ("sightseeing", ["麵包超人", "貓頭鷹", "owl", "足湯"]),
+    # Names that would otherwise hit a broader keyword (麵包超人 ≠ 麵包, 車站足湯, À la campagne is in 三越, BIC CAMERA【必買】)
+    ("sightseeing", ["麵包超人", "貓頭鷹", "owl", "足湯", "水舞"]),
+    ("shopping", ["bic camera"]),
     ("food", ["à la campagne", "必買"]),
-    ("flight", ["機場", "飛機", "出境", "入境", "回台", "土城→桃園"]),
-    ("transport", ["→", "出門", "取行李", "車站", "博多開車", "公車", "寄物", "寄行李"]),
-    ("food", ["早餐", "午餐", "晚餐", "大東園", "麵包", "水果派", "千層蛋糕", "草莓", "屋台", "cafe", "咖哩", "抹茶"]),
-    ("shopping", ["地下街", "三越", "parco", "岩田屋", "無印", "優衣褲", "gu", "beams", "3conis", "mina", "big cream", "運河城", "plaza", "mart", "迪士尼", "outlate", "血拼", "伴手禮"]),
-    ("hotel", ["check-in", "民宿", "晚安", "回家"]),
+    ("flight", ["機場", "飛機", "出境", "入境", "回台", "土城→桃園", "退稅"]),
+    ("transport", ["→", "出門", "出發", "取行李", "車站", "博多開車", "公車", "寄物", "寄行李", "中洲川端"]),
+    ("food", ["早餐", "午餐", "晚餐", "大東園", "麵包", "水果派", "千層蛋糕", "草莓", "屋台", "cafe", "咖哩", "抹茶", "一蘭", "shin-shin", "chocolate", "市場", "鳥雞"]),
+    ("shopping", ["地下街", "大丸", "三越", "parco", "岩田屋", "無印", "優衣褲", "gu", "beams", "3conis", "mina", "3coins", "運河城", "plaza", "mart", "迪士尼", "outlate", "血拼", "伴手禮"]),
+    ("hotel", ["check-in", "民宿", "晚安", "回家", "退房", "返家", "回土城"]),
     ("sightseeing", ["神社", "博物館", "城", "山", "廣場", "溫泉", "街道", "花卉村", "金鱗湖", "足湯", "海賊王", "條約"]),
 ]
 

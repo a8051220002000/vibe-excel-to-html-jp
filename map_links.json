@@ -61,13 +61,13 @@
     "もつ鍋 六花舎（もつなべ ろっかしゃ，牛腸鍋）": "https://maps.google.com/?cid=1349902386839871826",
     "唐戶市場（活きいき馬関街）": "https://maps.google.com/?cid=7791985743706569026",
     "唐戸市場 活きいき馬関街（からといちば いきいきばかんがい）": "https://maps.google.com/?cid=7791985743706569026",
-    "小蒼城": "https://maps.google.com/?cid=1371327252959948136",
+    "小倉城": "https://maps.google.com/?cid=1371327252959948136",
     "小倉城（こくらじょう）": "https://maps.google.com/?cid=1371327252959948136",
     "皿倉山": "https://maps.google.com/?cid=15617041537211558758",
     "皿倉山（さらくらやま）": "https://maps.google.com/?cid=15617041537211558758",
     "鳥雞研究團": "https://maps.google.com/?cid=2116234761678928324",
     "搭纜車上山": "https://maps.google.com/?cid=5282697707216040956",
-    "尤布院": "https://maps.google.com/?cid=9981118884584608729",
+    "由布院": "https://maps.google.com/?cid=9981118884584608729",
     "OWL'S FOREST（貓頭鷹森林）": "https://maps.google.com/?cid=2696757303103107704",
     "湯布院花卉村": "https://maps.google.com/?cid=2696757303103107704",
     "金鱗湖畔漫步": "https://maps.google.com/?cid=10265864507533133798",
@@ -86,8 +86,8 @@
     "天神地下街（甜點）": "https://maps.google.com/?cid=12006416572707283355",
     "福岡PARCO 新館 1F–2F【BEAMS】": "https://maps.google.com/?cid=5083421680458460640",
     "兌換 JR 北部九州三日券": null,
-    "Big Cream【必買】": "https://maps.google.com/?cid=5895427237111514620",
-    "mina天神 B1F【conis】": "https://maps.google.com/?cid=18241941393440748663",
+    "BIC CAMERA 天神2號館【必買】": "https://maps.google.com/?cid=5895427237111514620",
+    "mina天神 B1F【3COINS】": "https://maps.google.com/?cid=18241941393440748663",
     "大丸福岡天神店（第二站）": "https://maps.google.com/?cid=14777074030141287736",
     "mina天神 1F–2F【UNIQLO 優衣庫】": "https://maps.google.com/?cid=1349263199392547077",
     "mina天神 3F【GU】": "https://maps.google.com/?cid=5981749086918474142",
@@ -101,20 +101,20 @@
     "水舞秀(非必要）": "https://maps.google.com/?cid=15050275969203417903",
     "晚餐：明太子居酒屋（4 選 1）": [
       {
-        "name": "① 博多やまや",
-        "url": "https://maps.google.com/?cid=8747918711521726191"
-      },
-      {
-        "name": "② 博多弁天堂",
-        "url": "https://maps.google.com/?cid=17905127755032054592"
-      },
-      {
-        "name": "③ 大和",
+        "name": "① 大和",
         "url": "https://maps.google.com/?cid=12926507207289517699"
       },
       {
-        "name": "④ 伊都の台所",
+        "name": "② 伊都の台所",
         "url": "https://maps.google.com/?cid=14111717458315015095"
+      },
+      {
+        "name": "③ 博多やまや",
+        "url": "https://maps.google.com/?cid=8747918711521726191"
+      },
+      {
+        "name": "④ 博多弁天堂",
+        "url": "https://maps.google.com/?cid=17905127755032054592"
       }
     ]
   },
