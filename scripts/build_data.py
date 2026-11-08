@@ -489,12 +489,22 @@ def load_map_links(path):
         return json.load(f).get("links", {})
 
 def attach_map_links(schedule, attractions, links):
-    """Set map_url on timeline items (by spot) and attraction notes (by title) found in links."""
+    """Set map_url on timeline items (by spot) and attraction notes (by title) found in links.
+
+    A spot mapped to null gets no_map, which hides its map button; a spot mapped to a
+    list of {"name", "url"} gets map_options, one map button per option.
+    """
     hits = 0
     for day in schedule:
         for item in day["items"]:
+            if item["spot"] in links and links[item["spot"]] is None:
+                item["no_map"] = True
+                continue
             url = links.get(item["spot"])
-            if url:
+            if isinstance(url, list):
+                item["map_options"] = url
+                hits += len(url)
+            elif url:
                 item["map_url"] = url
                 hits += 1
     for a in attractions:

@@ -539,6 +539,7 @@
       border-radius: var(--radius-pill);
       padding: 2px 8px;
     }
+    .tl-maps { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
     .tl-meta { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
     .tag {
       display: inline-flex;
@@ -1019,8 +1020,10 @@
         tags.push(`<span class="tag ${yes ? 'booked-yes' : ''}">🎫 ${esc(it.booked)}</span>`);
       }
       const isRoute = /→|➔|->/.test(it.spot);
-      const map = it.spot && !isRoute
+      const map = it.spot && !isRoute && !it.no_map && !it.map_options
         ? `<a class="map-link" href="${esc(it.map_url || mapUrl(it.spot))}" target="_blank" rel="noopener">🗺️ 地圖</a>` : '';
+      const mapOptions = (it.map_options || []).length
+        ? `<div class="tl-maps">${it.map_options.map(o => `<a class="map-link" href="${esc(o.url)}" target="_blank" rel="noopener">🗺️ ${esc(o.name)}</a>`).join('')}</div>` : '';
       const remarks = it.remarks
         ? `<details class="tl-remarks"><summary>備註</summary><p>${esc(it.remarks)}</p></details>` : '';
       const deadline = it.deadline ? `<div class="tl-deadline">🔴 必趕・${esc(it.deadline)}</div>` : '';
@@ -1030,6 +1033,7 @@
           <div class="tl-dot" aria-hidden="true">${CAT_ICON[it.category] || '📌'}</div>
           <div class="tl-card">
             <div class="tl-title"><span>${esc(it.spot || '（未命名）')}</span>${map}</div>
+            ${mapOptions}
             ${deadline}
             ${tags.length ? `<div class="tl-meta">${tags.join('')}</div>` : ''}
             ${remarks}

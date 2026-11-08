@@ -18,7 +18,7 @@ for f in scripts/verify_*.py; do [ "$f" = scripts/verify_browser.py ] || python3
 .venv/bin/python scripts/verify_browser.py --only dark_contrast,theme_toggle   # a subset
 ```
 
-`verify_browser.py` serves a temporary copy of `dist/`, so it never modifies project files, and it derives expectations from `itinerary_data.json`, so itinerary edits don't break it. Checks: `now_focus`, `tomorrow_reminder`, `offline_bar`, `offline_reload`, `single_shell_cache`, `manifest`, `theme_toggle`, `dark_contrast`, `data_update`.
+`verify_browser.py` serves a temporary copy of `dist/`, so it never modifies project files, and it derives expectations from `itinerary_data.json`, so itinerary edits don't break it. Checks: `now_focus`, `tomorrow_reminder`, `offline_bar`, `offline_reload`, `single_shell_cache`, `manifest`, `theme_toggle`, `dark_contrast`, `data_update`, `map_links`.
 
 ### When you are the verifying agent
 - Run both suites first and report their output verbatim; failures come with the failing values.

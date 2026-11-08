@@ -84,6 +84,39 @@
     "カランドネル 可麗露（必買②）": "https://maps.google.com/?cid=12776858680167706653",
     "岩田屋 本館（第一站）": "https://maps.google.com/?cid=16672159947948753998",
     "天神地下街（甜點）": "https://maps.google.com/?cid=12006416572707283355",
-    "福岡PARCO 新館 1F–2F【BEAMS】": "https://maps.google.com/?cid=5083421680458460640"
-  }
+    "福岡PARCO 新館 1F–2F【BEAMS】": "https://maps.google.com/?cid=5083421680458460640",
+    "兌換 JR 北部九州三日券": null,
+    "Big Cream【必買】": "https://maps.google.com/?cid=5895427237111514620",
+    "mina天神 B1F【conis】": "https://maps.google.com/?cid=18241941393440748663",
+    "大丸福岡天神店（第二站）": "https://maps.google.com/?cid=14777074030141287736",
+    "mina天神 1F–2F【UNIQLO 優衣庫】": "https://maps.google.com/?cid=1349263199392547077",
+    "mina天神 3F【GU】": "https://maps.google.com/?cid=5981749086918474142",
+    "天神ショッパーズ福岡 2F【無印良品】": "https://maps.google.com/?cid=6301742206515962521",
+    "BOUL'ANGE 天神地下街店": "https://maps.google.com/?cid=9919604917635229346",
+    "MACCHA HOUSE 抹茶館 天神地下街店": "https://maps.google.com/?cid=3873331035586508442",
+    "PLAZA 天神地下街店": "https://maps.google.com/?cid=2926577942341416761",
+    "湯之坪街道（午餐・邊走邊吃）": "https://maps.google.com/?cid=12626907374884444216",
+    "湯の坪街道（ゆのつぼかいどう）": "https://maps.google.com/?cid=12626907374884444216",
+    "買票＆門司港到唐戶": "https://maps.google.com/?cid=13818673404272007470",
+    "水舞秀(非必要）": "https://maps.google.com/?cid=15050275969203417903",
+    "晚餐：明太子居酒屋（4 選 1）": [
+      {
+        "name": "① 博多やまや",
+        "url": "https://maps.google.com/?cid=8747918711521726191"
+      },
+      {
+        "name": "② 博多弁天堂",
+        "url": "https://maps.google.com/?cid=17905127755032054592"
+      },
+      {
+        "name": "③ 大和",
+        "url": "https://maps.google.com/?cid=12926507207289517699"
+      },
+      {
+        "name": "④ 伊都の台所",
+        "url": "https://maps.google.com/?cid=14111717458315015095"
+      }
+    ]
+  },
+  "_note": "A null link hides the map button; a list of {name, url} shows one map button per option."
 }

@@ -1,6 +1,6 @@
 {
   "title": "2026 福岡・九州自由行",
-  "generated_at": "2026-11-07T23:09:43.033900",
+  "generated_at": "2026-11-08T11:54:22.041036",
   "meta": {
     "destination": "日本福岡・九州 (Fukuoka & Kyushu)",
     "dates": "2026/11/12 - 2026/11/16",
@@ -72,7 +72,8 @@
           "price": "",
           "booked": "訂好了！",
           "deadline": "",
-          "category": "flight"
+          "category": "flight",
+          "no_map": true
         },
         {
           "id": "day1-5",
@@ -380,7 +381,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=12626907374884444216"
         },
         {
           "id": "day2-7",
@@ -482,7 +484,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=14777074030141287736"
         },
         {
           "id": "day3-4",
@@ -497,7 +500,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=5895427237111514620"
         },
         {
           "id": "day3-5",
@@ -544,7 +548,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=18241941393440748663"
         },
         {
           "id": "day3-8",
@@ -559,7 +564,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=1349263199392547077"
         },
         {
           "id": "day3-9",
@@ -574,7 +580,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=5981749086918474142"
         },
         {
           "id": "day3-10",
@@ -589,7 +596,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=6301742206515962521"
         },
         {
           "id": "day3-11",
@@ -668,7 +676,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=9919604917635229346"
         },
         {
           "id": "day3-16",
@@ -699,7 +708,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "food"
+          "category": "food",
+          "map_url": "https://maps.google.com/?cid=3873331035586508442"
         },
         {
           "id": "day3-18",
@@ -714,7 +724,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "shopping"
+          "category": "shopping",
+          "map_url": "https://maps.google.com/?cid=2926577942341416761"
         },
         {
           "id": "day3-19",
@@ -722,14 +733,32 @@
           "date": "2026-11-14",
           "time_start": "",
           "time_end": "",
-          "spot": "燒肉",
+          "spot": "晚餐：明太子居酒屋（4 選 1）",
           "location_tag": "",
           "transport": "",
-          "remarks": "🚃 回程：天神站搭空港線→中洲川端（約3分），步行約10分回民宿",
+          "remarks": "🍻 4 家都能定位，點上方地圖按鈕（①–④）；週六晚上人多，建議先訂位\n① 博多やまや 福岡本店（春吉）⭐首選：明太子大廠直營｜明太子 3 種盛 ¥1,980、半熟蛋明太子馬鈴薯沙拉、明太子土鍋飯｜12:00–23:00（LO 22:00），無公休｜晚餐約 ¥4,500｜小孩 OK、全面禁煙、可推嬰兒車｜Hot Pepper 網路訂位\n② 博多弁天堂 西中洲店：招牌明太子牛腸鍋（用ふくや明太子）｜17:00–23:00，週日休｜套餐 ¥4,000 起｜Gurunavi 訂位\n③ 博多水炊き 大和：離民宿最近（中洲川端站旁）｜炙燒明太子＋雞肉水炊鍋｜17:00–24:00｜¥4,000–5,000\n④ 糸島産直 伊都の台所 本店：中洲川端站 1 分｜有明太子單點｜17:00–翌 1:00｜約 ¥3,500\n🚃 回程：①② 走到中洲川端站約 7 分，再步行約 10 分回民宿；③④ 直接走回民宿約 12 分",
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "transport"
+          "category": "food",
+          "map_options": [
+            {
+              "name": "① 博多やまや",
+              "url": "https://maps.google.com/?cid=8747918711521726191"
+            },
+            {
+              "name": "② 博多弁天堂",
+              "url": "https://maps.google.com/?cid=17905127755032054592"
+            },
+            {
+              "name": "③ 大和",
+              "url": "https://maps.google.com/?cid=12926507207289517699"
+            },
+            {
+              "name": "④ 伊都の台所",
+              "url": "https://maps.google.com/?cid=14111717458315015095"
+            }
+          ]
         }
       ]
     },
@@ -783,7 +812,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "sightseeing"
+          "category": "sightseeing",
+          "map_url": "https://maps.google.com/?cid=13818673404272007470"
         },
         {
           "id": "day4-4",
@@ -794,7 +824,7 @@
           "spot": "唐戶市場（活きいき馬関街）",
           "location_tag": "",
           "transport": "",
-          "remarks": "✅ 官網行事曆確認 11/15（日）有開：週日 07:00–15:00\n各店依進貨狀況，壽司賣完就收 → 先逛市場再去記念館\n🚃 唐戶棧橋旁，下船步行約2分\n💡 買完可到外面的木棧道平台，邊看關門海峽邊吃\n💡 建議帶現金",
+          "remarks": "✅ 官網行事曆確認 11/15（日）有開：週日 07:00–15:00\n各店依進貨狀況，壽司賣完就收 → 先逛市場再去記念館\n🚃 唐戶棧橋旁，下船步行約2分\n💡 買完可到外面的木棧道平台，邊看關門海峽邊吃\n💡 建議帶現金\n\n🍣 推薦（1F 馬関街週日 08:00–15:00，賣完就收）\n① タケショー：排隊最長，魚料大、種類多，河豚湯也有名 → 第一站先排\n② カネヒ：30 種以上魚料，整顆鮑魚海鮮丼，也有 ¥500 海鮮丼\n③ 仁井田商店：60 年鮪魚批發老店，鮪魚控首選\n④ 湊商店：青背魚、近海魚專門\n🍽️ 想坐著吃（2F）：市場食堂よし（河豚刺身定食 ¥1,200、海鮮丼 ¥1,300）、まぐろとかめ（まぐろ三昧丼，看得到海峽）\n❌ 海転からと市場寿司 11:00 才開，時間不合\n⚠️ 在木棧道吃小心老鷹（トンビ）搶食，壽司不要舉高拍照",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -841,7 +871,7 @@
           "spot": "午餐-燒咖哩",
           "location_tag": "",
           "transport": "KOGANEMUSHI",
-          "remarks": "營業時間：午餐 11:45–15:00（LO 14:30）／晚餐 17:00–21:00（LO 20:20），賣完為止\n⚠️ 週五公休（11/15 週日有開）\n常 13 點多就賣完，建議早點到\n🚃 門司港站步行約7分",
+          "remarks": "營業時間：午餐 11:45–15:00（LO 14:30）／晚餐 17:00–21:00（LO 20:20），賣完為止\n⚠️ 週五公休（11/15 週日有開）\n常 13 點多就賣完，建議早點到\n🚃 門司港站步行約7分\n🥡 外帶：查不到能不能外帶（燒咖哩是烤盤現烤，通常內用）。想外帶先打 093-332-2585，或現場問「持ち帰りできますか？」",
           "price": "",
           "booked": "",
           "deadline": "",
@@ -1136,7 +1166,8 @@
           "price": "",
           "booked": "",
           "deadline": "",
-          "category": "flight"
+          "category": "flight",
+          "map_url": "https://maps.google.com/?cid=15050275969203417903"
         },
         {
           "id": "day5-12",
@@ -1440,7 +1471,8 @@
       "access": "由布院站步行約 5 分到街道入口",
       "hours": "店家多為 9:30／10:00 開到 17:00／17:30（由布院很早關門）",
       "cost": "",
-      "notes": "【吃什麼】\n・湯布院 金賞コロッケ（きんしょうころっけ）：全國可樂餅大賽金賞，現點現炸，約 ¥170–220\n・鞠智（くくち）：古民家和菓子店，一口地瓜燒、現烤銅鑼燒\n・由布院ミルヒ（ゆふいんみるひ）：半熟起司蛋糕、湯布院布丁\n・B-speak（びーすぴーく）：Pロール（瑞士捲）整條約 ¥1,520–1,620，常下午就賣完，可電話預約\n・CARANDONEL（カランドネル）：可麗露專賣，在車站往街道的路上\n・花麹菊家（はなこうじきくや）：湯の坪横丁入口，ぷりんどら（布丁銅鑼燒）\n建議往花卉村路上經過 B-speak 就先買"
+      "notes": "【吃什麼】\n・湯布院 金賞コロッケ（きんしょうころっけ）：全國可樂餅大賽金賞，現點現炸，約 ¥170–220\n・鞠智（くくち）：古民家和菓子店，一口地瓜燒、現烤銅鑼燒\n・由布院ミルヒ（ゆふいんみるひ）：半熟起司蛋糕、湯布院布丁\n・B-speak（びーすぴーく）：Pロール（瑞士捲）整條約 ¥1,520–1,620，常下午就賣完，可電話預約\n・CARANDONEL（カランドネル）：可麗露專賣，在車站往街道的路上\n・花麹菊家（はなこうじきくや）：湯の坪横丁入口，ぷりんどら（布丁銅鑼燒）\n建議往花卉村路上經過 B-speak 就先買",
+      "map_url": "https://maps.google.com/?cid=12626907374884444216"
     },
     {
       "day": "Day 2",

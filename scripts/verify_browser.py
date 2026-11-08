@@ -298,8 +298,30 @@ class Suite:
         return ok, f"toast={toast} {state} (picked day index {picked})"
 
 
+    async def map_links(self):
+        """Stops link to their exact map_url, show one button per map_options entry, or none when no_map."""
+        ctx, page = await self.page()
+        bad, n = [], 0
+        for di, day in enumerate(self.data["schedule"]):
+            await page.click(f'.day-chip[data-day-index="{di}"]')
+            await page.wait_for_timeout(100)
+            hrefs = await page.evaluate("""ids => ids.map(id => {
+                const links = [...(document.getElementById(id)?.querySelectorAll('.map-link') || [])];
+                return links.length ? links.map(a => a.getAttribute('href')) : null; })""",
+                [it["id"] for it in day["items"]])
+            for it, href in zip(day["items"], hrefs):
+                if it.get("no_map") or it.get("map_url") or it.get("map_options"):
+                    n += 1
+                    want = (None if it.get("no_map") else
+                            [o["url"] for o in it["map_options"]] if it.get("map_options") else [it["map_url"]])
+                    if href != want:
+                        bad.append(f"{day['date']} {it['spot']}: {href} != {want}")
+        await ctx.close()
+        return n > 0 and not bad, f"{n} stops checked, mismatches {bad[:5]}"
+
+
 CHECKS = ["now_focus", "tomorrow_reminder", "offline_bar", "offline_reload", "single_shell_cache",
-          "manifest", "theme_toggle", "dark_contrast", "data_update"]
+          "manifest", "theme_toggle", "dark_contrast", "data_update", "map_links"]
 
 
 async def main():
