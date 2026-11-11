@@ -13,7 +13,7 @@ Spec: Excel-to-JSON Pipeline & Mobile Travel Web (SDD Workflow)
 
 型別安全序列化 (Type Serialization)： Excel 中的 datetime、time 物件須自動正規化為 HH:MM 或 YYYY-MM-DD 純字串；空白儲存格與全空列須自動過濾，不得噴出 None 或導致程式拋錯。
 
-多工作表支援： 動態解析 行程表、景點資料、機票資訊、其他資訊、遊日優惠 等分頁，彙整為單一 JSON。
+多工作表支援： 動態解析 行程表、景點資料、票券資訊、其他資訊、遊日優惠 等分頁，彙整為單一 JSON。
 
 3. 原子化驗收清單 (Atomic Task Checklist)
 請 agy 嚴格遵守：一次只執行一個子任務，通過驗收指令後立即 git commit，並在 SPEC.md 將項目打勾 [x]。

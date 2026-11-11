@@ -6,7 +6,7 @@ Complies with SDD data contract rules:
 - Forward fill Day and Date
 - Type serialization for datetime/date/time
 - Null/empty row filtering
-- Multi-sheet parsing (行程表, 景點資料, 機票資訊, 交通套票資訊, todo, 遊日優惠)
+- Multi-sheet parsing (行程表, 景點資料, 票券資訊, 交通套票資訊, todo, 遊日優惠)
 """
 
 import argparse
@@ -332,7 +332,7 @@ def parse_todos_and_tickets(todo_sheet, ticket_sheet):
     return todos, tickets
 
 def parse_flight_sheet(sheet):
-    """'機票資訊' rows: 日期 | 班號 | 起飛 | 抵達 (no header row; first row = outbound)."""
+    """'票券資訊' (formerly 機票資訊) rows: 日期 | 班號 | 起飛 | 抵達 (no header row; first row = outbound)."""
     rows = []
     if not sheet:
         return rows
@@ -345,7 +345,7 @@ def parse_flight_sheet(sheet):
 def build_flights_info(schedule, flight_rows=()):
     """
     Day 1 outbound (TPE -> FUK) and Day 5 inbound (FUK -> TPE).
-    Flight numbers, dates and times come from '機票資訊'; the rest is descriptive text.
+    Flight numbers, dates and times come from '票券資訊'; the rest is descriptive text.
     """
     flights = [
         {
@@ -558,7 +558,7 @@ def main():
     print(f"Parsed {len(todos)} todo groups and {len(tickets)} tickets.")
 
     # 5. Build Flights
-    flight_sheet = wb["機票資訊"] if "機票資訊" in wb.sheetnames else None
+    flight_sheet = next((wb[n] for n in ("票券資訊", "機票資訊") if n in wb.sheetnames), None)
     flights = build_flights_info(schedule, parse_flight_sheet(flight_sheet))
 
     # 6. Practical Info
