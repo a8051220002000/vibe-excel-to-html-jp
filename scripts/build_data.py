@@ -357,7 +357,7 @@ def build_flights_info(schedule, flight_rows=()):
             "day": "Day 1",
             "departure": {
                 "airport": "桃園國際機場 (TPE)",
-                "terminal": "第一航廈 (預定)",
+                "terminal": "第一航廈",
                 "time": "06:45",
                 "action": "03:45 出發，04:00 上車前往機場，04:30 抵達桃機辦理報到與行李託運"
             },
@@ -368,9 +368,9 @@ def build_flights_info(schedule, flight_rows=()):
                 "action": "預計 10:00 抵達，辦理入境審查與領取行李"
             },
             "duration": "2 小時 15 分",
-            "baggage": "手提 1 件＋個人物品共 10kg、託運依購買方案",
+            "baggage": "託運 20kg（tigersmart）＋手提＋個人物品共 10kg",
             "status": "準時預定",
-            "notes": "入境後搭乘機場接駁車至國內線航廈，轉乘地下鐵至博多車站（車程約 5 分鐘）。"
+            "notes": "座位 14A（同行者另外訂位）。入境後搭乘機場接駁車至國內線航廈，轉乘地下鐵至博多車站（車程約 5 分鐘）。"
         },
         {
             "id": "flight-inbound",
@@ -387,14 +387,14 @@ def build_flights_info(schedule, flight_rows=()):
             },
             "arrival": {
                 "airport": "桃園國際機場 (TPE)",
-                "terminal": "第一航廈 (預定)",
+                "terminal": "第一航廈",
                 "time": "19:40",
                 "action": "19:40 抵達桃園機場，完成入境查驗，預計 21:00-22:00 返家休息"
             },
             "duration": "2 小時 45 分",
-            "baggage": "手提 1 件＋個人物品共 10kg、託運依購買方案",
+            "baggage": "託運 20kg（tigersmart）＋手提＋個人物品共 10kg",
             "status": "準時預定",
-            "notes": "虎航櫃檯約起飛前 45 分鐘關閉（約 17:10），加上 11 月新制退稅要過海關，最晚 14:15 從運河城出發。"
+            "notes": "座位 14E（同行者另外訂位）。虎航櫃檯約起飛前 45 分鐘關閉（約 17:10），加上 11 月新制退稅要過海關，最晚 14:15 從運河城出發。"
         }
     ]
     routes = ["TPE ➔ FUK", "FUK ➔ TPE"]
